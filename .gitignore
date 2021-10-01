@@ -1,7 +1,15 @@
-# Ignore docs files
-_gh_pages
-_site
-.ruby-version
+# TypeScript stuff
+.baseDir.ts
+.tscache
+#
+
+# Ignore composer stuff
+/bin/*
+/vendor/*
+/index.php
+/typo3/index.php
+/typo3/install.php
+#
 
 # Numerous always-ignore extensions
 *.diff
@@ -12,6 +20,7 @@ _site
 *.swo
 *.swp
 *.vi
+*.bak
 *.zip
 *~
 
@@ -24,6 +33,8 @@ _site
 .settings
 .php_cs
 .tmproj
+.webprj
+.TemporaryItems
 *.esproj
 *.sublime-project
 *.sublime-workspace
@@ -34,9 +45,11 @@ Thumbs.db
 .komodotools
 *.komodoproject
 
-# Jekyll metadata
-docs/.jekyll-metadata
-
 # Folders to ignore
+/typo3temp/*
+/typo3conf/*
+/fileadmin/*
+/uploads/*
+/FIRST_INSTALL
 bower_components
 node_modules

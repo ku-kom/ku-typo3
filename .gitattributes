@@ -1,12 +1,42 @@
-# Enforce Unix newlines
-*.css   text eol=lf
-*.html  text eol=lf
-*.js    text eol=lf
-*.json  text eol=lf
-*.less  text eol=lf
-*.md    text eol=lf
-*.svg   text eol=lf
-*.yml   text eol=lf
+/.crowdin.yaml export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitreview export-ignore
+/Build/ export-ignore
+/dynamicReturnTypeMeta.json export-ignore
+/phpstan.neon export-ignore
+/rector.yml export-ignore
+/typo3/sysext/*/Resources/Private/TypeScript/ export-ignore
+/typo3/sysext/*/Tests/ export-ignore
+/components/testing_framework/ export-ignore
+
+# Enforce checkout with linux lf consistent over all platforms
+*.html text eol=lf
+*.css text eol=lf
+*.tmpl text eol=lf
+*.less text eol=lf
+*.scss text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.patch text eol=lf
+*.php text eol=lf
+*.rst text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ts text eol=lf
+*.typoscript text eol=lf
+*.xlf text eol=lf
+*.sh text eol=lf
+*.sql text eol=lf
+*.svg text eol=lf
+*.t3s text eol=lf
+*.txt text eol=lf
+/typo3/sysext/rte_ckeditor/Resources/Public/JavaScript/Contrib/plugins/codesnippet/lib/highlight/LICENSE text eol=lf
+/typo3/sysext/t3editor/Resources/Public/JavaScript/Contrib/cm/AUTHORS text eol=lf
+/typo3/sysext/t3editor/Resources/Public/JavaScript/Contrib/cm/LICENSE text eol=lf
+/typo3/sysext/t3editor/Resources/Public/JavaScript/Contrib/cm/bin/source-highlight text eol=lf
+
 # Don't diff or textually merge source maps
 *.map   binary
 
