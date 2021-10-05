@@ -31,44 +31,48 @@
     "support": {
         "issues": "https://github.com/benjaminkott/bootstrap_package/issues"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": ">=7.2.0",
+        "ext-PDO": "*",
         "ext-dom": "*",
         "ext-filter": "*",
         "ext-hash": "*",
         "ext-json": "*",
         "ext-libxml": "*",
-        "ext-PDO": "*",
         "ext-simplexml": "*",
-        "typo3/cms-backend": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-core": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-extbase": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-extensionmanager": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-fluid": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-frontend": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-install": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-rte-ckeditor": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-seo": "^9.5 || ^10.0 || 10.*@dev",
-        "scssphp/scssphp": "^1.4.1",
+        "scssphp/scssphp": "^1.7.0",
+        "typo3/cms-backend": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-core": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-extbase": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-extensionmanager": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-fluid": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-frontend": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-install": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-rte-ckeditor": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-seo": "^10.4 || ^11.3 || 11.*.*@dev",
         "typo3fluid/fluid": "^2.5.2"
     },
     "require-dev": {
-        "typo3/cms-felogin": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-form": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-indexed-search": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-info": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-lowlevel": "^9.5 || ^10.0 || 10.*@dev",
-        "typo3/cms-tstemplate": "^9.5 || ^10.0 || 10.*@dev",
-        "friendsofphp/php-cs-fixer": "^2.3.1",
-        "typo3/testing-framework": "^4.9 || ^5.0",
+        "b13/container": "^1.3",
         "bk2k/demo-package": "@dev",
         "bk2k/extension-helper": "^1.0",
-        "overtrue/phplint": "^1.1"
-    },
-    "conflict": {
-        "scssphp/scssphp": "1.0.4 || 1.0.5"
+        "friendsofphp/php-cs-fixer": "^3.0.0",
+        "friendsoftypo3/phpstan-typo3": "^0.8.1",
+        "overtrue/phplint": "^2.3.5",
+        "phpstan/phpstan": "^0.12.87",
+        "phpstan/phpstan-deprecation-rules": "^0.12.6",
+        "phpstan/phpstan-phpunit": "^0.12.19",
+        "phpstan/phpstan-strict-rules": "^0.12.9",
+        "typo3/cms-belog": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-felogin": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-filelist": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-form": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-indexed-search": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-info": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-lowlevel": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-tstemplate": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/cms-workspaces": "^10.4 || ^11.3 || 11.*.*@dev",
+        "typo3/testing-framework": "^5.0 || ^6.4"
     },
     "autoload": {
         "psr-4": {
@@ -80,8 +84,10 @@
             "BK2K\\BootstrapPackage\\Tests\\": "Tests"
         }
     },
+    "prefer-stable": true,
     "config": {
         "optimize-autoloader": true,
+        "sort-packages": true,
         "vendor-dir": ".build/vendor",
         "bin-dir": ".build/bin"
     },
@@ -100,8 +106,17 @@
             "@test:php:unit",
             "@test:php:functional"
         ],
+        "phpstan": [
+            "phpstan analyze --configuration Build/phpstan.neon"
+        ],
+        "phpstan:baseline": [
+            "phpstan analyze --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
+        ],
         "cgl": [
             "php-cs-fixer --diff -v fix"
+        ],
+        "cgl:ci": [
+            "php-cs-fixer --diff -v --dry-run fix"
         ],
         "set-version": [
             "extension-helper version:set"
@@ -121,7 +136,7 @@
             "app-dir": ".build"
         },
         "branch-alias": {
-            "dev-BP_11-0": "11.0.x-dev"
+            "dev-BP_12-0": "12.0.x-dev"
         }
     }
 }
