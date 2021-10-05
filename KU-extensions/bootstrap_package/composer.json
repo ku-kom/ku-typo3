@@ -1,0 +1,127 @@
+{
+    "name": "bk2k/bootstrap-package",
+    "type": "typo3-cms-extension",
+    "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
+    "keywords": [
+        "TYPO3 CMS",
+        "introduction",
+        "sitepackage",
+        "bootstrap",
+        "responsive",
+        "frontend",
+        "theme",
+        "web"
+    ],
+    "homepage": "https://github.com/benjaminkott/bootstrap_package",
+    "repositories": {
+        "tests": {
+            "type": "path",
+            "url": "Tests/Packages/*"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benjamin Kott",
+            "email": "info@bk2k.info",
+            "role": "Developer",
+            "homepage": "http://www.bk2k.info/"
+        }
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/benjaminkott/bootstrap_package/issues"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2.0",
+        "ext-dom": "*",
+        "ext-filter": "*",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-PDO": "*",
+        "ext-simplexml": "*",
+        "typo3/cms-backend": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-core": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-extbase": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-extensionmanager": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-fluid": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-frontend": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-install": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-rte-ckeditor": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-seo": "^9.5 || ^10.0 || 10.*@dev",
+        "scssphp/scssphp": "^1.4.1",
+        "typo3fluid/fluid": "^2.5.2"
+    },
+    "require-dev": {
+        "typo3/cms-felogin": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-form": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-indexed-search": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-info": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-lowlevel": "^9.5 || ^10.0 || 10.*@dev",
+        "typo3/cms-tstemplate": "^9.5 || ^10.0 || 10.*@dev",
+        "friendsofphp/php-cs-fixer": "^2.3.1",
+        "typo3/testing-framework": "^4.9 || ^5.0",
+        "bk2k/demo-package": "@dev",
+        "bk2k/extension-helper": "^1.0",
+        "overtrue/phplint": "^1.1"
+    },
+    "conflict": {
+        "scssphp/scssphp": "1.0.4 || 1.0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "BK2K\\BootstrapPackage\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BK2K\\BootstrapPackage\\Tests\\": "Tests"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "vendor-dir": ".build/vendor",
+        "bin-dir": ".build/bin"
+    },
+    "scripts": {
+        "test:php:lint": [
+            "phplint"
+        ],
+        "test:php:unit": [
+            "phpunit -c Build/phpunit-unit.xml"
+        ],
+        "test:php:functional": [
+            "phpunit -c Build/phpunit-functional.xml"
+        ],
+        "test": [
+            "@test:php:lint",
+            "@test:php:unit",
+            "@test:php:functional"
+        ],
+        "cgl": [
+            "php-cs-fixer --diff -v fix"
+        ],
+        "set-version": [
+            "extension-helper version:set"
+        ],
+        "changelog": [
+            "extension-helper changelog:create"
+        ],
+        "post-autoload-dump": [
+            "mkdir -p .build/web/typo3conf/ext/",
+            "[ -L .build/web/typo3conf/ext/bootstrap_package ] || ln -snvf ../../../../. .build/web/typo3conf/ext/bootstrap_package"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bootstrap_package",
+            "web-dir": ".build/web",
+            "app-dir": ".build"
+        },
+        "branch-alias": {
+            "dev-BP_11-0": "11.0.x-dev"
+        }
+    }
+}
