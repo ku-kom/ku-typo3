@@ -1,0 +1,25 @@
+###############################################################
+## Remove all sourrounding html elements, except for content ""
+###############################################################
+page = PAGE
+page {
+  config {
+    disableAllHeaderCode = 1
+    disableBodyTag = 1
+  }
+  10 < styles.content.get
+}
+
+
+
+# This returns content from the "normal" column (colPos = 0).
+# page.10 < styles.content.get
+
+# This returns content from the "left" column (colPos = 1).
+# page.10 < styles.content.getLeft
+
+# This returns content from the "right" column (colPos = 2).
+# page.10 < styles.content.getRight
+
+# This returns content from the "border" column (colPos = 3).
+# page.10 < styles.content.getBorder

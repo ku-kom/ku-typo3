@@ -113,8 +113,8 @@ class TableContentElementUpdate implements UpgradeWizardInterface, RepeatableInt
         $mapping = [
             100 => '',
             110 => '',
-            120 => 'striped',
-            130 => 'bordered',
+            130 => 'striped',
+            120 => 'bordered',
             140 => 'hover',
             150 => 'condensed',
         ];

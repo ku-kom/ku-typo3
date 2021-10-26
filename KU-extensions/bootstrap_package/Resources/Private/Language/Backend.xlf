@@ -901,11 +901,11 @@
             <trans-unit id="tablelayout.bordered">
                 <source>Bordered table</source>
             </trans-unit>
-            <trans-unit id="tablelayout.hover">
-                <source>Hover rows</source>
-            </trans-unit>
             <trans-unit id="tablelayout.condensed">
                 <source>Condensed table</source>
+            </trans-unit>
+            <trans-unit id="tablelayout.hover">
+                <source>Hover rows</source>
             </trans-unit>
 
             <trans-unit id="uploadslayout.default">
