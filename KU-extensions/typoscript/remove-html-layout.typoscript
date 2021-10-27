@@ -1,5 +1,6 @@
 ###############################################################
-## Remove all sourrounding html elements, except for content ##
+## Remove all sourrounding html elements, such as            ##
+## <html>, <head> and <body>, only display content.          ##
 ###############################################################
 page = PAGE
 page {
