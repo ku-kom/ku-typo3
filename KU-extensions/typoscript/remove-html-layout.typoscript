@@ -1,5 +1,5 @@
 ###############################################################
-## Remove all sourrounding html elements, except for content ""
+## Remove all sourrounding html elements, except for content ##
 ###############################################################
 page = PAGE
 page {
