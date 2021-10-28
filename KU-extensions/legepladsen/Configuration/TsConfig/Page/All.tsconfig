@@ -1,0 +1,7 @@
+#
+# PageTS for Legepladsen
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:legepladsen/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:legepladsen/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:legepladsen/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:legepladsen/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">

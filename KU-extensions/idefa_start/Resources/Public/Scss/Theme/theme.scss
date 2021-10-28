@@ -1,0 +1,17 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+
+#top{
+    background-color: var(--primary);
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+

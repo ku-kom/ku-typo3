@@ -1,3 +1,6 @@
+# Ftp settings
+sftp.json
+
 # TypeScript stuff
 .baseDir.ts
 .tscache

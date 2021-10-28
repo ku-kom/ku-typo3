@@ -1,0 +1,51 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:idefa_start/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        idefa_start_scripts = EXT:idefa_start/Resources/Public/JavaScript/Dist/scripts.js
+    }
+
+    
+}
+
+page{
+    10{
+        settings{
+                    idefasettings{
+                        themetype = {$page.settings.themetype}
+                        special_id = {$page.themeoption.special_id}
+                    }
+            }
+    }
+}
+
+
+#Stien til fluid templates er defineret i TypoScript Setup page.10
+page.10.templateRootPaths.3 = EXT:idefa_start/Resources/Private/Templates/Page/
+page.10.partialRootPaths.3 = EXT:idefa_start/Resources/Private/Partials/Page/
+page.10.layoutRootPaths.3 = EXT:idefa_start/Resources/Private/Layouts/Page/
+
+

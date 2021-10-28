@@ -1,0 +1,22 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    settings {
+        # cat=bootstrap package: idefasettings/110/150; type=options[Standard=default, Rød=theme-red, Grøn=green-theme, Blå=blue-theme]; label=Custom konstant fra IdeF
+            themetype = default
+
+        # cat=idefasettings/332/120;type=string;label=Special Page ID
+        special_id = 
+    }
+
+}
+
+plugin.bootstrap_package.settings.scss.primary = #333333
+
