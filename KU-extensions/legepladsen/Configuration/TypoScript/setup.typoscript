@@ -9,7 +9,11 @@
 ##############
 page {
     includeCSS {
-        theme = EXT:legepladsen/Resources/Public/Scss/Theme/theme.scss
+        #theme = EXT:legepladsen/Resources/Public/Scss/Theme/theme.scss
+        ku_bootstrap = https://cms.ku.dk/bootstrap/dist/css/bootstrap.min.css
+        ku_bootstrap.external = 1
+        ku_gridbox = https://cms.ku.dk/bootstrap/dist/css/ku-gridboxes.min.css
+        ku_gridbox.external = 1
     }
 
     includeJSLibs {
@@ -25,6 +29,23 @@ page {
     }
 
     includeJSFooter {
-        legepladsen_scripts = EXT:legepladsen/Resources/Public/JavaScript/Dist/scripts.js
+        #legepladsen_scripts = EXT:legepladsen/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
+
+page{
+    10{
+        settings{
+                    idefasettings{
+                        themetype = {$page.settings.themetype}
+                        special_id = {$page.themeoption.special_id}
+                    }
+            }
+    }
+}
+
+
+#Stien til fluid templates er defineret i TypoScript Setup page.10
+page.10.templateRootPaths.3 = EXT:legepladsen/Resources/Private/Templates/Page/
+page.10.partialRootPaths.3 = EXT:legepladsen/Resources/Private/Partials/Page/
+page.10.layoutRootPaths.3 = EXT:legepladsen/Resources/Private/Layouts/Page/
