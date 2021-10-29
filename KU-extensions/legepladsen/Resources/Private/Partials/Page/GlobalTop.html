@@ -1,13 +1,19 @@
 {namespace s=IdeFA\IdefaBase\ViewHelpers}
-<s:registerVariable as="GlobalName" noprocess="1">{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:
+<s:registerVariable as="Topbar" noprocess="1">{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:
     {pageUid:'{settings.idefasettings.special_id}', colPos:'3'} )}</s:registerVariable>
+<!-- Grey topbar -->
 <header>
     <div aria-label="Globale genveje" class="navbar-inverse navbar-static-top ku-topbar" role="navigation">
-        <div class="container">
+        <div class="container relative">
             <div class="col-md-6">
-                <span class="topname">
-                    <f:format.stripTags>{GlobalName}</f:format.stripTags>
-                </span>
+                <!-- KU -->
+                <f:format.stripTags>{Topbar}</f:format.stripTags>
+            </div>
+            <div class="col-md-6">
+                <!-- Utility menu -->
+                {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:
+                {pageUid:'{settings.idefasettings.special_id}',
+                colPos:'6'} )}
             </div>
         </div>
     </div>

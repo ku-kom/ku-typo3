@@ -1,0 +1,16 @@
+{
+    "name": "university-of-copenhagen/ku-global-layout",
+    "type": "typo3-cms-extension",
+    "description": "KU global layout",
+    "homepage": "https://www.ku.dk",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\KuGlobalLayout\\": "Classes/"
+        }
+    }
+}

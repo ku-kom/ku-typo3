@@ -1,0 +1,45 @@
+#
+# BACKENDLAYOUT: EXAMPLE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            special {
+                title = Special
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Global grey topbar
+                                        colPos = 3
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Global Menu
+                                        colPos = 4
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Utility menu
+                                        colPos = 6
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:idefa_start/Resources/Public/Icons/BackendLayouts/example.svg
+            }
+        }
+    }
+}
