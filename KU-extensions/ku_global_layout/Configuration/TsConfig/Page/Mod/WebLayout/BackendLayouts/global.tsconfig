@@ -1,10 +1,10 @@
 #
-# BACKENDLAYOUT: EXAMPLE
+# BACKENDLAYOUT: Global elements
 #
 mod {
     web_layout {
         BackendLayouts {
-            example {
+            global {
                 title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.global
                 config {
                     backend_layout {
@@ -14,24 +14,24 @@ mod {
                             1 {
                                 columns {
                                     1 {
-                                        name = Global grey topbar
-                                        colPos = 1
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.topbar
+                                        colPos = 11
                                     }
                                 }
                             }
                             2 {
                                 columns {
                                     1 {
-                                        name = Global Menu
-                                        colPos = 2
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.menu
+                                        colPos = 12
                                     }
                                 }
                             }
                             3 {
                                 columns {
                                     1 {
-                                        name = Global Utility Menu
-                                        colPos = 3
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.utility
+                                        colPos = 13
                                     }
                                 }
                             }

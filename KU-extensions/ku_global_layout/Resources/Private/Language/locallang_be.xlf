@@ -9,8 +9,14 @@
             <trans-unit id="backend_layout.example">
                 <source>Example</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.normal">
-                <source>Normal</source>
+            <trans-unit id="backend_layout.column.topbar">
+                <source>Global grey topbar</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.menu">
+                <source>Global menu</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.utility">
+                <source>Global utility menu</source>
             </trans-unit>
             <trans-unit id="backend_layout.global">
                 <source>Global layout elements</source>
