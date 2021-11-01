@@ -1,17 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="ku_logo">
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '11'}" />
+</f:variable>
+<f:variable name="ku_utility">
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '13'}" />
+</f:variable>
 <!-- Grey topbar -->
+
 <header>
     <div aria-label="Globale genveje" class="navbar-inverse navbar-static-top ku-topbar" role="navigation">
         <div class="container relative">
             <div class="col-md-6">
-                <!-- KU -->
-                <f:format.stripTags>{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:
-                    {pageUid:'{settings.ku.special_id}', colPos:'11'} )}</f:format.stripTags>
+                <!-- KU logo -->
+
+                <f:if condition="{ku_logo}">
+                    <f:format.stripTags>{ku_logo}</f:format.stripTags>
+                </f:if>
+
             </div>
             <div class="col-md-6">
                 <!-- Utility menu -->
-                {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: {pageUid:'{settings.ku.special_id}',
-                colPos:'13'} )}
+                
+                <f:if condition="{ku_utility}">
+                    <f:format.raw>{ku_utility}</f:format.raw>
+                </f:if>
             </div>
         </div>
     </div>

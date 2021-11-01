@@ -8,14 +8,15 @@ mod {
                 title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.global
                 config {
                     backend_layout {
-                        colCount = 1
-                        rowCount = 3
+                        colCount = 12
+                        rowCount = 4
                         rows {
                             1 {
                                 columns {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.topbar
                                         colPos = 11
+                                        colspan = 12
                                     }
                                 }
                             }
@@ -24,6 +25,7 @@ mod {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.menu
                                         colPos = 12
+                                        colspan = 12
                                     }
                                 }
                             }
@@ -32,6 +34,31 @@ mod {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.utility
                                         colPos = 13
+                                        colspan = 12
+                                    }
+                                }
+                            }
+                            4 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col1
+                                        colPos = 14
+                                        colspan = 4
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col2
+                                        colPos = 15
+                                        colspan = 4
+                                    }
+                                    3 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col3
+                                        colPos = 16
+                                        colspan = 4
+                                    }
+                                    4 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col4
+                                        colPos = 17
+                                        colspan = 4
                                     }
                                 }
                             }

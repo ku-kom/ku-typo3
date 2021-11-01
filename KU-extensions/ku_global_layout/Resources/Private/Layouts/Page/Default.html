@@ -1,38 +1,32 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:spaceless>
-    <f:render partial="Navigation/GlobalTop"></f:render>
-    <div class="global-menu">
-        <div class="container">
-            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: {pageUid:'{settings.ku.special_id}',
-            colPos:'12'} )}
-        </div>
-    </div>
-    <div class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+    <div id="pagewrapper" class="sftp">
+        <f:render partial="Navigation/GlobalTop"></f:render>
+        <f:render partial="Navigation/GlobalMenu"></f:render>
 
-        <!-- <f:render partial="Structure/CookieConsent" arguments="{_all}" /> -->
-        <a class="sr-only sr-only-focusable" href="#page-content">
-            <span>{f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}</span>
-        </a>
-        <f:render partial="Navigation/Main" arguments="{_all}" />
+        <main id="content"
+            class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
 
-        <f:render section="Border" optional="true" />
-        <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
+            <a class="sr-only sr-only-focusable" href="#page-content">
+                <span>{f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}</span>
+            </a>
+            <f:render partial="Navigation/Main" arguments="{_all}" />
 
-        <div id="page-content" class="bp-page-content main-section">
-            <!--TYPO3SEARCH_begin-->
-            <f:render section="Main" />
-            <!--TYPO3SEARCH_end-->
-        </div>
+            <f:render section="Border" optional="true" />
+            <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
 
-        <!-- <footer id="page-footer" class="bp-page-footer">
-        <f:render partial="DropIn/Structure/FooterBefore" arguments="{_all}" />
-        <f:render section="Footer" optional="true" />
-        <f:render partial="Structure/FooterMeta" arguments="{_all}" />
-        <f:render partial="DropIn/Structure/FooterAfter" arguments="{_all}" />
-    </footer> -->
-        <f:render partial="Structure/ScrollTop" arguments="{_all}" />
-
+            <div id="page-content">
+                <!--TYPO3SEARCH_begin-->
+                <f:render section="Main" />
+                <!--TYPO3SEARCH_end-->
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid" id="globalfooter">
+                <f:render partial="Structure/FooterContent" arguments="{_all}" />
+            </div>
+        </footer>
     </div>
 </f:spaceless>
 
