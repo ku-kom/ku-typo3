@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+
+    <div class="container">
+        <div class="col-md-3">
+            Left menu
+        </div>
+        <div class="col-md-6">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '18'}" />
+        </div>
+        <div class="col-md-3">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '19'}" />
+        </div>
+
+    </div>
+
+
+</f:section>
+
+</html>
