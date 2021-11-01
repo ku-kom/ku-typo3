@@ -10,21 +10,23 @@
 <header>
     <div aria-label="Globale genveje" class="navbar-inverse navbar-static-top ku-topbar" role="navigation">
         <div class="container relative">
-            <div class="col-md-6">
-                <!-- KU logo -->
 
-                <f:if condition="{ku_logo}">
-                    <f:format.stripTags>{ku_logo}</f:format.stripTags>
-                </f:if>
+            <!-- KU logo -->
 
+            <f:if condition="{ku_logo}">
+                <f:format.raw>{ku_logo}</f:format.raw>
+            </f:if>
+
+
+            <!-- Utility menu -->
+            <div class="navbar-collapse collapse" id="topbar">
+                <nav aria-label="Værktøjsmenu">
+                    <f:if condition="{ku_utility}">
+                        <f:format.raw>{ku_utility}</f:format.raw>
+                    </f:if>
+                </nav>
             </div>
-            <div class="col-md-6">
-                <!-- Utility menu -->
-                
-                <f:if condition="{ku_utility}">
-                    <f:format.raw>{ku_utility}</f:format.raw>
-                </f:if>
-            </div>
+
         </div>
     </div>
 </header>

@@ -5,11 +5,13 @@
 
 <!-- Global menu -->
 <f:if condition="{ku_global_menu}">
-    <div class="global-menu">
+    <nav aria-label="Global navigation" class="navbar navbar-default navbar-static-top ku-nav" id="kunav">
         <div class="container">
-            <f:format.raw>{ku_global_menu}</f:format.raw>
+            <div class="navbar-collapse collapse" id="navbar">
+                <f:format.raw>{ku_global_menu}</f:format.raw>
+            </div>
         </div>
-    </div>
+    </nav>
 </f:if>
 
 </html>

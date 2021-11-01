@@ -23,9 +23,9 @@
                 <f:render partial="Frame/General/BackgroundImage" arguments="{_all}" />
                 <div class="frame-container">
                     <div class="frame-inner">
-                        <f:if condition="{data._LOCALIZED_UID}">
+                        <!-- <f:if condition="{data._LOCALIZED_UID}">
                             <a id="c{data._LOCALIZED_UID}"></a>
-                        </f:if>
+                        </f:if> -->
                         <f:render section="Before" optional="true">
                             <f:render partial="DropIn/Before/All" arguments="{_all}" />
                         </f:render>
@@ -46,9 +46,9 @@
         </f:then>
         <f:else>
 
-            <a id="c{data.uid}"></a>
+            <!-- <a id="c{data.uid}"></a> -->
             <f:if condition="{data._LOCALIZED_UID}">
-                <a id="c{data._LOCALIZED_UID}"></a>
+                <!-- <a id="c{data._LOCALIZED_UID}"></a> -->
             </f:if>
             <f:if condition="{data.space_before_class}">
                 <div class="{spaceBeforeClass}"></div>
