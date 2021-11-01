@@ -4,12 +4,12 @@
 mod {
     web_layout {
         BackendLayouts {
-            2col {
+            ku_2col {
                 title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col
                 config {
                     backend_layout {
                         colCount = 2
-                        rowCount = 1
+                        rowCount = 2
                         rows {
                             1 {
                                 columns {
@@ -20,6 +20,17 @@ mod {
                                     2 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.right
                                         colPos = 19
+                                    }
+                                }
+                            }
+                        }
+                        rows {
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.center
+                                        colPos = 20
+                                        colspan = 12
                                     }
                                 }
                             }
