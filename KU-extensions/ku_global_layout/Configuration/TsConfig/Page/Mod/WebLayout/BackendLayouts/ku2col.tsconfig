@@ -4,33 +4,22 @@
 mod {
     web_layout {
         BackendLayouts {
-            ku_2col {
+            ku2col {
                 title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col
                 config {
                     backend_layout {
                         colCount = 2
-                        rowCount = 2
+                        rowCount = 1
                         rows {
                             1 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.left
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.center
                                         colPos = 18
                                     }
                                     2 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.right
                                         colPos = 19
-                                    }
-                                }
-                            }
-                        }
-                        rows {
-                            2 {
-                                columns {
-                                    1 {
-                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col.center
-                                        colPos = 20
-                                        colspan = 12
                                     }
                                 }
                             }

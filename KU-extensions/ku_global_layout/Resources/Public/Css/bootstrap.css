@@ -5262,6 +5262,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
     margin: 0;
   }
+
+  #navbar_menu {
+    display: block;
+  }
   .navbar-nav > li {
     float: left;
   }
@@ -5271,6 +5275,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 #topbar_menu {
+  display: block;
   height: 100%;
   margin-right: 17px;
   font-size: 13px;

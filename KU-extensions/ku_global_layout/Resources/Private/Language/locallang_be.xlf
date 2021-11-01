@@ -9,9 +9,6 @@
             <trans-unit id="backend_layout.example">
                 <source>Example</source>
             </trans-unit>
-            <trans-unit id="backend_layout.2col.left">
-                <source>Left</source>
-            </trans-unit>
             <trans-unit id="backend_layout.2col.right">
                 <source>Right</source>
             </trans-unit>
