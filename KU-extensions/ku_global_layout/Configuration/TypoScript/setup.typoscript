@@ -9,7 +9,7 @@
 ##############
 page {
     includeCSS {
-          #theme = EXT:legepladsen/Resources/Public/Scss/Theme/theme.scss
+        theme >
         ku_bootstrap = EXT:ku_global_layout/Resources/Public/Css/bootstrap.css
         ku_gridbox = https://cms.ku.dk/bootstrap/dist/css/ku-gridboxes.css
         ku_gridbox.external = 1
@@ -44,7 +44,7 @@ page {
     10{
         settings {
             ku {
-                special_id = {$page.settings.special_id}
+                special_id = {$page.ku.settings.special_id}
             }
         }
     }
@@ -63,3 +63,4 @@ config {
     removeDefaultCss = 1
     removePageCss = 1
 }
+

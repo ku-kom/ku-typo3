@@ -3,7 +3,9 @@
 #
 TCEFORM {
     pages {
-
+        [usergroup = 4]
+            colPos.disabled = 18
+        [GLOBAL]
     }
     tt_content {
 

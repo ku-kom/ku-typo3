@@ -5,14 +5,13 @@
         <f:render partial="Navigation/GlobalTop" arguments="{_all}" />
         <f:render partial="Navigation/GlobalMenu" arguments="{_all}" />
 
-        <main id="content"
-            class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+        <main id="content" class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+            <f:render partial="Structure/Navnetraek" arguments="{_all}" />
                 <f:comment>
                     <f:render partial="Navigation/Main" arguments="{_all}" />
                     <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
                 </f:comment>
                 <f:render section="Border" optional="true" />
-
                 <div id="page-content">
                     <!--TYPO3SEARCH_begin-->
                     <f:render section="Main" />

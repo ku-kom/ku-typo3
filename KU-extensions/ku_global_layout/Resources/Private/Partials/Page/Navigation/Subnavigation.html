@@ -2,6 +2,9 @@
     xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{subnavigation}">
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" id="leftmenu_container">
+        <div class="ku-navbar-header">
+            <h2><a aria-label="Forside: {siteTitle}" href="#">{siteTitle}</a></h2>
+          </div>
         <nav class="" role="navigation">
             <ul class="nav" id="leftmenu">
                 <f:render section="SubnavigationItem" arguments="{menu: subnavigation, theme: theme}" />
@@ -29,7 +32,7 @@
                             <li class="{f:if(condition: item.active, then:' active')}">
                         </f:else>
                     </f:if>
-                    <a href="{item.link}" id="subnav-item-{item.data.uid}" {f:if(condition: item.target,
+                    <a href="{item.link}" id="menuitem-{item.data.uid}" {f:if(condition: item.target,
                         then: ' target="{item.target}"' )} {f:if(condition: item.current, then: ' aria-current="page"'
                         )}>
                         {item.title}

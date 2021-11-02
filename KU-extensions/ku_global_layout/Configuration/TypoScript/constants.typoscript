@@ -58,3 +58,12 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+page {
+    ku {
+        setting {
+            # cat=kusettings/332/120;type=string;label=Special Page ID
+              special_id = 
+        }
+    }
+}

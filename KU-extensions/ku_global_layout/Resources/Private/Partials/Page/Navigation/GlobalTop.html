@@ -16,7 +16,7 @@
             <f:if condition="{ku_logo}">
                 <f:format.raw>{ku_logo}</f:format.raw>
             </f:if>
-
+   
 
             <!-- Utility menu -->
             <div class="navbar-collapse collapse" id="topbar">
@@ -24,6 +24,7 @@
                     <f:if condition="{ku_utility}">
                         <f:format.raw>{ku_utility}</f:format.raw>
                     </f:if>
+                    <f:render partial="Navigation/Language" arguments="{_all}" />
                 </nav>
             </div>
 
