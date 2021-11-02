@@ -2,22 +2,22 @@
 
 <f:spaceless>
     <div id="pagewrapper">
-        <f:render partial="Navigation/GlobalTop" arguments="{_all}"></f:render>
-        <f:render partial="Navigation/GlobalMenu" arguments="{_all}"></f:render>
+        <f:render partial="Navigation/GlobalTop" arguments="{_all}" />
+        <f:render partial="Navigation/GlobalMenu" arguments="{_all}" />
 
         <main id="content"
             class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+                <f:comment>
+                    <f:render partial="Navigation/Main" arguments="{_all}" />
+                    <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
+                </f:comment>
+                <f:render section="Border" optional="true" />
 
-            <f:render partial="Navigation/Main" arguments="{_all}" />
-
-            <f:render section="Border" optional="true" />
-            <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
-
-            <div id="page-content">
-                <!--TYPO3SEARCH_begin-->
-                <f:render section="Main" />
-                <!--TYPO3SEARCH_end-->
-            </div>
+                <div id="page-content">
+                    <!--TYPO3SEARCH_begin-->
+                    <f:render section="Main" />
+                    <!--TYPO3SEARCH_end-->
+                </div>
         </main>
         <footer>
             <div class="container-fluid" id="globalfooter">

@@ -310,14 +310,14 @@ template {
 @font-face {
   font-family: "ku-symbols";
   font-display: swap;
-  src: url("../fonts/KU.eot");
-  src: url("../fonts/KU.eot?#iefix") format('embedded-opentype'), url("../fonts/KU.woff2") format('woff2'), url("../fonts/KU.woff") format('woff'), url("../fonts/KU.ttf") format('truetype'), url("../fonts/KU.svg#ku_symbols") format('svg');
+  src: url("../Fonts/KU.eot");
+  src: url("../Fonts/KU.eot?#iefix") format('embedded-opentype'), url("../Fonts/KU.woff2") format('woff2'), url("../Fonts/KU.woff") format('woff'), url("../Fonts/KU.ttf") format('truetype'), url("../Fonts/KU.svg#ku_symbols") format('svg');
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
   font-display: swap;
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'), url("../fonts/glyphicons-halflings-regular.woff2") format('woff2'), url("../fonts/glyphicons-halflings-regular.woff") format('woff'), url("../fonts/glyphicons-halflings-regular.ttf") format('truetype'), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format('svg');
+  src: url("../Fonts/glyphicons-halflings-regular.eot");
+  src: url("../Fonts/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'), url("../Fonts/glyphicons-halflings-regular.woff2") format('woff2'), url("../Fonts/glyphicons-halflings-regular.woff") format('woff'), url("../Fonts/glyphicons-halflings-regular.ttf") format('truetype'), url("../Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format('svg');
 }
 .glyphicon {
   position: relative;
@@ -1310,32 +1310,32 @@ template {
 }
 @font-face {
   font-family: "Open Sans";
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.eot');
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.woff2') format('woff2'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.woff') format('woff'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.ttf') format('truetype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-300.svg#OpenSans') format('svg');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-300.eot');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), url('/Fonts/open-sans-v23-latin-ext_latin-300.woff2') format('woff2'), url('/Fonts/open-sans-v23-latin-ext_latin-300.woff') format('woff'), url('/Fonts/open-sans-v23-latin-ext_latin-300.ttf') format('truetype'), url('/Fonts/open-sans-v23-latin-ext_latin-300.svg#OpenSans') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.eot');
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.eot?#iefix') format('embedded-opentype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.woff2') format('woff2'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.woff') format('woff'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.ttf') format('truetype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-400.svg#OpenSans') format('svg');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-400.eot');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-400.eot?#iefix') format('embedded-opentype'), url('/Fonts/open-sans-v23-latin-ext_latin-400.woff2') format('woff2'), url('/Fonts/open-sans-v23-latin-ext_latin-400.woff') format('woff'), url('/Fonts/open-sans-v23-latin-ext_latin-400.ttf') format('truetype'), url('/Fonts/open-sans-v23-latin-ext_latin-400.svg#OpenSans') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.eot');
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.woff2') format('woff2'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.woff') format('woff'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.ttf') format('truetype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-600.svg#OpenSans') format('svg');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-600.eot');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'), url('/Fonts/open-sans-v23-latin-ext_latin-600.woff2') format('woff2'), url('/Fonts/open-sans-v23-latin-ext_latin-600.woff') format('woff'), url('/Fonts/open-sans-v23-latin-ext_latin-600.ttf') format('truetype'), url('/Fonts/open-sans-v23-latin-ext_latin-600.svg#OpenSans') format('svg');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.eot');
-  src: url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.woff2') format('woff2'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.woff') format('woff'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.ttf') format('truetype'), url('https://cms.ku.dk/styling/fonts/open-sans-v23-latin-ext_latin-700.svg#OpenSans') format('svg');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-700.eot');
+  src: url('/Fonts/open-sans-v23-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), url('/Fonts/open-sans-v23-latin-ext_latin-700.woff2') format('woff2'), url('/Fonts/open-sans-v23-latin-ext_latin-700.woff') format('woff'), url('/Fonts/open-sans-v23-latin-ext_latin-700.ttf') format('truetype'), url('/Fonts/open-sans-v23-latin-ext_latin-700.svg#OpenSans') format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -11778,8 +11778,8 @@ fieldset[disabled] .datepicker-days .table-striped .day.today:hover {
 @font-face {
   font-family: 'Glyphicons Halflings';
   font-display: swap;
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'), url("../fonts/glyphicons-halflings-regular.woff2") format('woff2'), url("../fonts/glyphicons-halflings-regular.woff") format('woff'), url("../fonts/glyphicons-halflings-regular.ttf") format('truetype'), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format('svg');
+  src: url("../Fonts/glyphicons-halflings-regular.eot");
+  src: url("../Fonts/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'), url("../Fonts/glyphicons-halflings-regular.woff2") format('woff2'), url("../Fonts/glyphicons-halflings-regular.woff") format('woff'), url("../Fonts/glyphicons-halflings-regular.ttf") format('truetype'), url("../Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format('svg');
 }
 .ccc {
   position: fixed;
