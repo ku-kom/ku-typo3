@@ -32,9 +32,8 @@ page {
     }
 
     includeJSFooter {
-        #ku_global_layout_scripts = EXT:ku_global_layout/Resources/Public/JavaScript/Dist/scripts.js
-        ku_bootstrap_js = EXT:ku_global_layout/Resources/Public/JavaScript/Dist/ku-custom.js
-        #ku_bootstrap_js.external = 1
+        ku_bootstrap_js = EXT:ku_global_layout/Resources/Public/JavaScript/Dist/bootstrap.js
+        ku_bootstrap_custom_js = EXT:ku_global_layout/Resources/Public/JavaScript/Dist/ku-custom.js
     }
 }
 
@@ -47,6 +46,15 @@ page {
                 special_id = {$page.ku.settings.special_id}
             }
         }
+    }
+    includeCSS {
+        theme >
+    }
+    includeJSLibs {
+        theme >
+    }
+    includeJS {
+        theme >
     }
 }
 
