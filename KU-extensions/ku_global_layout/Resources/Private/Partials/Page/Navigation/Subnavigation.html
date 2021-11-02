@@ -3,35 +3,47 @@
 <f:if condition="{subnavigation}">
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" id="leftmenu_container">
         <nav class="" role="navigation">
-            <f:render section="SubnavigationItem" arguments="{menu: subnavigation, theme: theme}" />
+            <ul class="nav" id="leftmenu">
+                <f:render section="SubnavigationItem" arguments="{menu: subnavigation, theme: theme}" />
+            </ul>
         </nav>
     </div>
 </f:if>
 <f:section name="SubnavigationItem">
     <f:if condition="{menu}">
-        <f:comment><f:debug>{menu}</f:debug></f:comment>
-        <ul class="nav" id="leftmenu">
-            <f:for each="{menu}" as="item">
-                <f:if condition="{item.spacer}">
-                    <f:then>
-                        <li class="subnav-divider"></li>
-                    </f:then>
-                    <f:else>
-                        <li class="{f:if(condition: item.active, then:' active')}">
-                            <a href="{item.link}" id="subnav-item-{item.data.uid}" {f:if(condition:
-                                item.target, then: ' target="{item.target}"' )} {f:if(condition:
-                                    item.current, then: ' aria-current="page"' )}>
-                                <span class="subnav-link-text">{item.title}<f:if condition="{item.current}"> <span
-                                            class="sr-only">(current)</span></f:if></span>
-                            </a>
-                            <f:if condition="{item.children}">
-                                <f:render section="SubnavigationItem" arguments="{menu: item.children, theme: theme}" />
-                            </f:if>
-                        </li>
-                    </f:else>
-                </f:if>
-            </f:for>
-        </ul>
+        <f:comment>
+            <f:debug>{menu}</f:debug>
+        </f:comment>
+
+        <f:for each="{menu}" as="item">
+            <f:if condition="{item.spacer}">
+                <f:then>
+                    <li class="subnav-divider"></li>
+                </f:then>
+                <f:else>
+                    <f:if condition="{item.children}">
+                        <f:then>
+                            <li>
+                        </f:then>
+                        <f:else>
+                            <li class="{f:if(condition: item.active, then:' active')}">
+                        </f:else>
+                    </f:if>
+                    <a href="{item.link}" id="subnav-item-{item.data.uid}" {f:if(condition: item.target,
+                        then: ' target="{item.target}"' )} {f:if(condition: item.current, then: ' aria-current="page"'
+                        )}>
+                        {item.title}
+                    </a>
+                    <f:if condition="{item.children}">
+                        <ul>
+                            <f:render section="SubnavigationItem" arguments="{menu: item.children, theme: theme}" />
+                        </ul>
+                    </f:if>
+                    </li>
+                </f:else>
+            </f:if>
+        </f:for>
+
     </f:if>
 </f:section>
 
