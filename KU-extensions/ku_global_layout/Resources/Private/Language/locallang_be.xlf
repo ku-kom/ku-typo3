@@ -10,10 +10,10 @@
                 <source>Example</source>
             </trans-unit>
             <trans-unit id="backend_layout.right">
-                <source>Right</source>
+                <source>Right column</source>
             </trans-unit>
             <trans-unit id="backend_layout.center">
-                <source>Center</source>
+                <source>Center column</source>
             </trans-unit>
             <trans-unit id="backend_layout.2colmenu">
                 <source>KU left menu, content and right column</source>
