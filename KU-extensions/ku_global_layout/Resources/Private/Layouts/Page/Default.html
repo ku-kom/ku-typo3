@@ -12,12 +12,14 @@
                     <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
                 </f:comment>
                 <f:render section="Border" optional="true" />
-                <div id="page-content">
+                <div class="container main-area" id="main-area">
                     <!--TYPO3SEARCH_begin-->
                     <f:render section="Main" />
                     <!--TYPO3SEARCH_end-->
                 </div>
+                <f:render partial="Structure/LocalFooter" arguments="{_all}" />
         </main>
+        
         <footer>
             <div class="container-fluid" id="globalfooter">
                 <f:render partial="Structure/FooterContent" arguments="{_all}" />

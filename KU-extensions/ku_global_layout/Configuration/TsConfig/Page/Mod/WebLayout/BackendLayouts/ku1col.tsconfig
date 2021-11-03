@@ -5,21 +5,17 @@ mod {
     web_layout {
         BackendLayouts {
             ku2col {
-                title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2colmenu
+                title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col
                 config {
                     backend_layout {
-                        colCount = 2
+                        colCount = 1
                         rowCount = 1
                         rows {
                             1 {
                                 columns {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.center
-                                        colPos = 18
-                                    }
-                                    2 {
-                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.right
-                                        colPos = 19
+                                        colPos = 20
                                     }
                                 }
                             }

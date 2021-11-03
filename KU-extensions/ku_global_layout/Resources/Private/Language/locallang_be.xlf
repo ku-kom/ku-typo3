@@ -9,14 +9,17 @@
             <trans-unit id="backend_layout.example">
                 <source>Example</source>
             </trans-unit>
-            <trans-unit id="backend_layout.2col.right">
+            <trans-unit id="backend_layout.right">
                 <source>Right</source>
             </trans-unit>
-            <trans-unit id="backend_layout.2col.center">
+            <trans-unit id="backend_layout.center">
                 <source>Center</source>
             </trans-unit>
+            <trans-unit id="backend_layout.2colmenu">
+                <source>KU left menu, content and right column</source>
+            </trans-unit>
             <trans-unit id="backend_layout.2col">
-                <source>KU two columns</source>
+                <source>KU left menu and one column</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.topbar">
                 <source>Global grey topbar</source>
@@ -27,17 +30,23 @@
             <trans-unit id="backend_layout.column.utility">
                 <source>Global utility menu</source>
             </trans-unit>
+            <trans-unit id="backend_layout.column.local_footer_address">
+                <source>Local footer address</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.local_footer_contact">
+                <source>Local footer contact</source>
+            </trans-unit>
             <trans-unit id="backend_layout.column.footer_col1">
-                <source>Global footer - col 1</source>
+                <source>Global footer - column 1</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.footer_col2">
-                <source>Global footer - col 2</source>
+                <source>Global footer - column 2</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.footer_col3">
-                <source>Global footer - col 3</source>
+                <source>Global footer - column 3</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.footer_col4">
-                <source>Global footer - col 4</source>
+                <source>Global footer - column 4</source>
             </trans-unit>
             <trans-unit id="backend_layout.global">
                 <source>Global layout elements</source>

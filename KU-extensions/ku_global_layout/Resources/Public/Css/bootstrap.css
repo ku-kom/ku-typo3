@@ -7656,7 +7656,6 @@ img.img-default:after,
   min-height: 100%;
 }
 #content {
-  display: block!important;
   -ms-flex: 1 0 auto;
       flex: 1 0 auto;
   background-color: #fff;

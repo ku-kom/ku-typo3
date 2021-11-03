@@ -40,7 +40,7 @@ page {
 
 
 page {
-    10{
+    10 {
         settings {
             ku {
                 special_id = {$page.ku.settings.special_id}
@@ -50,7 +50,13 @@ page {
     includeCSS {
         theme >
     }
+    includeCSSLibs {
+        theme >
+    }
     includeJSLibs {
+        theme >
+    }
+    includeJSFooterlibs {
         theme >
     }
     includeJS {
