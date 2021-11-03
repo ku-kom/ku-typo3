@@ -5,5 +5,5 @@ TCEMAIN {
 
 }
 
-
-mod.SHARED.colPos_list = 0,1,3,4
+#MÅ IKKE ÆNDRES
+#mod.SHARED.colPos_list = 0,1,3,4
