@@ -26,7 +26,7 @@
                 <f:else>
                     <f:if condition="{item.children}">
                         <f:then>
-                            <li>
+                            <li class="{f:if(condition: item.current, then: ' active"')}">
                         </f:then>
                         <f:else>
                             <li class="{f:if(condition: item.active, then:' active')}">
