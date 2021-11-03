@@ -4,8 +4,8 @@
 mod {
     web_layout {
         BackendLayouts {
-            ku1col {
-                title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.2col
+            kunoleftmenu {
+                title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.noleftmenu
                 config {
                     backend_layout {
                         colCount = 1
@@ -15,7 +15,7 @@ mod {
                                 columns {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.center
-                                        colPos = 20
+                                        colPos = 23
                                     }
                                 }
                             }

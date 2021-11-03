@@ -8,7 +8,9 @@
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9 main-content">
             <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
-            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}" />
+            <div class="gridcontent">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '20'}" />
+            </div>
         </div>
     </div>
 

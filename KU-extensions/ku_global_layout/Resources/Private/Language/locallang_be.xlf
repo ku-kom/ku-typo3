@@ -19,7 +19,10 @@
                 <source>KU left menu, content and right column</source>
             </trans-unit>
             <trans-unit id="backend_layout.2col">
-                <source>KU left menu and one column</source>
+                <source>KU left menu and center column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.noleftmenu">
+                <source>KU full width, no left menu</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.topbar">
                 <source>Global grey topbar</source>
@@ -49,7 +52,7 @@
                 <source>Global footer - column 4</source>
             </trans-unit>
             <trans-unit id="backend_layout.global">
-                <source>Global layout elements</source>
+                <source>KU Global layout elements</source>
             </trans-unit>
         </body>
     </file>
