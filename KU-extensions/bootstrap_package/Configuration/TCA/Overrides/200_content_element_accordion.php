@@ -7,47 +7,36 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['accordion'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['accordion'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['accordion'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Accordion.tsconfig',
     'Bootstrap Package Content Element: Accordion'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.accordion',
         'accordion',
-        'content-bootstrappackage-accordion'
-    ],
-    '--div--',
-    'after'
+        'content-bootstrappackage-accordion',
+        'bootstrap_package'
+    ]
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['accordion'] = 'content-bootstrappackage-accordion';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['accordion'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['accordion'],
     [
@@ -75,9 +64,7 @@ $GLOBALS['TCA']['tt_content']['types']['accordion'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Register fields
- */
+// Register fields
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [
@@ -92,7 +79,6 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
                     'showSynchronizationLink' => true,
                     'showAllLocalizationLink' => true,
                     'showPossibleLocalizationRecords' => true,
-                    'showRemovedLocalizationRecords' => false,
                     'expandSingle' => true,
                     'enabledControls' => [
                         'localize' => true,
@@ -106,9 +92,7 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Add flexForms for content element configuration
- */
+// Add flexForms for content element configuration
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
     'FILE:EXT:bootstrap_package/Configuration/FlexForms/Accordion.xml',

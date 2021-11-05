@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the package bk2k/bootstrap-package.
@@ -19,18 +19,18 @@ class ImageVariantsUtilityTest extends UnitTestCase
 {
     /**
      * @param array $data
-     * @param string $expectedResult
+     * @param array $expectedResult
      * @dataProvider getImageVariantsTestDataProvider
      * @test
      */
-    public function getImageVariantsTest(array $data, array $expectedResult)
+    public function getImageVariantsTest(array $data, array $expectedResult): void
     {
         $variants = isset($data['variants']) ? $data['variants'] : null;
         $multiplier = isset($data['multiplier']) ? $data['multiplier'] : null;
         $corrections = isset($data['corrections']) ? $data['corrections'] : null;
         $gutters = isset($data['gutters']) ? $data['gutters'] : null;
         $result = ImageVariantsUtility::getImageVariants($variants, $multiplier, $gutters, $corrections);
-        $this->assertSame($expectedResult, $result);
+        self::assertSame($expectedResult, $result);
     }
 
     /**
@@ -43,59 +43,15 @@ class ImageVariantsUtilityTest extends UnitTestCase
                 [],
                 [
                     'default' => [
-                        'breakpoint' => 1200,
-                        'width' => 1100,
+                        'breakpoint' => 1400,
+                        'width' => 1280,
                         'sizes' => [
                             '1x' => [
                                 'multiplier' => 1
                             ]
                         ]
                     ],
-                    'large' => [
-                        'breakpoint' => 992,
-                        'width' => 920,
-                        'sizes' => [
-                            '1x' => [
-                                'multiplier' => 1,
-                            ]
-                        ]
-                    ],
-                    'medium' => [
-                        'breakpoint' => 768,
-                        'width' => 680,
-                        'sizes' => [
-                            '1x' => [
-                                'multiplier' => 1,
-                            ]
-                        ]
-                    ],
-                    'small' => [
-                        'breakpoint' => 576,
-                        'width' => 500,
-                        'sizes' => [
-                            '1x' => [
-                                'multiplier' => 1,
-                            ]
-                        ]
-                    ],
-                    'extrasmall' => [
-                        'width' => 374,
-                        'sizes' => [
-                            '1x' => [
-                                'multiplier' => 1,
-                            ]
-                        ]
-                    ]
-                ]
-            ],
-            'invalid dataset' => [
-                [
-                    'variants' => 'string',
-                    'multiplier' => 'string',
-                    'corrections' => 'string'
-                ],
-                [
-                    'default' => [
+                    'xlarge' => [
                         'breakpoint' => 1200,
                         'width' => 1100,
                         'sizes' => [
@@ -507,7 +463,7 @@ class ImageVariantsUtilityTest extends UnitTestCase
                 ],
                 [
                     'default' => [
-                        'width' => 1100,
+                        'width' => 1060,
                         'sizes' => [
                             '1x' => [
                                 'multiplier' => 1
@@ -559,7 +515,7 @@ class ImageVariantsUtilityTest extends UnitTestCase
                 ],
                 [
                     'numeric-string' => [
-                        'width' => 1100,
+                        'width' => 1060,
                         'sizes' => [
                             '1x' => [
                                 'multiplier' => 1
@@ -633,7 +589,7 @@ class ImageVariantsUtilityTest extends UnitTestCase
                         ]
                     ],
                     'large' => [
-                        'width' => 680,
+                        'width' => 660,
                         'sizes' => [
                             '1x' => [
                                 'multiplier' => 1
@@ -912,17 +868,63 @@ class ImageVariantsUtilityTest extends UnitTestCase
                         ]
                     ]
                 ]
+            ],
+            'aspect-ratio' => [
+                [
+                    'variants' => [
+                        'float' => [
+                            'width' => 1100,
+                            'aspectRatio' => 1.3333333333333,
+                        ],
+                        'integer' => [
+                            'width' => 1100,
+                            'aspectRatio' => 1,
+                        ],
+                        'invalid' => [
+                            'width' => 1100,
+                            'aspectRatio' => 'invalid',
+                        ]
+                    ]
+                ],
+                [
+                    'float' => [
+                        'width' => 1100,
+                        'aspectRatio' => 1.3333333333333,
+                        'sizes' => [
+                            '1x' => [
+                                'multiplier' => 1,
+                            ]
+                        ]
+                    ],
+                    'integer' => [
+                        'width' => 1100,
+                        'aspectRatio' => 1.0,
+                        'sizes' => [
+                            '1x' => [
+                                'multiplier' => 1,
+                            ]
+                        ]
+                    ],
+                    'invalid' => [
+                        'width' => 1100,
+                        'sizes' => [
+                            '1x' => [
+                                'multiplier' => 1,
+                            ]
+                        ]
+                    ]
+                ]
             ]
         ];
     }
 
     /**
      * @param array $data
-     * @param string $expectedResult
+     * @param array $expectedResult
      * @dataProvider getStackedImageVariantsTestDataProvider
      * @test
      */
-    public function getStackedImageVariantsTest(array $data, array $expectedResult)
+    public function getStackedImageVariantsTest(array $data, array $expectedResult): void
     {
         $result = null;
         foreach ($data as $datasetKey => $datasetConfig) {
@@ -932,7 +934,7 @@ class ImageVariantsUtilityTest extends UnitTestCase
             $gutters = isset($datasetConfig['gutters']) ? $datasetConfig['gutters'] : null;
             $result = ImageVariantsUtility::getImageVariants($variants, $multiplier, $gutters, $corrections);
         }
-        $this->assertSame($expectedResult, $result);
+        self::assertSame($expectedResult, $result);
     }
 
     /**
@@ -996,6 +998,32 @@ class ImageVariantsUtilityTest extends UnitTestCase
                     ]
                 ]
             ],
+            'keep-aspect-ratio' => [
+                [
+                    'base' => [
+                        'variants' => [
+                            'default' => [
+                                'width' => 1100,
+                                'aspectRatio' => 1.5
+                            ]
+                        ]
+                    ],
+                    'extend' => [
+                        'multiplier' => [ 'default' => 0.5 ]
+                    ]
+                ],
+                [
+                    'default' => [
+                        'width' => 550,
+                        'aspectRatio' => 1.5,
+                        'sizes' => [
+                            '1x' => [
+                                'multiplier' => 1
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ];
     }
 
@@ -1005,10 +1033,10 @@ class ImageVariantsUtilityTest extends UnitTestCase
      * @dataProvider isValidSizeKeyTestDataProvider
      * @test
      */
-    public function isValidSizeKeyTest($input, bool $expectedResult)
+    public function isValidSizeKeyTest($input, bool $expectedResult): void
     {
         $result = ImageVariantsUtility::isValidSizeKey($input);
-        $this->assertSame($expectedResult, $result);
+        self::assertSame($expectedResult, $result);
     }
 
     /**

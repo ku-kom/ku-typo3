@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['texticon'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['texticon'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['texticon'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Texticon.tsconfig',
     'Bootstrap Package Content Element: Text and Icon'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.texticon',
         'texticon',
-        'content-bootstrappackage-texticon'
+        'content-bootstrappackage-texticon',
+        'bootstrap_package'
     ],
     'textcolumn',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['texticon'] = 'content-bootstrappackage-texticon';
 
-/***************
- * Register palettes
- */
+// Register palettes
 $GLOBALS['TCA']['tt_content']['palettes']['bootstrap_package_icons'] = [
     'showitem' => '
         icon_position, icon_type, icon_size, --linebreak--,
@@ -57,9 +48,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['bootstrap_package_icons'] = [
     '
 ];
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['texticon'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['texticon'],
     [
@@ -95,9 +84,7 @@ $GLOBALS['TCA']['tt_content']['types']['texticon'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Register fields
- */
+// Register fields
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [
@@ -107,11 +94,7 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items' => [
-                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.none', ''],
-                    ['Ionicons', 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/'],
-                    ['Glyphicons', 'EXT:bootstrap_package/Resources/Public/Images/Icons/Glyphicons/'],
-                ],
+                'itemsProcFunc' => 'BK2K\BootstrapPackage\Service\IconService->getIconSetItems',
             ],
         ],
         'icon' => [
@@ -120,10 +103,7 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items' => [
-                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.none', 0, 'EXT:bootstrap_package/Resources/Public/Images/Icons/none.jpg'],
-                ],
-                'itemsProcFunc' => 'BK2K\BootstrapPackage\Utility\TextIconUtility->addIconItems',
+                'itemsProcFunc' => 'BK2K\BootstrapPackage\Service\IconService->getIconItems',
                 'fieldWizard' => [
                     'selectIcons' => [
                         'disabled' => false,

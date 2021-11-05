@@ -87,6 +87,12 @@ Recommended Apache Modules
 Usage
 =====
 
+Documentation
+-------------
+
+* `Wiki <https://github.com/benjaminkott/bootstrap_package/wiki>`_
+* `Documentation <https://docs.typo3.org/p/bk2k/bootstrap-package/master/en-us/>`_
+
 Contributing
 ------------
 
@@ -106,7 +112,6 @@ The extension comes with a ready to use DDEV Local configuration. Type
 
 ``ddev launch`` will open the browser and head to the testing website. You can
 use ``ddev launch typo3`` to get directly to the backend.
-
 
 Bug reporting
 -------------
@@ -149,11 +154,3 @@ Code Quality
 .. image:: https://github.com/benjaminkott/bootstrap_package/workflows/CI/badge.svg
    :alt: Continuous Integration Status
    :target: https://github.com/benjaminkott/bootstrap_package/actions?query=workflow%3ACI
-
-.. image:: https://travis-ci.org/benjaminkott/bootstrap_package.svg?branch=master
-   :alt: Build Status
-   :target: https://travis-ci.org/benjaminkott/bootstrap_package
-
-.. image:: https://scrutinizer-ci.com/g/benjaminkott/bootstrap_package/badges/quality-score.png?b=master
-   :alt: Scrutinizer Code Quality
-   :target: https://scrutinizer-ci.com/g/benjaminkott/bootstrap_package/?branch=master

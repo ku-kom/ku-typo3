@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the package bk2k/bootstrap-package.
@@ -10,6 +10,7 @@
 namespace BK2K\BootstrapPackage\Service;
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -17,40 +18,43 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class BrandingService
 {
-    /**
-     * @var string
-     */
-    const EXT_KEY = 'bootstrap_package';
-
-    /**
-     * @param string $extension
-     */
-    public function setBackendStyling($extension = null)
+    public function __invoke(AfterPackageActivationEvent $event): void
     {
-        if ($extension === self::EXT_KEY && class_exists(ExtensionConfiguration::class)) {
+        if ($event->getPackageKey() === 'bootstrap_package') {
+            $this->setBackendStyling();
+        }
+    }
+
+    public function setBackendStyling(): void
+    {
+        if (class_exists(ExtensionConfiguration::class)) {
             $extensionConfiguration = GeneralUtility::makeInstance(
                 ExtensionConfiguration::class
             );
             $backendConfiguration = $extensionConfiguration->get('backend');
 
-            if (!isset($backendConfiguration['loginLogo']) || empty(trim($backendConfiguration['loginLogo']))) {
+            if (!isset($backendConfiguration['loginLogo']) || trim($backendConfiguration['loginLogo']) === '') {
                 $backendConfiguration['loginLogo'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/login-logo.svg';
             }
-            if (!isset($backendConfiguration['loginBackgroundImage']) || empty(trim($backendConfiguration['loginBackgroundImage']))) {
+            if (!isset($backendConfiguration['loginBackgroundImage']) || trim($backendConfiguration['loginBackgroundImage']) === '') {
                 $backendConfiguration['loginBackgroundImage'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/login-background-image.jpg';
             }
-            if (!isset($backendConfiguration['backendLogo']) || empty(trim($backendConfiguration['backendLogo']))) {
+            if (!isset($backendConfiguration['backendLogo']) || trim($backendConfiguration['backendLogo']) === '') {
                 $backendConfiguration['backendLogo'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/backend-logo.svg';
             }
 
+            // Workaround for
+            // https://review.typo3.org/c/Packages/TYPO3.CMS/+/62650
             $reflection = new \ReflectionClass(ExtensionConfiguration::class);
             $parameters = $reflection->getMethod('set')->getParameters();
-
+            $arguments = [];
+            $arguments[] = 'backend';
             if (count($parameters) === 3) {
-                $extensionConfiguration->set('backend', '', $backendConfiguration);
-            } else {
-                $extensionConfiguration->set('backend', $backendConfiguration);
+                $arguments[] = '';
             }
+            $arguments[] = $backendConfiguration;
+
+            $extensionConfiguration->set(...$arguments);
         }
     }
 }

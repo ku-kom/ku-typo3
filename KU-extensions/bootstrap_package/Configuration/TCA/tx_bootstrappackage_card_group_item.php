@@ -84,8 +84,12 @@ return [
                 link,
                 link_title,
                 --linebreak--,
-                link_icon,
                 link_class,
+                --linebreak--,
+                link_icon_set,
+                --linebreak--,
+                link_icon_identifier,
+                link_icon,
             '
         ],
         'general' => [
@@ -277,7 +281,7 @@ return [
                 'type' => 'text',
                 'cols' => '80',
                 'rows' => '15',
-                'softref' => 'typolink_tag,images,email[subst],url',
+                'softref' => 'typolink_tag,email[subst],url',
                 'enableRichtext' => true
             ],
         ],
@@ -309,9 +313,35 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'link_icon_set' => [
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_icon_set',
+            'onChange' => 'reload',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'itemsProcFunc' => 'BK2K\BootstrapPackage\Service\IconService->getIconSetItems',
+            ],
+        ],
+        'link_icon_identifier' => [
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_icon_identifier',
+            'displayCond' => 'FIELD:link_icon_set:REQ:true',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'itemsProcFunc' => 'BK2K\BootstrapPackage\Service\IconService->getIconItems',
+                'itemsProcConfig' => [
+                    'iconSetField' => 'link_icon_set'
+                ],
+                'fieldWizard' => [
+                    'selectIcons' => [
+                        'disabled' => false,
+                    ],
+                ],
+            ],
+        ],
         'link_icon' => [
-            'exclude' => true,
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_icon',
+            'displayCond' => 'FIELD:link_icon_set:REQ:false',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'link_icon',
                 [
@@ -352,10 +382,9 @@ return [
                             ],
                         ],
                     ],
-                    'minitems' => 0,
                     'maxitems' => 1,
                 ],
-                'svg'
+                'gif,png,svg'
             ),
         ],
         'link_class' => [
@@ -368,6 +397,8 @@ return [
                     ['default', 'default'],
                     ['primary', 'primary'],
                     ['secondary', 'secondary'],
+                    ['tertiary', 'tertiary'],
+                    ['quaternary', 'quaternary'],
                     ['success', 'success'],
                     ['info', 'info'],
                     ['warning', 'warning'],
@@ -375,6 +406,8 @@ return [
                     ['outline-default', 'outline-default'],
                     ['outline-primary', 'outline-primary'],
                     ['outline-secondary', 'outline-secondary'],
+                    ['outline-tertiary', 'outline-tertiary'],
+                    ['outline-quaternary', 'outline-quaternary'],
                     ['outline-success', 'outline-success'],
                     ['outline-info', 'outline-info'],
                     ['outline-warning', 'outline-warning'],

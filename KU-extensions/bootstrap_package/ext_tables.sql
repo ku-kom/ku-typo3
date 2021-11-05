@@ -1,15 +1,17 @@
-#
-# Table structure for table 'pages'
-#
+--
+-- Table structure for table 'pages'
+--
 CREATE TABLE pages (
+    nav_icon_set varchar(255) DEFAULT '' NOT NULL,
+    nav_icon_identifier varchar(255) DEFAULT '' NOT NULL,
     nav_icon int(11) unsigned DEFAULT '0',
     thumbnail int(11) unsigned DEFAULT '0',
 );
 
 
-#
-# Table structure for table 'sys_language'
-#
+--
+-- Table structure for table 'sys_language'
+--
 CREATE TABLE sys_language (
     nav_title varchar(255) DEFAULT '' NOT NULL,
     locale varchar(20) DEFAULT '' NOT NULL,
@@ -18,11 +20,13 @@ CREATE TABLE sys_language (
 );
 
 
-#
-# Table structure for table 'tt_content'
-#
+--
+-- Table structure for table 'tt_content'
+--
 CREATE TABLE tt_content (
     teaser text,
+    aspect_ratio varchar(255) DEFAULT '1.3333333333333' NOT NULL,
+    items_per_page int(11) unsigned DEFAULT '10',
     readmore_label varchar(255) DEFAULT '' NOT NULL,
     quote_source varchar(255) DEFAULT '' NOT NULL,
     quote_link varchar(1024) DEFAULT '' NOT NULL,
@@ -44,15 +48,16 @@ CREATE TABLE tt_content (
     tx_bootstrappackage_icon_group_item int(11) unsigned DEFAULT '0',
     tx_bootstrappackage_tab_item int(11) unsigned DEFAULT '0',
     tx_bootstrappackage_timeline_item int(11) unsigned DEFAULT '0',
+    frame_layout varchar(255) DEFAULT 'default' NOT NULL,
     background_color_class varchar(255) DEFAULT '' NOT NULL,
     background_image int(11) unsigned DEFAULT '0',
     background_image_options mediumtext,
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_card_group_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_card_group_item'
+--
 CREATE TABLE tx_bootstrappackage_card_group_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -64,6 +69,8 @@ CREATE TABLE tx_bootstrappackage_card_group_item (
     bodytext text,
     link varchar(1024) DEFAULT '' NOT NULL,
     link_title varchar(255) DEFAULT '' NOT NULL,
+    link_icon_set varchar(255) DEFAULT '' NOT NULL,
+    link_icon_identifier varchar(255) DEFAULT '' NOT NULL,
     link_icon int(11) unsigned DEFAULT '0',
     link_class varchar(255) DEFAULT '' NOT NULL,
 
@@ -98,15 +105,16 @@ CREATE TABLE tx_bootstrappackage_card_group_item (
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_carousel_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_carousel_item'
+--
 CREATE TABLE tx_bootstrappackage_carousel_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 
     tt_content int(11) unsigned DEFAULT '0',
     item_type varchar(255) DEFAULT '' NOT NULL,
+    layout varchar(255) DEFAULT '' NOT NULL,
     header varchar(255) DEFAULT '' NOT NULL,
     header_layout tinyint(3) unsigned DEFAULT '1' NOT NULL,
     header_position varchar(255) DEFAULT 'center' NOT NULL,
@@ -155,9 +163,9 @@ CREATE TABLE tx_bootstrappackage_carousel_item (
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_accordion_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_accordion_item'
+--
 CREATE TABLE tx_bootstrappackage_accordion_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -201,9 +209,9 @@ CREATE TABLE tx_bootstrappackage_accordion_item (
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_icon_group_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_icon_group_item'
+--
 CREATE TABLE tx_bootstrappackage_icon_group_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -213,6 +221,8 @@ CREATE TABLE tx_bootstrappackage_icon_group_item (
     subheader varchar(255) DEFAULT '' NOT NULL,
     bodytext text,
     link varchar(1024) DEFAULT '' NOT NULL,
+    icon_set varchar(255) DEFAULT '' NOT NULL,
+    icon_identifier varchar(255) DEFAULT '' NOT NULL,
     icon_file int(11) unsigned DEFAULT '0',
 
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -246,9 +256,9 @@ CREATE TABLE tx_bootstrappackage_icon_group_item (
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_tab_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_tab_item'
+--
 CREATE TABLE tx_bootstrappackage_tab_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -292,9 +302,9 @@ CREATE TABLE tx_bootstrappackage_tab_item (
 );
 
 
-#
-# Table structure for table 'tx_bootstrappackage_timeline_item'
-#
+--
+-- Table structure for table 'tx_bootstrappackage_timeline_item'
+--
 CREATE TABLE tx_bootstrappackage_timeline_item (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -303,6 +313,8 @@ CREATE TABLE tx_bootstrappackage_timeline_item (
     date datetime,
     header varchar(255) DEFAULT '' NOT NULL,
     bodytext text,
+    icon_set varchar(255) DEFAULT '' NOT NULL,
+    icon_identifier varchar(255) DEFAULT '' NOT NULL,
     icon_file int(11) unsigned DEFAULT '0',
     image int(11) unsigned DEFAULT '0',
 

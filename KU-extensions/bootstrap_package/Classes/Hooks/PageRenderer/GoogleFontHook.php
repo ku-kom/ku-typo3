@@ -11,6 +11,8 @@ declare(strict_types = 1);
 namespace BK2K\BootstrapPackage\Hooks\PageRenderer;
 
 use BK2K\BootstrapPackage\Service\GoogleFontService;
+use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Http\ApplicationType;
 use TYPO3\CMS\Core\TypoScript\TemplateService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -36,9 +38,10 @@ class GoogleFontHook
      * @param array $params
      * @param \TYPO3\CMS\Core\Page\PageRenderer $pagerenderer
      */
-    public function execute(&$params, &$pagerenderer)
+    public function execute(&$params, &$pagerenderer): void
     {
-        if (TYPO3_MODE !== 'FE' ||
+        if (!($GLOBALS['TYPO3_REQUEST'] ?? null) instanceof ServerRequestInterface ||
+            !ApplicationType::fromRequest($GLOBALS['TYPO3_REQUEST'])->isFrontend() ||
             (!is_array($params['cssFiles']) && !is_array($params['cssLibs']))
         ) {
             return;
@@ -49,7 +52,7 @@ class GoogleFontHook
                 $files = [];
                 foreach ($params[$section] as $file => $settings) {
                     $cachedFile = $this->getGoogleFontService()->getCachedFile($file);
-                    if ($cachedFile !== false) {
+                    if ($cachedFile !== null) {
                         $this->adjustTypoScriptCssConfiguration($include, $file, $cachedFile);
                         $settings['file'] = $cachedFile;
                         $files[$cachedFile] = $settings;
@@ -67,10 +70,10 @@ class GoogleFontHook
      * @param string $file
      * @param string $cachedFile
      */
-    protected function adjustTypoScriptCssConfiguration($include, $file, $cachedFile)
+    protected function adjustTypoScriptCssConfiguration($include, $file, $cachedFile): void
     {
         $includeFilesConfiguration = $this->getTemplateService()->setup['page.'][$include . '.'];
-        if (!empty($includeFilesConfiguration)) {
+        if (is_array($includeFilesConfiguration) && count($includeFilesConfiguration) > 0) {
             foreach ($includeFilesConfiguration as $includeKey => $includeFilename) {
                 if (substr($includeKey, -1) === '.') {
                     continue;
@@ -88,7 +91,7 @@ class GoogleFontHook
      *
      * @return GoogleFontService
      */
-    protected function getGoogleFontService()
+    protected function getGoogleFontService(): GoogleFontService
     {
         if ($this->googleFontService === null) {
             $this->googleFontService = GeneralUtility::makeInstance(GoogleFontService::class);
@@ -99,7 +102,7 @@ class GoogleFontHook
     /**
      * @return TemplateService
      */
-    private function getTemplateService()
+    private function getTemplateService(): TemplateService
     {
         return $GLOBALS['TSFE']->tmpl;
     }

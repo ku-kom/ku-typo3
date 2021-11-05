@@ -1,138 +1,289 @@
-# 11.0.3
+# 12.0.3
 
 ## TASK
 
-- [TASK] Setup mysql server in docker container fa0c697d
-- [TASK] Update ddev config 484b844f
-- [TASK] Update bundled scssphp to 1.4.1 56254a01
-- [TASK] Drop scrutinizer 6079c083
-- [TASK] Drop travis ci a6425d96
-- [TASK] Update actions 1e3ddba5
-- [TASK] Update dependencies 029d24b5
-- [TASK] Remove tempfs for dev environment 08a86525
-- [TASK] Add publishing TER workflow aec7c889
-- [TASK] Replace GeneralUtility::getUrl by RequestFactory (#910) 1a899285
-- [TASK] Migrate to afterExtensionInstall signal (#909) 07851e99
-- [TASK] Update README.rst (#900) 08f86603
-- [TASK] Bump actions/checkout to v2 89c1b83e
-- [TASK] Move path repository for testing to Tests (#882) ae90147e
-- [TASK] Downgrade to labeler v2 (#881) e0b916f2
-- [TASK] Use v3-preview labeler (#880) 3b153412
-- [TASK] Add functional test setup (#879) 75073b20
-- [TASK] Update ddev to 1.14.0 ef6c6b36
-- [TASK] Update labeler to version 2.1.0 (#812) b07ba7e3
-- [TASK] Automatic label dependency changes (#796) 627aa082
-- [TASK] Add PHP 7.4 to workflow (#855) 43dc25a9
-- [TASK] Add typo3fluid/fluid to composer dependencies (#876) d743bbe2
-- [TASK] Update frontend build dependencies a69544b7
-- [TASK] Add missing extension key (#874) 082c658b
-- [TASK] Bump DDEV to 1.13.1 (#863) 36ec258e
-- [TASK] Update DDEV to 1.13.0 (#853) 80f36eeb
-- [TASK] Use cfg instead of yml for documentation configuration aa7c19df
-- [TASK] Remove path in ExtensionConfiguration::set call (#836) 3b3b10a0
+- [TASK] Migrate form definition (#1095) 13707e54
 
 ## BUGFIX
 
-- [BUGFIX] Apply latest scssphp changes to import behavior (#948) 48e9dcc9
-- Revert "[BUGFIX] Use image vh for image types to enable thumbnails for non images like PDF files (#913)" 23ebd610
-- [BUGFIX] Use image vh for image types to enable thumbnails for non images like PDF files (#913) 8564d895
-- [BUGFIX] Introduce table-condensed class again for compatibility (#908) d26c5188
-- [BUGFIX] Missing body class for current language (#906) 0e6cf009
-- [BUGFIX] Fix paths in url() statements (#868) 76793039
-- [BUGFIX] Do not force a specific RTE configuration for content elements 739ca18e
-- [BUGFIX] Correct path to temp directory in compile service (#884) 9c1b84c6
-- [BUGFIX] Resolve SCSS files correctly when using symlinked paths (#866) 71052ef3
-- [BUGFIX] Correct test location 7ffcdb7a
-- [BUGFIX] Add missing extension dependencies (#871) e9780872
-- [BUGFIX] Add missing filter extension dependency (#870) 5b39b7d4
-- [BUGFIX] Change TCA escaping for database compatibility (#865) c9928e34
-- [BUGFIX] Ensure correct field casing and escaping in TCA for database compatibility (#862) 94e56ec6
-- [BUGFIX] Check parse_url return for false cb31e068
-- [BUGFIX] Update dependencies and rebuild assets 490d5efd
-- [BUGFIX] Add compiled css 0ad13e26
-- [BUGFIX] Restrict fixed menu overflows to mobile resolutions - fixes #837 7a8c81db
-- [BUGFIX] Hide link text for carousel bg image f0c40ff7
-- [BUGFIX] Ensure elements exist before accessing 0109d3b0
+- [BUGFIX] BrandingService conditions (#1094) 41718f62
+- [BUGFIX] Remove pollution of global scss variables add3aeac
+- [BUGFIX] Ensure accordion elements collapse as intended with bootstrap 5 c2ea116b
+- [BUGFIX] Avoid overrides of global scss variables within card-panel comonent 05ef945f
+- [BUGFIX] Fix breadcrumb when "breadcrumbExtendedValue" is used 576014e7
 
-## MISC
-
-- [SECURITY] Ensure content element subheader is HTML encoded 673e6b0c
-- [DOCS] Add render-docs helpers (#901) 3fb5a69b
-
-# 11.0.2
+# 12.0.2
 
 ## TASK
 
-- [TASK] Update bootstrap 4.1 constants (#831) 18659a63
-- [TASK] Add Github workflow badge (#824) 0cd35366
-- [TASK] Update bootstrap.stickyheader.min.js (#823) d5318052
-- [TASK] Rename DDEV build command to yarn (#821) 135fc155
-- [TASK] Bump modernizr to version 3.8.0  (#820) daa1fc4f
-- [TASK] Bump grunt-stylelint to version 0.11.1 (#819) 44679407
-- [TASK] Bump grunt-sass to version 3.1.0  (#818) c529dac9
-- [TASK] Bump bootstrap 4 to version 4.4.1 (#817) 39360029
-- [TASK] Bump popperjs to version 1.16.0 (#816) c141e1e5
-- [TASK] Add lowlevel module as dev dependency for debugging (#810) 273a1ac8
-- [TASK] Configure markdown lint (#811) e2597bab
-- [TASK] Add info module as dev dependency for debugging (#809) 0c375b20
-- [TASK] Introduce DDEV build script 87ddf03f
-- [TASK] Change build order (#793) 14276df9
-- [TASK] Update ddev to 1.12.0 (#783) 703bdd5c
-- [TASK] Remove double inclusion of content elements (#792) ffef5fc1
-- [TASK] Update build dependencies (#790) 240af7a2
-- [TASK] Add DDEV custom command description (#782) 16385648
+- [TASK] Update frontend dependencies 151f4877
+- [TASK] Update scssphp to v1.7.0 168b6c90
+- [TASK] Update Bug Report template (#1069) 95ba43c4
+- [TASK] Provide frontend build custom commands (#1068) 6c56d7ba
+- [TASK] Exclude submenues from indexing (#1061) 1c4b80a2
+- [TASK] correct Photoswipe opening animation (#941) 3a6f50cd
 
 ## BUGFIX
 
-- [BUGFIX] Conflict scssphp/scssphp 1.0.4 and 1.0.5 for composer installs (#764) 222394a5
-- [BUGFIX] Escape special chars in bootstrap.smoothscroll.js (#786) e582c737
-- [BUGFIX] Use correct category for texticon constants (#781) 2b9ef2eb
-- [BUGFIX] Resolve plain bootstrap 4 accordion conflicts (#775) 795e6f5a
-- [BUGFIX] Ensure frame collapsing for node-sass compilations on theme 5c517c0c
-- [BUGFIX] Include autoloader for parser class check (#778) de9214c3
-- [BUGFIX] Force node version during build (#771) ca865cad
-- [BUGFIX] Disable RTE for carousel type html - fixes #770 e8fc3077
-- [BUGFIX] Correct feature flag evaluation c3a56719
-- [BUGFIX] Respect sorting in section menus 1d8a3d8a
+- [BUGFIX] Add automatic contrast calculations again for backgrounds - fixes #1057 e56f5ec4
+- [BUGFIX] Hide header for container elements - fixes #1079 98faa9ad
+- [BUGFIX] Ensure spacing for frames is applied when set to none 48ec125d
+- [BUGFIX] Missing theme colors (#1067) 85867a1b
+- [BUGFIX] Array access warnings in PHP 8 (#1063) 1511a449
+- [BUGFIX] CGL in CI workflow (#1064) 7dafab16
+- [BUGFIX] Docs rendering (#1062) 2122e791
+- [BUGFIX] Mark menu items correctly as closed - fixes #1052 9bc37078
+- [BUGFIX] Include correct popper.js version for bootstrap 5 f9fccd09
+- [BUGFIX] Wrong table classes and add missing ones (#927) faaa75c7
+- [BUGFIX] Preserve custom layout values (#1055) 63667857
+- [BUGFIX] Add Bootstrap v5 options to Fullscreen and Small carousel (#1053) 10b2eced
+- [BUGFIX] Remove deprecated softref `images` (#1046) 07bdd774
+- [BUGFIX] Make embedded layouts more strict and reset backgrounds properly 42395176
 
-## MISC
+# 12.0.1
 
-- [DOCS] Fix code blocks (#825) e9d13e74
-- Fix Header on PageLoad if scrolled (#784) 17901f80
+## BUGFIX
 
-# 11.0.1
+- [BUGFIX] Let image service resolve svgicon - fixes #1042 e763705f
+- [REVERT][BUGFIX] Update doctrine usages (#1037) (#1044) 1e8864b4
+- [BUGFIX] Add missing embed css to bootstrap 5 (#1043) c6addb4b
+- [BUGFIX] Remove external softref to ext:rtehtmlarea (#1039) 7345b209
+
+# 12.0.0
+
+## SECURITY
+
+- [SECURITY] Ensure content element subheader is HTML encoded de3a568f
+
+## BREAKING
+
+- [!!!][TASK] Add support for Bootstrap v5 (#1016) 8c63fd58
+- [!!!][TASK] Replace fluid pagination widget (#1012) f5657558
+- [!!!][TASK] Drop webfontloader (#1011) e4c07088
+- [!!!][FEATURE] Introduce embedded frames and improve rendering 8323a17b
+- [!!!][TASK] Replace deprecated lastImageInfo access (#1005) 34a9680b
+- [!!!][TASK] Remove TYPO3 9.5 support (#979) 82b21786
+- [!!!][TASK] Remove InstallService (#977) c0ba1c96
+- [!!!][TASK] Remove bootstrap3 (#826) 35fdfd78
 
 ## FEATURE
 
-- [FEATURE] Add header position for carousel items e5f0b9a0
+- [FEATURE] Improve icon registry (#1038) 0e55bdc0
+- [FEATURE] Add container support (#1035) bd1e172d
+- [FEATURE] Add tca defaults for imagecol 35fd14b1
+- [FEATURE] Make theme colors selectable for carousel items (#1032) ef50a0cb
+- [FEATURE] Extend RTE config for links and lists (#1031) 1801887d
+- [FEATURE] Extend color palette (#1030) dde661e1
+- [FEATURE] Add new DropIns to page before and after 5207c194
+- [!!!][FEATURE] Introduce embedded frames and improve rendering 8323a17b
+- [FEATURE] Set font display to swap by default 3a809980
+- [FEATURE] Add gallery content block (#765) cd08510a
+- [FEATURE] Add header position for carousel items 561c9298
 
 ## TASK
 
-- [TASK] Update bundled scssphp/scssphp version to 1.0.4 7e2cd340
-- [TASK] Add width, height and intrinsicsize to images 5e407e27
-- [TASK] Remove update build script e2cd4acd
-- [TASK] Extend CI to 10.x and master (#755) 9bd93914
-- [TASK] Make typo3/cms-* requirements less strict c4021f66
-- [TASK] Update ddev to 1.11.1 060db7d0
-- [TASK] Use github actions for ci (#741) 21c88577
-- [TASK] Disable xdebug by default for dev environment 1ed57870
-- [TASK] Update ddev to 1.10.2 7f0d0daf
-- [TASK] Streamline database field types a5332505
-- [TASK] Enable tmpfs for dev environment 00c41524
+- [TASK] Raise version constraints to support released v11 317595f4
+- [TASK] Remove workaround for v11 (#1036) b65e3044
+- [TASK] Upgrade bootstrap to 5.1 2ff1b43a
+- [TASK] Streamline bp icons 74ba9040
+- [TASK] Reduce default size of gallery-gap f6d8de81
+- [TASK] Use fantasticon to build icon font (#1028) 86b596d0
+- [TASK] Allow REVERT key word in commit messages (#1026) 0c6d842f
+- [!!!][TASK] Add support for Bootstrap v5 (#1016) 8c63fd58
+- [TASK] Upgrade bundled and minimum required version of scssphp/scssphp to ^1.6.0 5188f94f
+- [TASK] Remove all showRemovedLocalizationRecords occurrences (#1019) 04efddec
+- [TASK] Use SiteConfiguration for website title f31359d3
+- [TASK] Remove obsolete hammer.js polyfill for swipe gestures on carousel 357bc410
+- [TASK] Reduce jquery usage on navbar 49af9a0f
+- [TASK] Remove jquery from lightbox (#1014) 52c99601
+- [TASK] Drop yarn as dependency manager (#1013) 4560df58
+- [TASK] Remove jquery from form custom file input 48d98cc5
+- [!!!][TASK] Replace fluid pagination widget (#1012) f5657558
+- [!!!][TASK] Drop webfontloader (#1011) e4c07088
+- [TASK] Drop feedit 203668a9
+- [TASK] Disable deployment and publish workflows for forks (#1010) ae3aced3
+- [TASK] Don´t continue on PHPStan errors fdeaf209
+- [!!!][TASK] Replace deprecated lastImageInfo access (#1005) 34a9680b
+- [TASK] PHPStan clean ups (#1004) 4ccae72b
+- [TASK] Allow tests to pass for phpstan and build result for now (#1003) 48ae9da1
+- [TASK] Add phpstan 1f753fb2
+- [TASK] Update scssphp/scssphp 966b8f9d
+- [TASK] Update phplint b442b35b
+- [TASK] Update php-cs-fixer 247cddab
+- [TASK] Upgrade frontend dependencies 3df72439
+- [TASK] Setup mysql server in docker container 36f60ba0
+- [TASK] Update ddev config d2bfa0a9
+- [TASK] Upgrade dependencies 31b8a64f
+- [TASK] Upgrade ddev config 511db515
+- [TASK] Remove yarn ddev wrapper 76cec4ec
+- [TASK] Add extension-key to demo package f1c86d8f
+- [TASK] Enable deployment again (#985) f4f6ad21
+- [TASK] Replace TYPO3_MODE and TYPO3_REQUESTTYPE (#984) c703ad7b
+- [TASK] Migrate signals to PSR-14 events (#983) 3f8e38a6
+- [TASK] Update branch-alias and package sorting (#982) b0e10f5e
+- [TASK] Remove TYPO3 9 from CI (#981) dbabe541
+- [!!!][TASK] Remove TYPO3 9.5 support (#979) 82b21786
+- [!!!][TASK] Remove InstallService (#977) c0ba1c96
+- [!!!][TASK] Remove bootstrap3 (#826) 35fdfd78
+- [TASK] Allow installation with testing framework ^6.4 6d4fd9dd
+- [TASK] Update bundled scssphp to 1.4.1 db0ad783
+- [TASK] Let all actions run db8fc926
+- [TASK] Remove travis and scrutinizer from readme c2da8dcf
+- [TASK] drop scrutinizer a38ad36c
+- [TASK] Drop travis ci f9201716
+- [TASK] Update actions 4c546808
+- [TASK] Update dependencies ab622fe4
+- [TASK] Remove tempfs for dev environment ed1f28e9
+- [TASK] Add publishing TER workflow f77265bb
+- [TASK] Allow installation on TYPO3 v11 for development purposes 77488690
+- [TASK] Update DDEV configuration (#962) d5e9632b
+- [TASK] WSL2 support (#961) 8a1beef2
+- [TASK] Reintroduce prefer-stable (#960) 209753a8
+- [TASK] Bump labeler to v3 and enable sync-labels (#952) 34fc1bd9
+- [TASK] Update Pull Request template (#950) f7b08da6
+- [TASK] Update pull request types for Check PR workflow (#949) 26d5ae30
+- [TASK] Replace GeneralUtility::getUrl by RequestFactory (#910) 240e2dfb
+- [TASK] Migrate to afterExtensionInstall signal (#909) c2b2918b
+- [TASK] Update README.rst (#900) d5af9cfd
+- [TASK] Add workspaces as dev dependency 000bc1bc
+- [TASK] Bump actions/checkout to v2 bf94f47b
+- [TASK] Move path repository for testing to Tests (#882) f13a42dd
+- [TASK] Downgrade to labeler v2 (#881) 4527808a
+- [TASK] Use v3-preview labeler (#880) 85b0dcae
+- [TASK] Add functional test setup (#879) c3dfcf41
+- [TASK] Add typo3fluid/fluid to composer dependencies (#876) 4651154e
+- [TASK] Update frontend build dependencies ecdb0252
+- [TASK] Update ddev to 1.14.0 9175ab4a
+- [TASK] Add missing extension key (#874) becff742
+- [TASK] Bump DDEV to 1.13.1 (#863) aca79603
+- [TASK] Add PHP 7.4 to workflow (#855) 47b2a3da
+- [TASK] Ignore false positives in extension scanner (#854) 477c7c4e
+- [TASK] Update DDEV to 1.13.0 (#853) 051f3f0c
+- [TASK] Slim down documentation configuration 2deb9684
+- [TASK] Remove path in ExtensionConfiguration::set call (#836) b5a591b2
+- [TASK] Update bootstrap 4.1 constants (#831) 7f5ffb1f
+- [TASK] Remove scssphp/scssphp conflict (#832) 8dc2ab29
+- [TASK] Add check commit message workflow for pull requests (#828) 5e2881c2
+- [TASK] Add Github workflow badge (#824) 6f30d904
+- [TASK] Update bootstrap.stickyheader.min.js (#823) 255407cb
+- [TASK] Rename DDEV build command to yarn (#821) c0a3d485
+- [TASK] Bump modernizr to version 3.8.0  (#820) f41102e0
+- [TASK] Bump grunt-stylelint to version 0.11.1 (#819) 689784dc
+- [TASK] Bump grunt-sass to version 3.1.0  (#818) 41475573
+- [TASK] Bump bootstrap 4 to version 4.4.1 (#817) 8bce4872
+- [TASK] Bump popperjs to version 1.16.0 (#816) 861b43bc
+- [TASK] Add lowlevel module as dev dependency for debugging (#810) be48491d
+- [TASK] Configure markdown lint (#811) be12760a
+- [TASK] Add info module as dev dependency for debugging (#809) 2473a78e
+- [TASK] Update labeler to version 2.1.0 (#812) 00f77921
+- [TASK] Introduce DDEV build script (#808) 2d49db12
+- [TASK] Update ddev to 1.12.0 (#783) 69843d4f
+- [TASK] Change build order (#793) b18d7755
+- [TASK] Automatic label dependency changes (#796) 76061f01
+- [TASK] Remove deprecated translateToHidden option (#800) d863cc7d
+- [TASK] Update issue and pull request templates (#795) b9b6ba3c
+- [TASK] Remove double inclusion of content elements (#792) 9d444b13
+- [TASK] Update build dependencies (#790) 71c4da3f
+- [TASK] Add DDEV custom command description (#782) c6c7ea69
+- [TASK] Fix typo in image variants view helper (#769) 8d9143e4
+- [TASK] Update bundled scssphp/scssphp version to 1.0.4 d8799321
+- [TASK] Add width, height and intrinsicsize to images d9a9ac48
+- [TASK] Remove update build script 770fc438
+- [TASK] Extend CI to 10.x and master (#755) 88ca8d91
+- [TASK] Make typo3/cms-* requirements less strict 7114b00f
+- [TASK] Update ddev to 1.11.1 6e8ddee7
+- [TASK] Use github actions for ci (#741) 87222fc7
+- [TASK] Disable xdebug by default for dev environment 2a294542
+- [TASK] Update ddev to 1.10.2 5a82470b
+- [TASK] Streamline database field types 2847fd3e
+- [TASK] Enable tmpfs for dev environment ac916e7b
 
 ## BUGFIX
 
-- [BUGFIX] Set default header position for carousel items 5eecad1c
-- [BUGFIX] Add check for cached file in GoogleFont Service again 00d16fc3
-- [BUGFIX] Switch GoogleFont Cache to woff for broader support - fixes #751 1b3a62f4
-- [BUGFIX] Keep viewbox attribute for photoswipe skin 0ae05920
-- [BUGFIX] Restore missing viewBox attribute for glyphicon icons 818044e6
-- [BUGFIX] Use correct constant for texticon width (#736) d70f1a91
-- [BUGFIX] Remove invalid date default value for timeline item b9c95a04
-- [BUGFIX] Ensure timeline item can be translated 7fb3993a
-- [BUGFIX] Correct Branch Alias 8084fb02
-- [BUGFIX] Remove default alignment of carousel header item b79f5e32
-- [BUGFIX] Correct wrapping for icongroup with less 43839d60
+- [BUGFIX] Add space between gallery and navigaiton 0398bebb
+- [BUGFIX] Update doctrine usages (#1037) de2c69c2
+- [BUGFIX] Correct image calculation 8c4e4cab
+- [BUGFIX] Streamline card paddings 34fb30af
+- [BUGFIX] Ignore phpstan error for dom_import_simplexml (#1033) a6aa8244
+- [BUGFIX] Update icon css (#1034) f3959528
+- [BUGFIX] Ensure correct correct scaling of special links 0ecbeb8c
+- [BUGFIX] Remove obsolete margin from gallery df42070f
+- [BUGFIX] SassError: compound selectors may no longer be extended. #1023 (#1029) 4c514238
+- [REVERT][BUGFIX] SassError: compound selectors may no longer be extended. Consider `@extend .form-control, .is-invalid` instead. https://sass-lang.com/documentation/breaking-changes/extend-compound (#1023) (#1025) 18af0848
+- [BUGFIX] Remove wrong !default from monospace (#1024) 834a1576
+- [BUGFIX] SassError: compound selectors may no longer be extended. Consider `@extend .form-control, .is-invalid` instead. https://sass-lang.com/documentation/breaking-changes/extend-compound (#1023) d8350fef
+- [BUGFIX] Workaround core issue #94422 in ci (#1020) fcbcbe5e
+- [BUGFIX] Migrate phpunit functional test configuration b14e4adf
+- [BUGFIX] Correct default image height calculation 7174037b
+- [BUGFIX] Correct frame collapsing for no backgrounds 28446c5a
+- [BUGFIX] Restore grouping in ctype selector 7b522d97
+- [BUGFIX] Only call getIcons if value is not null 238f48e0
+- [BUGFIX] Correct label for processing css files bd81170d
+- [BUGFIX] Adapt to changes in fluid contexts between v10 and v11 b5107f2a
+- [BUGFIX] Add missing spacers for frames aagain abc20109
+- [BUGFIX] Minor fixes to frame layout b73c95c1
+- [BUGFIX] Revert unintended revert of TYPO3 constant (#1008) 78a2bd94
+- [BUGFIX] Respect gallery size settings instead of beeing smart 34ef3de5
+- [BUGFIX] Correct extension manager dependencies to match composer requirements e4623ce3
+- [BUGFIX] Update form definition (#980) 1a951398
+- [BUGFIX] Apply latest scssphp changes to import behavior (#948) 1238613b
+- [BUGFIX] Remove minimum stability dev from composer.json (#936) 4543ad16
+- Revert "[BUGFIX] Use image vh for image types to enable thumbnails for non images like PDF files (#913)" (#914) 1c590d82
+- [BUGFIX] Use image vh for image types to enable thumbnails for non images like PDF files (#913) 826f6beb
+- [BUGFIX] Introduce table-condensed class again for compatibility (#908) d5af3aac
+- [BUGFIX] Missing body class for current language (#906) 6c1e3da1
+- [BUGFIX] Fix paths in url() statements (#868) 41879dba
+- [BUGFIX] Do not force a specific RTE configuration for content elements 063af998
+- [BUGFIX] Change controllerActionName in extbase configuration of gallery (#890) b5c83cfc
+- [BUGFIX] Adapt server ip address for deployment 6cded416
+- [BUGFIX] Correct path to temp directory in compile service (#884) 245c8f89
+- [BUGFIX] Resolve SCSS files correctly when using symlinked paths (#866) 1e4d71ed
+- [BUGFIX] Correct test location cb712010
+- [BUGFIX] Add missing extension dependencies (#871) 6b3237af
+- [BUGFIX] Add missing filter extension dependency (#870) 5b40d7ab
+- [BUGFIX] Change TCA escaping for database compatibility (#865) 50f45603
+- [BUGFIX] Ensure correct field casing and escaping in TCA for database compatibility (#862) b9124c3b
+- [BUGFIX] Update dependencies and rebuild assets b9ac3bb0
+- [BUGFIX] Add compiled css 453f56e1
+- [BUGFIX] Restrict fixed menu overflows to mobile resolutions - fixes #837 5da26ce3
+- [BUGFIX] Hide link text for carousel bg image 7d6597ab
+- [BUGFIX] Ensure elements exist before accessing 631161b7
+- [BUGFIX] Conflict scssphp/scssphp 1.0.4 and 1.0.5 for composer installs (#764) ed586c88
+- [BUGFIX] Escape special chars in bootstrap.smoothscroll.js (#786) 9c26f626
+- [BUGFIX] Use correct category for texticon constants (#781) da4d4436
+- [BUGFIX] Resolve plain bootstrap 4 accordion conflicts (#775) 4c0bff4d
+- [BUGFIX] Ensure frame collapsing for node-sass compilations on theme 4850c2db
+- [BUGFIX] Add missing compiled and minified assets for for gallery b00bda82
+- [BUGFIX] Include autoloader for parser class check (#776) 124b4fad
+- [BUGFIX] Correct pseudo controller for pagination db2c2487
+- [BUGFIX] Force node version during build (#771) b448c076
+- [BUGFIX] Disable RTE for carousel type html - fixes #770 cc8d51fe
+- [BUGFIX] Correct feature flag evaluation 740d9fe2
+- [BUGFIX] Respect sorting in section menus 50110eee
+- [BUGFIX] Set default header position for carousel items 94a14e8b
+- [BUGFIX] Add check for cached file in GoogleFont Service again bbe6f235
+- [BUGFIX] Switch GoogleFont Cache to woff for broader support - fixes #751 2ace8816
+- [BUGFIX] Keep viewbox attribute for photoswipe skin b4e04b0c
+- [BUGFIX] Restore missing viewBox attribute for glyphicon icons a4b9e1bb
+- [BUGFIX] Use correct constant for texticon width (#736) 089ff319
+- [BUGFIX] Remove invalid date default value for timeline item a4e0276f
+- [BUGFIX] Ensure timeline item can be translated 42386ff2
+- [BUGFIX] Remove default alignment of carousel header item 96aaa454
+- [BUGFIX] Correct wrapping for icongroup with less ab6a7d74
+
+## MISC
+
+- [DOCS] Fix some typos (#1001) 3c501e44
+- [DOCS] Fix bullet lists (#1000) bd79929d
+- [DOCS] Fix typo (#998) bc68d846
+- [DOCS] Add render-docs helpers (#901) 6d0a6581
+- [DOCS] Fix code blocks (#825) 4bca8502
+- [DOCS] Add documentation hints to README (#802) 279c9761
+- Fix Header on PageLoad if scrolled (#784) 016bf027
+- [DOCS] Add Image Rendering (#767) 2058d12a
+- [DOCS] Fix duplicated label (#772) cde513ac
+- [REVERT] "Update _texticon.scss" fae0ae81
+- Update _texticon.scss 8015f856
 
 # 11.0.0
 

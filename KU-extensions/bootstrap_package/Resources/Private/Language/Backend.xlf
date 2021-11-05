@@ -215,6 +215,13 @@
                 <source>Social Media</source>
             </trans-unit>
 
+            <trans-unit id="content_element.gallery">
+                <source>Gallery</source>
+            </trans-unit>
+            <trans-unit id="content_element.gallery.description">
+                <source>Display multiple images in a rich gallery.</source>
+            </trans-unit>
+
             <trans-unit id="content_element.csv">
                 <source>CSV</source>
             </trans-unit>
@@ -349,6 +356,12 @@
                 <source>Title</source>
             </trans-unit>
             <trans-unit id="card_group_item.link_icon">
+                <source>Icon</source>
+            </trans-unit>
+            <trans-unit id="card_group_item.link_icon_set">
+                <source>Icon Set</source>
+            </trans-unit>
+            <trans-unit id="card_group_item.link_icon_identifier">
                 <source>Icon</source>
             </trans-unit>
             <trans-unit id="card_group_item.link_class">
@@ -486,6 +499,9 @@
             </trans-unit>
             <trans-unit id="carousel_item.tt_content">
                 <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.layout">
+                <source>Layout</source>
             </trans-unit>
             <trans-unit id="carousel_item.link">
                 <source>Link</source>
@@ -695,6 +711,12 @@
             <trans-unit id="timeline_item.bodytext">
                 <source>Text</source>
             </trans-unit>
+            <trans-unit id="timeline_item.icon_set">
+                <source>Icon Set</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.icon_identifier">
+                <source>Icon</source>
+            </trans-unit>
             <trans-unit id="timeline_item.icon_file">
                 <source>Icon File</source>
             </trans-unit>
@@ -720,8 +742,14 @@
             <trans-unit id="icon_group_item.link">
                 <source>Link</source>
             </trans-unit>
+            <trans-unit id="icon_group_item.icon_set">
+                <source>Icon Set</source>
+            </trans-unit>
+            <trans-unit id="icon_group_item.icon_identifier">
+                <source>Icon</source>
+            </trans-unit>
             <trans-unit id="icon_group_item.icon_file">
-                <source>Icon File</source>
+                <source>Icon</source>
             </trans-unit>
 
             <trans-unit id="field.panel_class">
@@ -736,6 +764,13 @@
             </trans-unit>
             <trans-unit id="field.external_media_ratio">
                 <source>Ratio</source>
+            </trans-unit>
+
+            <trans-unit id="field.aspect_ratio">
+                <source>Aspect Ratio</source>
+            </trans-unit>
+            <trans-unit id="field.items_per_page">
+                <source>Items per page</source>
             </trans-unit>
 
             <trans-unit id="field.icon">
@@ -764,6 +799,10 @@
             </trans-unit>
             <trans-unit id="field.icon_background">
                 <source>Background</source>
+            </trans-unit>
+
+            <trans-unit id="field.frame_layout">
+                <source>Frame Layout</source>
             </trans-unit>
 
             <trans-unit id="field.background_color_class">
@@ -863,6 +902,15 @@
             <trans-unit id="option.primary">
                 <source>Primary</source>
             </trans-unit>
+            <trans-unit id="option.secondary">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="option.tertiary">
+                <source>Tertiary</source>
+            </trans-unit>
+            <trans-unit id="option.quaternary">
+                <source>Quaternary</source>
+            </trans-unit>
             <trans-unit id="option.success">
                 <source>Success</source>
             </trans-unit>
@@ -874,6 +922,18 @@
             </trans-unit>
             <trans-unit id="option.danger">
                 <source>Danger</source>
+            </trans-unit>
+            <trans-unit id="option.lighter">
+                <source>Lighter</source>
+            </trans-unit>
+            <trans-unit id="option.light">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="option.dark">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="option.darker">
+                <source>Darker</source>
             </trans-unit>
 
             <trans-unit id="ratio.16_9">
@@ -901,11 +961,11 @@
             <trans-unit id="tablelayout.bordered">
                 <source>Bordered table</source>
             </trans-unit>
-            <trans-unit id="tablelayout.condensed">
-                <source>Condensed table</source>
-            </trans-unit>
             <trans-unit id="tablelayout.hover">
                 <source>Hover rows</source>
+            </trans-unit>
+            <trans-unit id="tablelayout.condensed">
+                <source>Condensed table</source>
             </trans-unit>
 
             <trans-unit id="uploadslayout.default">

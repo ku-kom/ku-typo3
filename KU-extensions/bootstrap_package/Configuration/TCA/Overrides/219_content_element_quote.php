@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['quote'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['quote'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['quote'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Quote.tsconfig',
     'Bootstrap Package Content Element: Quote'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.quote',
         'quote',
-        'content-quote'
+        'content-quote',
+        'bootstrap_package'
     ],
     'panel',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['quote'] = 'content-quote';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['quote'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['quote'],
     [
@@ -75,9 +66,7 @@ $GLOBALS['TCA']['tt_content']['types']['quote'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Register fields
- */
+// Register fields
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [

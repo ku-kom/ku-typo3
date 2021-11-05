@@ -7,25 +7,19 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Define TypoScript as content rendering template
- */
+// Define TypoScript as content rendering template
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'bootstrappackage/Configuration/TypoScript/';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'bootstrappackage/Configuration/TypoScript/ContentElement/';
 
-/***************
- * Make the extension configuration accessible
- */
+// Make the extension configuration accessible
 $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
     \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
 );
 $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
 
-/***************
- * PageTS
- */
+// PageTS
 
 // Add Content Elements
 if (!(bool) $bootstrapPackageConfiguration['disablePageTsContentElements']) {
@@ -42,6 +36,11 @@ if (!(bool) $bootstrapPackageConfiguration['disablePageTsRTE']) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/RTE.tsconfig">');
 }
 
+// TCADefaults
+if (!(bool) $bootstrapPackageConfiguration['disablePageTsTCADefaults']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/TCADefaults.tsconfig">');
+}
+
 // TCEMAIN
 if (!(bool) $bootstrapPackageConfiguration['disablePageTsTCEMAIN']) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/TCEMAIN.tsconfig">');
@@ -52,9 +51,7 @@ if (!(bool) $bootstrapPackageConfiguration['disablePageTsTCEFORM']) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/TCEFORM.tsconfig">');
 }
 
-/***************
- * Register custom EXT:form configuration
- */
+// Register custom EXT:form configuration
 if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
         module.tx_form {
@@ -74,99 +71,32 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
     '));
 }
 
-if (TYPO3_MODE === 'BE') {
-    $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-
-    /**
-     * Provide example webserver configuration after extension is installed.
-     */
-    $signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
-        'afterExtensionInstall',
-        \BK2K\BootstrapPackage\Service\InstallService::class,
-        'generateApacheHtaccess'
-    );
-
-    /**
-     * Add backend styling
-     */
-    $signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
-        'afterExtensionInstall',
-        \BK2K\BootstrapPackage\Service\BrandingService::class,
-        'setBackendStyling'
-    );
-
-    /**
-     * Add current Bootstrap Package version to system information toolbar
-     */
-    $signalSlotDispatcher->connect(
-        \TYPO3\CMS\Backend\Backend\ToolbarItems\SystemInformationToolbarItem::class,
-        'getSystemInformation',
-        \BK2K\BootstrapPackage\Backend\ToolbarItem\VersionToolbarItem::class,
-        'addVersionInformation'
-    );
-}
-
-/***************
- * Register google font hook
- */
+// Register google font hook
 if (!(bool) $bootstrapPackageConfiguration['disableGoogleFontCaching']) {
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][\BK2K\BootstrapPackage\Hooks\PageRenderer\GoogleFontHook::class]
         = \BK2K\BootstrapPackage\Hooks\PageRenderer\GoogleFontHook::class . '->execute';
 }
 
-/***************
- * Register css processing parser
- */
+// Register css processing parser
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/css']['parser'][\BK2K\BootstrapPackage\Parser\ScssParser::class] =
     \BK2K\BootstrapPackage\Parser\ScssParser::class;
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/css']['parser'][\BK2K\BootstrapPackage\Parser\LessParser::class] =
-    \BK2K\BootstrapPackage\Parser\LessParser::class;
 
-/***************
- * Register css processing hooks
- */
+// Register css processing hooks
 if (!(bool) $bootstrapPackageConfiguration['disableCssProcessing']) {
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][\BK2K\BootstrapPackage\Hooks\PageRenderer\PreProcessHook::class]
         = \BK2K\BootstrapPackage\Hooks\PageRenderer\PreProcessHook::class . '->execute';
 }
 
-/***************
- * Register font loader
- */
-if (!(bool) $bootstrapPackageConfiguration['disableFontLoader']) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(implode(LF, [
-        '# customsubcategory=98=Preloader',
-        'page.preloader {',
-        '    # cat=bootstrap package: preloader/98/1_enable; type=boolean; label=Preloader: Enable to display the preloader',
-        '    enable = 1',
-        '    logo {',
-        '        # cat=bootstrap package: preloader/98/2_logo_file; type=string; label=Logo: Leave blank to don´t show a logo',
-        '        file = EXT:bootstrap_package/Resources/Public/Images/BootstrapPackageInverted.svg',
-        '        # cat=bootstrap package: preloader/98/3_logo_height; type=int+; label=Height: The image will not be resized!',
-        '        height = 52',
-        '        # cat=bootstrap package: preloader/98/4_logo_width; type=int+; label=Width: The image will not be resized!',
-        '        width = 180',
-        '    }',
-        '    # cat=bootstrap package: preloader/98/5_background_color; type=color; label=Background Color',
-        '    backgroundColor = #333333',
-        '    # cat=bootstrap package: preloader/98/6_fade_duration; type=string; label=Fade duration',
-        '    fadeDuration = 0.25',
-        '}'
-    ]));
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][\BK2K\BootstrapPackage\Hooks\PageRenderer\FontLoaderHook::class]
-        = \BK2K\BootstrapPackage\Hooks\PageRenderer\FontLoaderHook::class . '->execute';
-}
+// Register icon provider
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/icons']['provider'][\BK2K\BootstrapPackage\Icons\IoniconsProvider::class]
+    = \BK2K\BootstrapPackage\Icons\IoniconsProvider::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/bootstrap-package/icons']['provider'][\BK2K\BootstrapPackage\Icons\GlyphiconsProvider::class]
+    = \BK2K\BootstrapPackage\Icons\GlyphiconsProvider::class;
 
-/***************
- * Add default RTE configuration for bootstrap package
- */
+// Add default RTE configuration for bootstrap package
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bootstrap'] = 'EXT:bootstrap_package/Configuration/RTE/Default.yaml';
 
-/***************
- * Extend TYPO3 upgrade wizards to handle bootstrap package specific upgrades
- */
+// Extend TYPO3 upgrade wizards to handle bootstrap package specific upgrades
 if (isset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\TYPO3\CMS\Install\Updates\SectionFrameToFrameClassUpdate::class])) {
     unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\TYPO3\CMS\Install\Updates\SectionFrameToFrameClassUpdate::class]);
 }
@@ -182,6 +112,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\Bootstr
     = \BK2K\BootstrapPackage\Updates\CarouselContentElementUpdate::class;
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\CarouselItemTypeUpdate::class]
     = \BK2K\BootstrapPackage\Updates\CarouselItemTypeUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\CarouselItemLayoutUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\CarouselItemLayoutUpdate::class;
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\ExternalMediaContentElementUpdate::class]
     = \BK2K\BootstrapPackage\Updates\ExternalMediaContentElementUpdate::class;
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\FrameClassUpdate::class]
@@ -207,14 +139,10 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\Bootstr
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\TexticonIconUpdate::class]
     = \BK2K\BootstrapPackage\Updates\TexticonIconUpdate::class;
 
-/***************
- * Register "bk2k" as global fluid namespace
- */
+// Register "bk2k" as global fluid namespace
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['bk2k'][] = 'BK2K\\BootstrapPackage\\ViewHelpers';
 
-/***************
- * Register Icons
- */
+// Register Icons
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 $iconRegistry->registerIcon(
     'systeminformation-bootstrappackage',
@@ -239,6 +167,7 @@ $icons = [
     'beside-text-img-centered-right',
     'csv',
     'externalmedia',
+    'gallery',
     'icon-group',
     'icon-group-item',
     'listgroup',

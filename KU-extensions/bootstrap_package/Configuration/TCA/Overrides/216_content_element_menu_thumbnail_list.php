@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Enable Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'])) {
+// Enable Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/MenuThumbnailList.tsconfig',
     'Bootstrap Package Content Element: Menu Thumbnails'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.thumbnail_list',
         'menu_thumbnail_list',
-        'content-menu-thumbnail'
+        'content-menu-thumbnail',
+        'bootstrap_package'
     ],
     'menu_card_dir',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['menu_thumbnail_list'] = 'content-menu-thumbnail';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'],
     [
@@ -77,9 +68,7 @@ $GLOBALS['TCA']['tt_content']['types']['menu_thumbnail_list'] = array_replace_re
     ]
 );
 
-/***************
- * Add flexForms for content element configuration
- */
+// Add flexForms for content element configuration
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
     'FILE:EXT:bootstrap_package/Configuration/FlexForms/MenuThumbnail.xml',

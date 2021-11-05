@@ -47,7 +47,7 @@ class CarouselContentElementUpdate implements UpgradeWizardInterface, Repeatable
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getPrerequisites(): array
     {
@@ -95,11 +95,19 @@ class CarouselContentElementUpdate implements UpgradeWizardInterface, Repeatable
                         $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
                     )
                 )
-                ->set('layout', 0, false)
+                ->set('layout', $this->resetLayout($record['layout']), false)
                 ->set('CType', $this->mapValues($record['layout']));
             $queryBuilder->execute();
         }
         return true;
+    }
+
+    protected function resetLayout(int $layout): string
+    {
+        if (in_array($layout, [100, 110, 120], true)) {
+            return '0';
+        }
+        return (string)$layout;
     }
 
     /**

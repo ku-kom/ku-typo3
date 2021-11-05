@@ -7,11 +7,23 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Adjust columns for generic usage
- */
+// Adjust columns for generic usage
+$GLOBALS['TCA']['tt_content']['columns']['frame_layout'] = [
+    'exclude' => true,
+    'displayCond' => 'FIELD:frame_class:!=:none',
+    'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.frame_layout',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['default', 'default'],
+            ['embedded', 'embedded']
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
 $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
     'exclude' => true,
     'displayCond' => 'FIELD:frame_class:!=:none',
@@ -23,6 +35,8 @@ $GLOBALS['TCA']['tt_content']['columns']['background_color_class'] = [
             ['none', 'none'],
             ['primary', 'primary'],
             ['secondary', 'secondary'],
+            ['tertiary', 'tertiary'],
+            ['quaternary', 'quaternary'],
             ['light', 'light'],
             ['dark', 'dark']
         ]
@@ -108,7 +122,7 @@ $GLOBALS['TCA']['tt_content']['columns']['teaser'] = [
     'exclude' => true,
     'config' => [
         'type' => 'text',
-        'softref' => 'rtehtmlarea_images,typolink_tag',
+        'softref' => 'typolink_tag',
         'cols' => '40',
         'rows' => '3'
     ]
@@ -124,7 +138,6 @@ $GLOBALS['TCA']['tt_content']['columns']['tx_bootstrappackage_carousel_item'] = 
             'showSynchronizationLink' => true,
             'showAllLocalizationLink' => true,
             'showPossibleLocalizationRecords' => true,
-            'showRemovedLocalizationRecords' => false,
             'expandSingle' => true,
             'enabledControls' => [
                 'localize' => true,
@@ -143,10 +156,35 @@ $GLOBALS['TCA']['tt_content']['columns']['file_folder'] = [
         'internal_type' => 'folder',
     ]
 ];
+$GLOBALS['TCA']['tt_content']['columns']['aspect_ratio'] = [
+    'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.aspect_ratio',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3', (string) (4/3)],
+            ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9', (string) (16/9)],
+            ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1', (string) (1/1)],
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
+$GLOBALS['TCA']['tt_content']['columns']['items_per_page'] = [
+    'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.items_per_page',
+    'config' => [
+        'type' => 'input',
+        'size' => 2,
+        'eval' => 'trim,int',
+        'range' => [
+            'lower' => 1,
+            'upper' => 50,
+        ],
+        'default' => 10,
+    ],
+    'l10n_mode' => 'exclude',
+];
 
-/***************
- * Adjust default fields
- */
+// Adjust default fields
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'imageorient',
@@ -171,10 +209,10 @@ $GLOBALS['TCA']['tt_content']['columns']['file_folder'] = [
 );
 $GLOBALS['TCA']['tt_content']['columns']['frame_class']['onChange'] = 'reload';
 
-/***************
- * Add fields to default palettes
- */
+// Add fields to default palettes
 $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
+    --linebreak--,
+    frame_layout,
     --linebreak--,
     background_color_class,
     --linebreak--,

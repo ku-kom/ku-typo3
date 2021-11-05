@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['panel'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['panel'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['panel'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Panel.tsconfig',
     'Bootstrap Package Content Element: Panel'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.panel',
         'panel',
-        'content-panel'
+        'content-panel',
+        'bootstrap_package'
     ],
     'menu_thumbnail_dir',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['panel'] = 'content-panel';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['panel'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['panel'],
     [
@@ -82,9 +73,7 @@ $GLOBALS['TCA']['tt_content']['types']['panel'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Register fields
- */
+// Register fields
 $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['columns'],
     [
@@ -96,10 +85,17 @@ $GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
                 'items' => [
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default', 'default'],
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.primary', 'primary'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.secondary', 'secondary'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.tertiary', 'tertiary'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.quaternary', 'quaternary'],
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.success', 'success'],
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.info', 'info'],
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.warning', 'warning'],
                     ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.danger', 'danger'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.lighter', 'lighter'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.light', 'light'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.dark', 'dark'],
+                    ['LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.darker', 'darker'],
                 ],
             ],
         ],

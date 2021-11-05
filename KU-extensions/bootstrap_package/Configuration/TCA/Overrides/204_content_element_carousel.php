@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['carousel'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['carousel'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['carousel'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Carousel.tsconfig',
     'Bootstrap Package Content Element: Carousel'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.carousel',
         'carousel',
-        'content-bootstrappackage-carousel'
+        'content-bootstrappackage-carousel',
+        'bootstrap_package'
     ],
     'card_group',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['carousel'] = 'content-bootstrappackage-carousel';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['carousel'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['carousel'],
     [
@@ -75,9 +66,7 @@ $GLOBALS['TCA']['tt_content']['types']['carousel'] = array_replace_recursive(
     ]
 );
 
-/***************
- * Add flexForms for content element configuration
- */
+// Add flexForms for content element configuration
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
     'FILE:EXT:bootstrap_package/Configuration/FlexForms/Carousel.xml',

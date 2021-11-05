@@ -28,9 +28,11 @@ tt_content.menu_card_dir {
                         isTrue = {$plugin.bootstrap_package_contentelements.menu_card.thumbnail.enable}
                     }
                 }
-                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                20 {
-                    references.fieldName = nav_icon
+                1628754217 = BK2K\BootstrapPackage\DataProcessing\IconsDataProcessor
+                1628754217 {
+                    iconSet.field = nav_icon_set
+                    iconIdentifier.field = nav_icon_identifier
+                    iconFileFieldName = nav_icon
                     as = icon
                     if {
                         isTrue = {$plugin.bootstrap_package_contentelements.menu_card.icon.enable}
@@ -65,6 +67,7 @@ lib.contentElement.settings.responsiveimages.contentelements {
         1 {
             corrections {
                 default = 2
+                xlarge = 2
                 large = 2
                 medium = 2
                 small = 2
@@ -74,18 +77,21 @@ lib.contentElement.settings.responsiveimages.contentelements {
         2 {
             multiplier {
                 default = 0.5
+                xlarge = 0.5
                 large = 0.5
                 medium = 0.5
                 small = 0.5
             }
             gutters {
                 default = 20
+                xlarge = 20
                 large = 20
                 medium = 20
                 small = 20
             }
             corrections {
                 default = 2
+                xlarge = 2
                 large = 2
                 medium = 2
                 small = 2
@@ -95,16 +101,19 @@ lib.contentElement.settings.responsiveimages.contentelements {
         3 {
             multiplier {
                 default = 0.3333
+                xlarge = 0.3333
                 large = 0.3333
                 medium = 0.3333
             }
             gutters {
                 default = 20
+                xlarge = 20
                 large = 20
                 medium = 20
             }
             corrections {
                 default = 2
+                xlarge = 2
                 large = 2
                 medium = 2
                 small = 2
@@ -114,18 +123,21 @@ lib.contentElement.settings.responsiveimages.contentelements {
         4 {
             multiplier {
                 default = 0.25
+                xlarge = 0.5
                 large = 0.5
                 medium = 0.5
                 small = 0.5
             }
             gutters {
                 default = 20
+                xlarge = 20
                 large = 20
                 medium = 20
                 small = 20
             }
             corrections {
                 default = 2
+                xlarge = 2
                 large = 2
                 medium = 2
                 small = 2

@@ -19,7 +19,7 @@
             </f:if>
         </f:link.page>
         <f:if condition="{mainnavigation}">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-expanded="false" aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#mainnavigation" data-bs-target="#mainnavigation" aria-controls="mainnavigation" aria-expanded="false" aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <nav id="mainnavigation" class="collapse navbar-collapse">
@@ -45,17 +45,10 @@
                             <a href="{item.link}" id="nav-item-{item.data.uid}" class="nav-link{f:if(condition: item.children, then:' dropdown-toggle')}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}"{f:if(condition: item.children, then:' aria-haspopup="true" aria-expanded="false"')}>
                                 <f:if condition="{theme.navigation.icon.enable} && {item.icon}">
                                     <span class="nav-link-icon">
-                                        <f:if condition="{item.icon.0.extension} === svg">
-                                            <f:then>
-                                                <bk2k:inlineSvg image="{item.icon.0}" width="{theme.navigation.icon.width}" height="{theme.navigation.icon.height}" />
-                                            </f:then>
-                                            <f:else>
-                                                <f:image additionalAttributes="{loading: 'lazy'}" image="{item.icon.0}" alt="{item.icon.0.alternative}" title="{item.icon.0.title}" width="{theme.navigation.icon.width}" height="{theme.navigation.icon.height}" />
-                                            </f:else>
-                                        </f:if>
+                                        <bk2k:icon icon="{item.icon}" width="{theme.navigation.icon.width}" height="{theme.navigation.icon.height}" />
                                     </span>
                                 </f:if>
-                                <span class="nav-link-text">{item.title}<f:if condition="{item.current}"> <span class="sr-only">(current)</span></f:if></span>
+                                <span class="nav-link-text">{item.title}<f:if condition="{item.current}"> <span class="visually-hidden">(current)</span></f:if></span>
                             </a>
                             <f:if condition="{item.children}">
                                 <ul class="dropdown-menu" aria-labelledby="nav-item-{item.data.uid}">
@@ -69,17 +62,10 @@
                                                     <a href="{child.link}" class="dropdown-item{f:if(condition: child.active, then:' active')}"{f:if(condition: child.target, then: ' target="{child.target}"')} title="{child.title}">
                                                         <f:if condition="{theme.navigation.dropdown.icon.enable} && {child.icon}">
                                                             <span class="dropdown-icon">
-                                                                <f:if condition="{child.icon.0.extension} === svg">
-                                                                    <f:then>
-                                                                        <bk2k:inlineSvg image="{child.icon.0}" width="{theme.navigation.dropdown.icon.width}" height="{theme.navigation.dropdown.icon.height}" />
-                                                                    </f:then>
-                                                                    <f:else>
-                                                                        <f:image additionalAttributes="{loading: 'lazy'}" image="{child.icon.0}" alt="{child.icon.0.alternative}" title="{child.icon.0.title}" width="{theme.navigation.dropdown.icon.width}" height="{theme.navigation.dropdown.icon.height}" />
-                                                                    </f:else>
-                                                                </f:if>
+                                                                <bk2k:icon icon="{child.icon}" width="{theme.navigation.dropdown.icon.width}" height="{theme.navigation.dropdown.icon.height}" />
                                                             </span>
                                                         </f:if>
-                                                        <span class="dropdown-text">{child.title}<f:if condition="{child.current}"> <span class="sr-only">(current)</span></f:if></span>
+                                                        <span class="dropdown-text">{child.title}<f:if condition="{child.current}"> <span class="visually-hidden">(current)</span></f:if></span>
                                                     </a>
                                                 </li>
                                             </f:else>

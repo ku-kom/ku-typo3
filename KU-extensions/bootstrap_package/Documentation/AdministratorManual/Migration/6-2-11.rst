@@ -6,7 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-.. _migration:
+.. _migration_6.2.11:
 
 =============================
 Upgrade from 6.2.10 to 6.2.11
@@ -195,7 +195,7 @@ After
 
 
 
-Corrected calucaltion of relative paths in build in LESS parser
+Corrected calculation of relative paths in build in LESS parser
 ===============================================================
 
 Calculation of relative paths in less should now be resolved correctly.

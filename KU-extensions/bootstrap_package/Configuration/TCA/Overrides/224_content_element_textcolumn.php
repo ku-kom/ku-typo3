@@ -7,47 +7,38 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
-/***************
- * Add Content Element
- */
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['textcolumn'])) {
+// Add Content Element
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['textcolumn'] ?? false)) {
     $GLOBALS['TCA']['tt_content']['types']['textcolumn'] = [];
 }
 
-/***************
- * Add content element PageTSConfig
- */
+// Add content element PageTSConfig
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+    'bootstrap_package',
     'Configuration/TsConfig/Page/ContentElement/Element/Textcolumn.tsconfig',
     'Bootstrap Package Content Element: Text in Columns'
 );
 
-/***************
- * Add content element to selector list
- */
+// Add content element to selector list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.textcolumn',
         'textcolumn',
-        'content-text-columns'
+        'content-text-columns',
+        'bootstrap_package'
     ],
     'tab',
     'after'
 );
 
-/***************
- * Assign Icon
- */
+// Assign Icon
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textcolumn'] = 'content-text-columns';
 
-/***************
- * Configure element type
- */
+// Configure element type
 $GLOBALS['TCA']['tt_content']['types']['textcolumn'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['textcolumn'],
     [

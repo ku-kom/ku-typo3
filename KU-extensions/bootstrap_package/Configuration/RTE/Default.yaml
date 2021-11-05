@@ -22,37 +22,69 @@ editor:
         stylesSet:
             - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
             - { name: "Small", element: "small" }
+
             - { name: "Table", element: "table", attributes: { 'class': 'table' } }
             - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-striped' } }
             - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-bordered' } }
             - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-condensed' } }
-            - { name: "Row Active", element: "tr", attributes: { 'class': 'active' } }
-            - { name: "Row Success", element: "tr", attributes: { 'class': 'success' } }
-            - { name: "Row Info", element: "tr", attributes: { 'class': 'info' } }
-            - { name: "Row Warning", element: "tr", attributes: { 'class': 'warning' } }
-            - { name: "Row Danger", element: "tr", attributes: { 'class': 'danger' } }
+
+            - { name: "Row Active", element: "tr", attributes: { 'class': 'table-active' } }
+            - { name: "Row Success", element: "tr", attributes: { 'class': 'table-success' } }
+            - { name: "Row Info", element: "tr", attributes: { 'class': 'table-info' } }
+            - { name: "Row Warning", element: "tr", attributes: { 'class': 'table-warning' } }
+            - { name: "Row Danger", element: "tr", attributes: { 'class': 'table-danger' } }
+
+            - { name: "Cell Active", element: "td", attributes: { 'class': 'table-active' } }
+            - { name: "Cell Success", element: "td", attributes: { 'class': 'table-success' } }
+            - { name: "Cell Info", element: "td", attributes: { 'class': 'table-info' } }
+            - { name: "Cell Warning", element: "td", attributes: { 'class': 'table-warning' } }
+            - { name: "Cell Danger", element: "td", attributes: { 'class': 'table-danger' } }
+
             - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
             - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
             - { name: "Button Secondary", element: "a", attributes: { 'class': 'btn btn-secondary' } }
+            - { name: "Button Tertiary", element: "a", attributes: { 'class': 'btn btn-tertiary' } }
+            - { name: "Button Quaternary", element: "a", attributes: { 'class': 'btn btn-quaternary' } }
             - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
             - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
             - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
             - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+
             - { name: "Button Outline Default", element: "a", attributes: { 'class': 'btn btn-outline-default' } }
             - { name: "Button Outline Primary", element: "a", attributes: { 'class': 'btn btn-outline-primary' } }
             - { name: "Button Outline Secondary", element: "a", attributes: { 'class': 'btn btn-outline-secondary' } }
+            - { name: "Button Outline Tertiary", element: "a", attributes: { 'class': 'btn btn-outline-tertiary' } }
+            - { name: "Button Outline Quaternary", element: "a", attributes: { 'class': 'btn btn-outline-quaternary' } }
             - { name: "Button Outline Success", element: "a", attributes: { 'class': 'btn btn-outline-success' } }
             - { name: "Button Outline Info", element: "a", attributes: { 'class': 'btn btn-outline-info' } }
             - { name: "Button Outline Warning", element: "a", attributes: { 'class': 'btn btn-outline-warning' } }
             - { name: "Button Outline Danger", element: "a", attributes: { 'class': 'btn btn-outline-danger' } }
+
+            - { name: "Link Arrow", element: "a", attributes: { 'class': 'link-arrow' } }
+            - { name: "Link Chevron", element: "a", attributes: { 'class': 'link-chevron' } }
+            - { name: "Link Page", element: "a", attributes: { 'class': 'link-page' } }
+            - { name: "Link Folder", element: "a", attributes: { 'class': 'link-folder' } }
+            - { name: "Link File", element: "a", attributes: { 'class': 'link-file' } }
+            - { name: "Link External", element: "a", attributes: { 'class': 'link-external' } }
+            - { name: "Link Mail", element: "a", attributes: { 'class': 'link-mail' } }
+            - { name: "Link Globe", element: "a", attributes: { 'class': 'link-globe' } }
+
             - { name: "List Unstyled", element: "ul", attributes: { 'class': 'list-unstyled' } }
             - { name: "List Inline", element: "ul", attributes: { 'class': 'list-inline' } }
+            - { name: "List Check", element: "ul", attributes: { 'class': 'list-check' } }
+            - { name: "List Info", element: "ul", attributes: { 'class': 'list-info' } }
+            - { name: "List Warning", element: "ul", attributes: { 'class': 'list-warning' } }
+            - { name: "List Ban", element: "ul", attributes: { 'class': 'list-ban' } }
+            - { name: "List Chevron", element: "ul", attributes: { 'class': 'list-chevron' } }
+
             - { name: "Lowercased text", element: "span", attributes: { 'class': 'text-lowercase' } }
             - { name: "Uppercased text", element: "span", attributes: { 'class': 'text-uppercase' } }
             - { name: "Capitalized text", element: "span", attributes: { 'class': 'text-capitalize' } }
             - { name: "Muted", element: "span", attributes: { 'class': 'text-muted' } }
             - { name: "Primary", element: "span", attributes: { 'class': 'text-primary' } }
             - { name: "Secondary", element: "span", attributes: { 'class': 'text-secondary' } }
+            - { name: "Tertiary", element: "span", attributes: { 'class': 'text-tertiary' } }
+            - { name: "Quaternary", element: "span", attributes: { 'class': 'text-quaternary' } }
             - { name: "Success", element: "span", attributes: { 'class': 'text-success' } }
             - { name: "Info", element: "span", attributes: { 'class': 'text-info' } }
             - { name: "Warning", element: "span", attributes: { 'class': 'text-warning' } }

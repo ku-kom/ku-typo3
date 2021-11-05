@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') or die('Access denied.');
 
 /***************
  * TypoScript: Full Package
@@ -31,20 +31,20 @@ defined('TYPO3_MODE') || die();
 
 /***************
  * TypoScript: Framework
- * Include Bootstrap 3.x (LESS) Assets
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'bootstrap_package',
-    'Configuration/TypoScript/Bootstrap3',
-    'Bootstrap Package: Bootstrap 3.x (LESS)'
-);
-
-/***************
- * TypoScript: Framework
  * Include Bootstrap 4.x (SCSS) Assets
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'bootstrap_package',
     'Configuration/TypoScript/Bootstrap4',
     'Bootstrap Package: Bootstrap 4.x (SCSS)'
+);
+
+/***************
+ * TypoScript: Framework
+ * Include Bootstrap 5.x (SCSS) Assets
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'bootstrap_package',
+    'Configuration/TypoScript/Bootstrap5',
+    'Bootstrap Package: Bootstrap 5.x (SCSS)'
 );

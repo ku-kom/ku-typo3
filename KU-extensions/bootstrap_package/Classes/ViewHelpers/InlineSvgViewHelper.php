@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the package bk2k/bootstrap-package.
@@ -9,10 +9,7 @@
 
 namespace BK2K\BootstrapPackage\ViewHelpers;
 
-use TYPO3\CMS\Core\Resource\Exception\ResourceDoesNotExistException;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
-use TYPO3\CMS\Extbase\Service\ImageService;
+use BK2K\BootstrapPackage\Utility\SvgUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
@@ -58,81 +55,10 @@ class InlineSvgViewHelper extends AbstractViewHelper
     ) {
         $src = (string)$arguments['src'];
         $image = $arguments['image'];
+        $width = $arguments['width'] ? (int) $arguments['width'] : null;
+        $height = $arguments['height'] ? (int) $arguments['height'] : null;
+        $class = $arguments['class'] ? (string) $arguments['class'] : null;
 
-        if (($src === '' && $image === null) || ($src !== '' && $image !== null)) {
-            throw new \Exception('You must either specify a string src or a File object.', 1530601100);
-        }
-
-        try {
-            $imageService = self::getImageService();
-            $image = $imageService->getImage($src, $image, false);
-            if ($image->getProperty('extension') !== 'svg') {
-                return '';
-            }
-
-            $svgContent = $image->getContents();
-            $svgContent = trim(preg_replace('/<script[\s\S]*?>[\s\S]*?<\/script>/i', '', $svgContent));
-
-            // Exit if file does not contain content
-            if (empty($svgContent)) {
-                return '';
-            }
-
-            // Disables the functionality to allow external entities to be loaded when parsing the XML, must be kept
-            $previousValueOfEntityLoader = libxml_disable_entity_loader(true);
-            $svgElement = simplexml_load_string($svgContent);
-            libxml_disable_entity_loader($previousValueOfEntityLoader);
-
-            // Override css class
-            $svgElement = self::setAttribute($svgElement, 'class', filter_var(trim((string)$arguments['class']), FILTER_SANITIZE_STRING));
-            $svgElement = self::setAttribute($svgElement, 'width', (int)$arguments['width']);
-            $svgElement = self::setAttribute($svgElement, 'height', (int)$arguments['height']);
-
-            // remove xml version tag
-            $domXml = dom_import_simplexml($svgElement);
-            return $domXml->ownerDocument->saveXML($domXml->ownerDocument->documentElement);
-        } catch (ResourceDoesNotExistException $e) {
-            // thrown if file does not exist
-            throw new \Exception($e->getMessage(), 1530601100, $e);
-        } catch (\UnexpectedValueException $e) {
-            // thrown if a file has been replaced with a folder
-            throw new \Exception($e->getMessage(), 1530601101, $e);
-        } catch (\RuntimeException $e) {
-            // RuntimeException thrown if a file is outside of a storage
-            throw new \Exception($e->getMessage(), 1530601102, $e);
-        } catch (\InvalidArgumentException $e) {
-            // thrown if file storage does not exist
-            throw new \Exception($e->getMessage(), 1530601103, $e);
-        }
-    }
-
-    /**
-     * @param \SimpleXMLElement $element
-     * @param string $attribute
-     * @param mixed $value
-     */
-    protected static function setAttribute(\SimpleXMLElement $element, $attribute, $value): \SimpleXMLElement
-    {
-        if ($value) {
-            if (isset($element->attributes()->$attribute)) {
-                $element->attributes()->$attribute = $value;
-            } else {
-                $element->addAttribute($attribute, $value);
-            }
-        }
-
-        return $element;
-    }
-
-    /**
-     * Return an instance of ImageService using object manager
-     *
-     * @return ImageService
-     */
-    protected static function getImageService()
-    {
-        /** @var ObjectManager $objectManager */
-        $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        return $objectManager->get(ImageService::class);
+        return SvgUtility::getInlineSvg($src, $image, $width, $height, $class);
     }
 }

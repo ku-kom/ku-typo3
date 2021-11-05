@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the package bk2k/bootstrap-package.
@@ -27,25 +27,27 @@ class ImageVariantsViewHelper extends AbstractViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('as', 'string', 'Name of variable to create', true);
-        $this->registerArgument('variants', 'array', 'Variants for responsive images', false);
-        $this->registerArgument('multiplier', 'array', 'Multiplier to calculate responsive image widths', false);
-        $this->registerArgument('gutters', 'array', 'Gutter that needs to be respected when calculating responsive image widths', false);
-        $this->registerArgument('corrections', 'array', 'Corrections to be applied after calculationof image widths', false);
+        $this->registerArgument('as', 'string', 'Name of variable to create.', true);
+        $this->registerArgument('variants', 'array', 'Variants for responsive images.', false);
+        $this->registerArgument('multiplier', 'array', 'Multiplier to calculate responsive image widths.', false);
+        $this->registerArgument('gutters', 'array', 'Gutter that needs to be respected when calculating responsive image widths.', false);
+        $this->registerArgument('corrections', 'array', 'Corrections to be applied after calculation of image widths.', false);
+        $this->registerArgument('aspectRatio', 'float', 'Set aspect ratio for all variants.', false);
     }
 
     /**
      * @param array $arguments
      * @param \Closure $renderChildrenClosure
      * @param RenderingContextInterface $renderingContext
-     * @return mixed
+     * @return string
      */
     public static function renderStatic(
         array $arguments,
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $variants = ImageVariantsUtility::getImageVariants($arguments['variants'], $arguments['multiplier'], $arguments['gutters'], $arguments['corrections']);
+        $variants = ImageVariantsUtility::getImageVariants($arguments['variants'], $arguments['multiplier'], $arguments['gutters'], $arguments['corrections'], $arguments['aspectRatio']);
         $renderingContext->getVariableProvider()->add($arguments['as'], $variants);
+        return '';
     }
 }

@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.interactive {
+    elements {
+        modals_button {
+            iconIdentifier = modals-button
+            title = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.modalButton
+            description = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.modalDesc
+            tt_content_defValues {
+                CType = modals_button
+            }
+        }
+    }
+    show := addToList(modals_button)
+}
