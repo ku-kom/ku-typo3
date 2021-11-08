@@ -5,5 +5,3 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_global_layout/Configuration/TsConfig/Page/TCEFORM.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_global_layout/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_global_layout/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
-# KU modals
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_global_layout/Configuration/TsConfig/Page/ContentElement/Element/Modal.tsconfig">

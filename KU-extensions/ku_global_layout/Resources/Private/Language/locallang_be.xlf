@@ -54,11 +54,8 @@
             <trans-unit id="backend_layout.global">
                 <source>KU Global layout elements</source>
             </trans-unit>
-            <trans-unit id="backend_layout.modalButton">
-                <source>KU Modal button</source>
-            </trans-unit>
-            <trans-unit id="backend_layout.modalDesc">
-                <source>A Button that opens a Modal Window</source>
+            <trans-unit id="backend_layout.customFrame1">
+                <source>KU farve</source>
             </trans-unit>
         </body>
     </file>

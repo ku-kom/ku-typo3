@@ -8,6 +8,10 @@ TCEFORM {
         [GLOBAL]
     }
     tt_content {
-
+        frame_class {
+            addItems {
+                custom-1 = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.customFrame1
+            }
+        }
     }
 }
