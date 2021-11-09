@@ -1,0 +1,18 @@
+{
+    "host": "ftp.idefadev.dk",
+    "username": "ku",
+    "password": "8SORTEmus",
+    "remotePath": "/ku.dk/ku_global_layout",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode",
+        ".stylelintrc",
+        ".php.cs"
+    ]
+}
