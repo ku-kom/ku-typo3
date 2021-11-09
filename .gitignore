@@ -1,5 +1,5 @@
 # Ftp settings
-sftp.json
+ftp-kr.json
 
 # TypeScript stuff
 .baseDir.ts
@@ -29,6 +29,7 @@ sftp.json
 
 # OS or Editor folders
 ._*
+ /.vscode/*
 .cache
 .DS_Store
 .idea
