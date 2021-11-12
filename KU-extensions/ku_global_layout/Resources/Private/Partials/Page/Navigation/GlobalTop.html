@@ -12,11 +12,16 @@
         <div class="container relative">
 
             <!-- KU logo -->
-
+            <f:debug>{_all}</f:debug>
             <f:if condition="{ku_logo}">
-                <f:format.raw>{ku_logo}</f:format.raw>
+                <f:then>
+                    <a class="topbar-logo" href="https://www.ku.dk/" title="Start">
+                        {ku_logo}
+                        <span class="sr-only">Start</span>
+                    </a>
+                </f:then>
             </f:if>
-   
+
 
             <!-- Utility menu -->
             <div class="navbar-collapse collapse" id="topbar">

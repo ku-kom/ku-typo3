@@ -9,7 +9,7 @@ mod {
                 config {
                     backend_layout {
                         colCount = 2
-                        rowCount = 1
+                        rowCount = 2
                         rows {
                             1 {
                                 columns {
@@ -20,6 +20,20 @@ mod {
                                     2 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.right
                                         colPos = 19
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.local_footer_address
+                                        colPos = 21
+                                        colspan = 6
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.local_footer_contact
+                                        colPos = 22
+                                        colspan = 6
                                     }
                                 }
                             }

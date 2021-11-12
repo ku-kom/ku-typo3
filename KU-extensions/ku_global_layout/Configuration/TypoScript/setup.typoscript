@@ -77,3 +77,4 @@ config {
     removeDefaultCss = 1
     removePageCss = 1
 }
+

@@ -16,7 +16,11 @@
             <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '19'}" />
         </div>
     </div>
-
+    <div class="row content-local-footer">
+        <div class="col-sm-12 col-md-9 col-md-offset-3">
+            <f:render partial="Structure/LocalFooter" arguments="{_all}" />
+        </div>
+    </div>
 </f:section>
 
 </html>

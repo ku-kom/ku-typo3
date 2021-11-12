@@ -5,21 +5,28 @@
         <f:render partial="Navigation/GlobalTop" arguments="{_all}" />
         <f:render partial="Navigation/GlobalMenu" arguments="{_all}" />
 
-        <main id="content" class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+        <main id="content"
+            class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
             <f:render partial="Structure/Navnetraek" arguments="{_all}" />
-                <f:comment>
-                    <f:render partial="Navigation/Main" arguments="{_all}" />
-                    <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
-                </f:comment>
-                <f:render section="Border" optional="true" />
-                <div class="container main-area" id="main-area">
-                    <!--TYPO3SEARCH_begin-->
-                    <f:render section="Main" />
-                    <!--TYPO3SEARCH_end-->
+            <f:comment>
+                <f:render partial="Navigation/Main" arguments="{_all}" />
+                <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
+            </f:comment>
+            <f:render section="Border" optional="true" />
+            <div class="container main-area" id="main-area">
+                <!--TYPO3SEARCH_begin-->
+                <f:render section="Main" />
+                <!--TYPO3SEARCH_end-->
+            </div>
+            <div class="container local-footer">
+                <hr>
+                <div class="row">
+                    <f:render partial="Structure/LocalFooter" arguments="{_all}" />
                 </div>
-                <f:render partial="Structure/LocalFooter" arguments="{_all}" />
+            </div>
+
         </main>
-        
+
         <footer>
             <div class="container-fluid" id="globalfooter">
                 <f:render partial="Structure/FooterContent" arguments="{_all}" />

@@ -1,5 +1,5 @@
 #
-# BACKENDLAYOUT: Global elements
+# BACKENDLAYOUT: KU Global elements
 #
 mod {
     web_layout {
@@ -53,22 +53,22 @@ mod {
                                     1 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col1
                                         colPos = 14
-                                        colspan = 4
+                                        colspan = 3
                                     }
                                     2 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col2
                                         colPos = 15
-                                        colspan = 4
+                                        colspan = 3
                                     }
                                     3 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col3
                                         colPos = 16
-                                        colspan = 4
+                                        colspan = 3
                                     }
                                     4 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col4
                                         colPos = 17
-                                        colspan = 4
+                                        colspan = 3
                                     }
                                 }
                             }
