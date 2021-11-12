@@ -2,7 +2,7 @@
     "host": "ftp.idefadev.dk",
     "username": "ku",
     "password": "8SORTEmus",
-    "remotePath": "/ku.dk/ku_global_layout",
+    "remotePath": "/ku.dk/typo3conf/ext/ku_global_layout",
     "protocol": "ftp",
     "port": 21,
     "fileNameEncoding": "utf8",

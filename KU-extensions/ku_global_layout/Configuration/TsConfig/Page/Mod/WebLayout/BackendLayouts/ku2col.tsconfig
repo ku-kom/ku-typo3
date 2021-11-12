@@ -1,5 +1,5 @@
 #
-# BACKENDLAYOUT: KU two columns
+# BACKENDLAYOUT: KU two columns.
 #
 mod {
     web_layout {
