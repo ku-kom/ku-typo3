@@ -20,6 +20,9 @@ mod {
                                     2 {
                                         name = LLL:EXT:ku_global_layout/Resources/Private/Language/locallang_be.xlf:backend_layout.right
                                         colPos = 19
+                                        disallowed {
+                                            CType = gridelements_pi1,gridelements_bootstrap
+                                        }
                                     }
                                 }
                             }
