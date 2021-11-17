@@ -11,8 +11,8 @@ page {
     includeCSS {
         theme >
         ku_bootstrap = EXT:ku_global_layout/Resources/Public/Css/bootstrap.css
-        ku_gridbox = https://cms.ku.dk/bootstrap/dist/css/ku-gridboxes.css
-        ku_gridbox.external = 1
+        ku_gridbox = EXT:ku_global_layout/Resources/Public/Css/ku-gridboxes.css
+        ku_special_elements = EXT:ku_global_layout/Resources/Public/Css/special-elements.css
     }
 
     includeCSSLibs {
