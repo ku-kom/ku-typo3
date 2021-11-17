@@ -1,0 +1,21 @@
+{
+    "name": "university-of-copenhagen/ku-prototype",
+    "type": "typo3-cms-extension",
+    "description": "KU demo design.",
+    "homepage": "https://www.ku.dk",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\KuPrototype\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ku_prototype"
+        }
+    }
+}

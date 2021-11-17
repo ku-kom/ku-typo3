@@ -1,7 +1,0 @@
-#
-# PageTS for IdeFA Start
-#
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:idefa_start/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:idefa_start/Configuration/TsConfig/Page/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:idefa_start/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:idefa_start/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">

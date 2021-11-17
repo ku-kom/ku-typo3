@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:ku_prototype/Resources/Public/Images/logo.svg
+        fileInverted = EXT:ku_prototype/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = KU prototype
+        linktitle = KU prototype
+    }
+    favicon {
+        file = EXT:ku_prototype/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:ku_prototype/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:ku_prototype/Resources/Private/Partials/Page/
+        templateRootPath = EXT:ku_prototype/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:ku_prototype/Resources/Private/Layouts/
+        partialRootPath = EXT:ku_prototype/Resources/Private/Partials/
+        templateRootPath = EXT:ku_prototype/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:ku_prototype/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:ku_prototype/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:ku_prototype/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}

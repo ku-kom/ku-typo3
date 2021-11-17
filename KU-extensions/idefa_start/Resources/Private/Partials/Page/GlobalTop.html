@@ -1,9 +1,0 @@
-{namespace s=IdeFA\IdefaBase\ViewHelpers}
-<s:registerVariable as="GlobalName" noprocess="1">{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: {pageUid:'{settings.idefasettings.special_id}', colPos:'3'} )}</s:registerVariable>
-<div id="top">
-    <div class="container">
-        <div class="col-md-6">
-            <span class="topname"><f:format.stripTags>{GlobalName}</f:format.stripTags></span>
-        </div>
-    </div>
-</div>
