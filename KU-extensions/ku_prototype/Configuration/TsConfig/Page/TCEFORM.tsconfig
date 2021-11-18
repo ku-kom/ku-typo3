@@ -9,3 +9,9 @@ TCEFORM {
 
     }
 }
+
+TCEFORM.tt_content.frame_class {
+   addItems {
+      superframe = Tester
+   }
+}
