@@ -6,4 +6,6 @@ TCEMAIN {
 }
 
 #MÅ IKKE ÆNDRES
-#mod.SHARED.colPos_list = 0,1,3,4
+[usergroup = 4]
+mod.SHARED.colPos_list = 0,1,3,4
+[global]
