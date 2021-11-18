@@ -32,7 +32,7 @@ page {
         settings {
             ku {
                 # Used for global elements
-                special_id = {$page.ku.settings.special_id}
+                global_elements_id = {$page.ku.settings.global_elements_id}
             }
         }
         templateRootPaths.3 = EXT:ku_prototype/Resources/Private/Templates/Page/

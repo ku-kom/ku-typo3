@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2021-11-17UTC14:41:230">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-10-29UTC08:09:160">
         <header>
             <authorName>Nanna Ellegaard</authorName>
             <authorEmail>nel@adm.ku.dk</authorEmail>
         </header>
         <body>
-            <trans-unit id="backend_layout.example">
-                <source>Example</source>
+            <trans-unit id="backend_layout.default">
+                <source>KU Standard</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.normal">
-                <source>Normal</source>
+            <trans-unit id="backend_layout.right">
+                <source>Right column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.center">
+                <source>Center column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.2colmenu">
+                <source>KU left menu, content and right column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.2col">
+                <source>KU left menu and center column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.noleftmenu">
+                <source>KU full width, no left menu</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.topbar">
+                <source>Global grey topbar</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.menu">
+                <source>Global menu</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.utility">
+                <source>Global utility menu</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.local_footer_address">
+                <source>Local footer address</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.local_footer_contact">
+                <source>Local footer contact</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer_col1">
+                <source>Global footer - column 1</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer_col2">
+                <source>Global footer - column 2</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer_col3">
+                <source>Global footer - column 3</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer_col4">
+                <source>Global footer - column 4</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.global">
+                <source>KU Global layout elements</source>
             </trans-unit>
         </body>
     </file>
