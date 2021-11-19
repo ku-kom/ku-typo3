@@ -12,8 +12,8 @@ page {
         file = EXT:ku_prototype/Resources/Public/Images/logo.svg
         height = 148
         width = 109
-        alt = KU prototype
-        linktitle = KU prototype
+        alt = 
+        linktitle = Københavns Universitet
     }
     favicon {
         file = EXT:ku_prototype/Resources/Public/Icons/favicon.ico
