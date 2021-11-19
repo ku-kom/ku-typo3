@@ -13,21 +13,21 @@ page {
         
     }
 
-    includeJSLibs {
+    # includeJSLibs {
 
-    }
+    # }
 
-    includeJS {
+    # includeJS {
 
-    }
+    # }
 
-    includeJSFooterlibs {
+    # includeJSFooterlibs {
 
-    }
+    # }
 
-    includeJSFooter {
+    # includeJSFooter {
         
-    }
+    # }
     10 {
         settings {
             ku {

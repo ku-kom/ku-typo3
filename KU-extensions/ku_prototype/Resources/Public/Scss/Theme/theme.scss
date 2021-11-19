@@ -2,8 +2,16 @@
 // Variables
 //
 @import "variables";
+@import "mixins";
+
 
 //
 // Import needed Bootstrap Package Files
 //
-@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/theme"
+@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+// KU overrides
+@import "Custom/global";
+@import "Custom/footer";
+@import "Custom/colorFamily";
+

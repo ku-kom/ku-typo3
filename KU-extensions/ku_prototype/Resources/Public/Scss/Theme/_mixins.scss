@@ -1,0 +1,14 @@
+// KU color families
+
+@mixin color-family($color, $background, $hover) {
+    background: $background;
+    color: $color;
+
+    &:hover {
+        background: $hover;
+    }
+
+    a {
+        color: inherit;
+    }
+}

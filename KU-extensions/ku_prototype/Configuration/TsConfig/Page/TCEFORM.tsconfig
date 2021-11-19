@@ -12,6 +12,38 @@ TCEFORM {
 
 TCEFORM.tt_content.frame_class {
    addItems {
-      superframe = Tester
+        hide-mobile = Hide in mobile
+        hide-desktop = Hide in desktop
+        sticky-bottom-right = Sticky bottom right
+   }
+}
+
+TCEFORM.tt_content.background_color_class {
+   addItems {
+        box-red1 = Rød mørk
+        box-red2 = Rød mellem
+        box-red3 = Rød lys
+        box-blue1 = Blå mørk
+        box-blue2 = Blå mellem
+        box-blue3 = Blå lys
+        box-teal1 = Petroleum mørk
+        box-teal2 = Petroleum mellem
+        box-teal3 = Petroleum lys
+        box-green1 = Grøn mørk
+        box-green2 = Grøn mellem
+        box-green3 = Grøn lys
+        box-grey1 = Grå mørk
+        box-grey2 = Grå mellem
+        box-grey3 = Grå lys
+        box-light1 = Hvid
+        box-light2 = Champagne
+        box-light3 = Gul
+   }
+}
+
+TCEFORM.tt_content.frame_layout {
+   addItems {
+        well = Well
+        factbox = Faktabox
    }
 }

@@ -1,0 +1,17 @@
+//
+// Scaffolding - global elements like sticky footer, etc.
+//
+html,
+body {
+    height: 100%;
+}
+
+.body-bg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}

@@ -4,7 +4,7 @@
 mod {
     web_layout {
         BackendLayouts {
-            default {
+            ku_default {
                 title = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.default
                 config {
                     backend_layout {
@@ -51,22 +51,22 @@ mod {
                                 columns {
                                     1 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col1
-                                        colPos = 10
+                                        colPos = 140
                                         colspan = 3
                                     }
                                     2 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col2
-                                        colPos = 11
+                                        colPos = 150
                                         colspan = 3
                                     }
                                     3 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col3
-                                        colPos = 12
+                                        colPos = 160
                                         colspan = 3
                                     }
                                     4 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col4
-                                        colPos = 12
+                                        colPos = 170
                                         colspan = 3
                                     }
                                 }

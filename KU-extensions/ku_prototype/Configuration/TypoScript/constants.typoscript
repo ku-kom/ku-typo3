@@ -10,9 +10,8 @@
 page {
     logo {
         file = EXT:ku_prototype/Resources/Public/Images/logo.svg
-        fileInverted = EXT:ku_prototype/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
+        height = 148
+        width = 109
         alt = KU prototype
         linktitle = KU prototype
     }
