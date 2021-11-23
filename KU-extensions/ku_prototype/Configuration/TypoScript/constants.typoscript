@@ -57,3 +57,19 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+page {
+    settings {
+        ku {
+            globalMenu {    
+                enable =
+            }
+            globalFooter {    
+                enable =
+            }
+            localFooter {    
+                enable =
+            }
+        }
+    }
+}

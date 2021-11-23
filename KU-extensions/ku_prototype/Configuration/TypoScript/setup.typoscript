@@ -39,4 +39,19 @@ page {
         partialRootPaths.3 = EXT:ku_prototype/Resources/Private/Partials/Page/
         layoutRootPaths.3 = EXT:ku_prototype/Resources/Private/Layouts/Page/
     }
+    20 {
+        settings {
+            ku {
+                globalMenu {    
+                    enable = {$page.settings.ku.globalMenu.enable}
+                }
+                globalFooter {    
+                    enable = {$page.settings.ku.globalFooter.enable}
+                }
+                localFooter {    
+                    enable = {$page.settings.ku.localFooter.enable}
+                }
+            }
+        }
+    }
 }
