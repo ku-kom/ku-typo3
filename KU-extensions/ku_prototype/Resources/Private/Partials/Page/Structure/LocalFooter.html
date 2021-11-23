@@ -1,32 +1,47 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-    <f:variable name="local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '71', slide: '-1'}" /></f:variable>
-    <f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '72', slide: '-1'}" /></f:variable>
+<f:variable name="global_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '71', slide: '-1'}" /></f:variable>
+
+<f:variable name="page_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '71', slide: '-1'}" /></f:variable>
+
+<f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '72', slide: '-1'}" /></f:variable>
 
 
-<section class="section section-default local-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 footer-address">
-                <f:if condition="{local_footer_address}">
-                    <f:then>
-                        <address>
-                            <f:format.raw>{local_footer_address}</f:format.raw>
-                        </address>
-                    </f:then>
-                </f:if>
-            </div>
-            <div class="col-md-6 footer-data">
-                <f:if condition="{local_footer_contact}">
-                    <f:then>
-                        <address>
-                            <f:format.raw>{local_footer_contact}</f:format.raw>
-                        </address>
-                    </f:then>
-                </f:if>
+<f:variable name="footer_address">
+    <f:if condition="{page_local_footer_address}">
+        <f:then>
+            {page_local_footer_address}
+        </f:then>
+        <f:else>
+            {global_local_footer_address}
+        </f:else>
+    </f:if>
+</f:variable>
+
+
+<f:debug title="Local footer" inline="1">{_all}</f:debug>
+
+<f:if condition="{settings.ku.localFooter.enable} > 0">
+    <section class="section section-default local-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 footer-address">
+                    <address>
+                        <f:format.raw>{footer_address}</f:format.raw>
+                    </address>
+                </div>
+                <div class="col-md-6 footer-data">
+                    <f:if condition="{local_footer_contact}">
+                        <f:then>
+                            <address>
+                                <f:format.raw>{local_footer_contact}</f:format.raw>
+                            </address>
+                        </f:then>
+                    </f:if>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</f:if>
 
 
 </html>

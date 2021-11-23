@@ -6,6 +6,9 @@
             <authorEmail>nel@adm.ku.dk</authorEmail>
         </header>
         <body>
+            <trans-unit id="ku-page-settings">
+                <source>KU Page settings</source>
+            </trans-unit>
             <trans-unit id="backend_layout.right">
                 <source>Right column</source>
             </trans-unit>

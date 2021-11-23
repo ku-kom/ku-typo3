@@ -58,17 +58,24 @@ plugin.bootstrap_package.settings.scss {
     secondary = #013859
 }
 
+######################################
+### ENABLE/DISABLE GLOBAL ELEMENTS ###
+######################################
 page {
     settings {
         ku {
-            globalMenu {    
-                enable =
+            # customcategory=ku-page-settings=LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:ku-page-settings
+            #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
+            globalMenu {
+                enable = 1
             }
+            #cat=ku-page-settings; type=boolean; label=Display global footer. Set to '0' to disable.
             globalFooter {    
-                enable =
+                enable = 1
             }
-            localFooter {    
-                enable =
+            #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
+            localFooter {
+                enable = 1
             }
         }
     }

@@ -33,25 +33,24 @@ page {
             ku {
                 # Used for global elements
                 global_elements_id = {$page.settings.ku.global_elements_id}
+                # Enable/disable global menu
+                globalMenu {
+                    enable = {$page.settings.ku.globalMenu.enable}
+                }
+                # Enable/disable global footer
+                globalFooter {    
+                    enable = {$page.settings.ku.globalFooter.enable}
+                }
+                # Enable/disable local footer
+                localFooter {    
+                    enable = {$page.settings.ku.localFooter.enable}
+                }
             }
+            
         }
         templateRootPaths.3 = EXT:ku_prototype/Resources/Private/Templates/Page/
         partialRootPaths.3 = EXT:ku_prototype/Resources/Private/Partials/Page/
         layoutRootPaths.3 = EXT:ku_prototype/Resources/Private/Layouts/Page/
     }
-    20 {
-        settings {
-            ku {
-                globalMenu {    
-                    enable = {$page.settings.ku.globalMenu.enable}
-                }
-                globalFooter {    
-                    enable = {$page.settings.ku.globalFooter.enable}
-                }
-                localFooter {    
-                    enable = {$page.settings.ku.localFooter.enable}
-                }
-            }
-        }
-    }
+
 }
