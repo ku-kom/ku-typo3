@@ -9,6 +9,9 @@
         <trans-unit id="frontend.ku">
                 <source>University og Copenhagen</source>
             </trans-unit>
+            <trans-unit id="right-column-aria">
+                <source>Related content</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
