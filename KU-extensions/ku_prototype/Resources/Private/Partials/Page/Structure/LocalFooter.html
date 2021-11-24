@@ -1,19 +1,16 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:variable name="global_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '71', slide: '-1'}" /></f:variable>
+
+<f:variable name="global_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent"  data="{pageUid: '{settings.ku.special_id}', colPos: '71'}" /></f:variable>
 
 <f:variable name="page_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '71', slide: '-1'}" /></f:variable>
 
-<f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '72', slide: '-1'}" /></f:variable>
+<f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContent"  data="{pageUid: '{settings.ku.special_id}', colPos: '72'}" /></f:variable>
 
 
 <f:variable name="footer_address">
     <f:if condition="{page_local_footer_address}">
-        <f:then>
-            {page_local_footer_address}
-        </f:then>
-        <f:else>
-            {global_local_footer_address}
-        </f:else>
+        <f:then>{page_local_footer_address}</f:then>
+        <f:else>{global_local_footer_address}</f:else>
     </f:if>
 </f:variable>
 

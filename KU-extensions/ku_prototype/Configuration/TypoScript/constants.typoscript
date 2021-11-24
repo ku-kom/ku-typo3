@@ -25,6 +25,29 @@ page {
     }
 }
 
+######################################
+### ENABLE/DISABLE GLOBAL ELEMENTS ###
+######################################
+page {
+    settings {
+        ku {
+            # customcategory=ku-page-settings=LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:ku-page-settings
+            #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
+            globalMenu {
+                enable = 1
+            }
+            #cat=ku-page-settings; type=boolean; label=Display global footer. Set to '0' to disable.
+            globalFooter {    
+                enable = 1
+            }
+            #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
+            localFooter {
+                enable = 1
+            }
+        }
+    }
+}
+
 
 ##################
 ### EXTENSIONS ###
@@ -56,27 +79,14 @@ plugin.bootstrap_package_contentelements {
 plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
+
+    # KU color families - must be in one line
+    frame-backgrounds = (box-red1:(background: $ku-red, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-red2:(background: $red2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-red3:(background: $red3, color: $white, link-color: $white, link-hover-color: $white), box-blue1:(background: $blue1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-blue2:(background: $blue2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-blue3:(background: $blue3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-teal1:(background: $teal1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-teal2:(background: $teal2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-teal3:(background: $teal3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-green1:(background: $green1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-green2:(background: $green2, color: $white, link-color: $white, link-hover-color: $white), box-green3:(background: $green3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-grey1:(background: $grey1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-grey2:(background: $grey2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-grey3:(background: $grey3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light1:(background: $white, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light2:(background: $white2, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light3:(background: $white3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark))
+
+    # Adjust frame margins
+    # frame-inner-spacing-scaling = (lg: 1, xl: 1.25)
+
+    # Update footer colors
+    # footer-sections = (content:(background: $body-bg, color: $body-color, link-color: $primary), meta:(background: #f6f6f6, color: #313131, link-color: $primary))
 }
 
-######################################
-### ENABLE/DISABLE GLOBAL ELEMENTS ###
-######################################
-page {
-    settings {
-        ku {
-            # customcategory=ku-page-settings=LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:ku-page-settings
-            #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
-            globalMenu {
-                enable = 1
-            }
-            #cat=ku-page-settings; type=boolean; label=Display global footer. Set to '0' to disable.
-            globalFooter {    
-                enable = 1
-            }
-            #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
-            localFooter {
-                enable = 1
-            }
-        }
-    }
-}
