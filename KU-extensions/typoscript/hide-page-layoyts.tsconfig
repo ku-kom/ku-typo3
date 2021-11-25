@@ -1,0 +1,19 @@
+// In file: \your_extension\Configuration\TsConfig\Page\TCEMAIN.tsconfig
+
+// Hide default Bootstrap page layouts:
+mod.web_layout.BackendLayouts.2_columns_25_75 >
+mod.web_layout.BackendLayouts.2_columns >
+mod.web_layout.BackendLayouts.2_columns_50_50 >
+mod.web_layout.BackendLayouts.2_columns_offset_right >
+mod.web_layout.BackendLayouts.3_columns >
+mod.web_layout.BackendLayouts.default >
+mod.web_layout.BackendLayouts.simple >
+mod.web_layout.BackendLayouts.special_feature >
+mod.web_layout.BackendLayouts.special_start >
+mod.web_layout.BackendLayouts.2_columns_offset_right >
+mod.web_layout.BackendLayouts.subnavigation_left >
+mod.web_layout.BackendLayouts.subnavigation_left_2_columns >
+mod.web_layout.BackendLayouts.subnavigation_right >
+mod.web_layout.BackendLayouts.subnavigation_right_2_columns >
+mod.web_layout.BackendLayouts.example >
+mod.web_layout.BackendLayouts.leftsidebarrightcontent >
