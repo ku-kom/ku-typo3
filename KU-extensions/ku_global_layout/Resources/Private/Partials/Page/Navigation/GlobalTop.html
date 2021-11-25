@@ -12,12 +12,12 @@
 
             <!-- KU logo -->
             
-            <f:debug title="GlobalTop.html">{_all}</f:debug>
+     
             
             <f:if condition="{ku_logo}">
                 <f:then>
-                    <a class="topbar-logo" href="https://www.ku.dk/" title="Start">
-                        <f:format.html>{ku_logo}</f:format.html>
+                    <a class="" href="https://www.ku.dk/" title="Start">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{settings.ku.special_id}', colPos: '11'}" />
                         <span class="sr-only">Start</span>
                     </a>
                 </f:then>

@@ -10,10 +10,36 @@
 page {
     logo {
         file = EXT:ku_prototype/Resources/Public/Images/logo.svg
+        fileInverted >
         height = 148
         width = 109
         alt = 
         linktitle = Københavns Universitet
+    }
+    theme {
+        socialmedia {
+            channels {
+                github >
+                googleplus >
+                xing >
+                vk >
+                videoportal {
+                    label = KU Video portal
+                    # cat=bootstrap package: social media/165/012_video_url; type=string; label=KU video portal: Insert the full account url
+                    url =
+                }
+                futurity {
+                    label = Futurity
+                    # cat=bootstrap package: social media/165/013_futurity_url; type=string; label=Futurity: Insert the full account url
+                    url =
+                }
+                coursera {
+                    label = Coursera
+                    # cat=bootstrap package: social media/165/014_coursera_url; type=string; label=Coursera: Insert the full account url
+                    url =
+                }
+            }
+        }
     }
     favicon {
         file = EXT:ku_prototype/Resources/Public/Icons/favicon.ico
@@ -33,15 +59,19 @@ page {
         ku {
             # customcategory=ku-page-settings=LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:ku-page-settings
             #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
-            globalMenu {
+            utilityMenu {
                 enable = 1
             }
-            #cat=ku-page-settings; type=boolean; label=Display global footer. Set to '0' to disable.
-            globalFooter {    
+            #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
+            globalMenu {
                 enable = 1
             }
             #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
             localFooter {
+                enable = 1
+            }
+            #cat=ku-page-settings; type=boolean; label=Display global footer. Set to '0' to disable.
+            globalFooter {    
                 enable = 1
             }
         }
@@ -84,7 +114,7 @@ plugin.bootstrap_package.settings.scss {
     frame-backgrounds = (box-red1:(background: $ku-red, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-red2:(background: $red2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-red3:(background: $red3, color: $white, link-color: $white, link-hover-color: $white), box-blue1:(background: $blue1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-blue2:(background: $blue2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-blue3:(background: $blue3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-teal1:(background: $teal1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-teal2:(background: $teal2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-teal3:(background: $teal3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-green1:(background: $green1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-green2:(background: $green2, color: $white, link-color: $white, link-hover-color: $white), box-green3:(background: $green3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-grey1:(background: $grey1, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-grey2:(background: $grey2, color: $gridbox-text-light, link-color: $gridbox-text-light, link-hover-color: $gridbox-text-light), box-grey3:(background: $grey3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light1:(background: $white, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light2:(background: $white2, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark), box-light3:(background: $white3, color: $gridbox-text-dark, link-color: $gridbox-text-dark, link-hover-color: $gridbox-text-dark))
 
     # Adjust frame margins
-    # frame-inner-spacing-scaling = (lg: 1, xl: 1.25)
+    # frame-inner-spacing-scaling = (xs:1, sm: 1.2, md: 1.3, lg: 1.4, xl: 1.5)
 
     # Update footer colors
     # footer-sections = (content:(background: $body-bg, color: $body-color, link-color: $primary), meta:(background: #f6f6f6, color: #313131, link-color: $primary))

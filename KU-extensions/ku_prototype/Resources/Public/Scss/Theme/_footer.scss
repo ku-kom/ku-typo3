@@ -1,0 +1,11 @@
+//
+// Footer Columns
+//
+.footer-section-content-column-left,
+.footer-section-content-column-middle,
+.footer-section-content-column-right {
+    width: 100%;
+    @include media-breakpoint-up('sm') {
+        width: calc(100% / 4);
+    }
+}

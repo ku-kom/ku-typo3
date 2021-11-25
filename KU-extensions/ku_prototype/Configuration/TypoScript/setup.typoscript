@@ -33,18 +33,22 @@ page {
             ku {
                 # Used for global elements
                 global_elements_id = {$page.settings.ku.global_elements_id}
+                # Enable/disable utility menu
+                utilityMenu {
+                    enable = {$page.settings.ku.utilityMenu.enable}
+                }
                 # Enable/disable global menu
                 globalMenu {
                     enable = {$page.settings.ku.globalMenu.enable}
-                }
-                # Enable/disable global footer
-                globalFooter {    
-                    enable = {$page.settings.ku.globalFooter.enable}
                 }
                 # Enable/disable local footer
                 localFooter {    
                     enable = {$page.settings.ku.localFooter.enable}
                 }
+                # Enable/disable global footer
+                globalFooter {    
+                    enable = {$page.settings.ku.globalFooter.enable}
+                }   
             }
             
         }
