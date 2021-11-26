@@ -2,6 +2,9 @@
 // Footer Columns
 //
 
+.footer-section-content {
+    padding: ($spacer * 1.5) 0 ($spacer * 1) 0;
+}
 
 .footer-section-content-column {
     width: 100%;
@@ -9,5 +12,21 @@
 
     @include media-breakpoint-up('sm') {
         width: calc(100% / 4);
+    }
+}
+
+.local-footer {
+    border-top: 1px solid $gray-ccc;
+
+    &-container {
+        padding-top: ($spacer * 1);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .footer-data {
+        @extend .text-right;
     }
 }
