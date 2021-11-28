@@ -1,19 +1,6 @@
 //
-// Footer Columns
+// Local and global footer
 //
-
-.footer-section-content {
-    padding: ($spacer * 1.5) 0 ($spacer * 1) 0;
-}
-
-.footer-section-content-column {
-    width: 100%;
-    color: $white;
-
-    @include media-breakpoint-up('md') {
-        width: calc(100% / 4);
-    }
-}
 
 .local-footer {
     border-top: 1px solid $gray-ccc;
@@ -33,31 +20,94 @@
     }
 }
 
+.footer-section-content-column {
+    width: 100%;
 
-@include media-breakpoint-down('md') {
-    .footer-section-content-column {
-        border-bottom: 1px solid $white;
+    @include media-breakpoint-up('md') {
+        width: calc(100% / 4);
+        color: $white;
+    }
 
-        .frame-header {
-            cursor: pointer;
-        }
+    .list {
+        @include list-unstyled();
+        color: var(--frame-color);
 
-        .list {
-            transition: height .4s ease;
-            overflow: hidden;
-
-            &:not(.active) {
-                display: none;
+        li {
+            p {
+                margin: 0;
             }
         }
     }
 }
 
+@include media-breakpoint-down('md') {
+    .footer-section-content-column {
+        padding-left: 0;
+        padding-right: 0;
+
+        .frame-header {
+            cursor: pointer;
+            margin-bottom: 0;
+            color: var(--frame-color);
+
+            &::after {
+                content: '';
+                display: block;
+                background: $gray-500;
+                height: 1px;
+                width: 100%;
+            }
+        }
+
+        .element-header {
+            padding: ($spacer * 1) ($spacer * 1.25);
+        }
+
+        .list {
+            margin: 0;
+            transition: height .4s cubic-bezier(.02, .01, .47, 1);
+            overflow: hidden;
+
+            &:not(.active) {
+                display: none;
+            }
+
+            li {
+                padding: 10px ($spacer * 1.25);
+
+                &+li {
+                    border-top: 1px solid $gray-500;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .footer-sociallinks {
+        background-color: var(--frame-background);
+        color: $white;
+        padding: ($spacer * 1) ($spacer * 1.25);
+    }
+}
+
+@include media-breakpoint-up('sm') {
+    .footer-sociallinks .sociallinks-list {
+        justify-content: flex-start;
+    }
+}
+
 @include media-breakpoint-up('md') {
+    .footer-section-content {
+        padding: ($spacer * 1.5) 0 ($spacer * 1.25) 0;
+
+    }
+
     .footer-section-content-column {
 
         .frame-header {
             pointer-events: none;
+            margin-bottom: .5rem;
         }
     }
+
 }

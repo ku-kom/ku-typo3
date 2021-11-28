@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const toggleFooter = () => {
     footerHeading.forEach(el => {
       el.addEventListener('click', (e) => {
-
         let that = e.currentTarget;
         let list = that.nextElementSibling;
 

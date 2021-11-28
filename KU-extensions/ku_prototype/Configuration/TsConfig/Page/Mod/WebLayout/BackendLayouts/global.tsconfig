@@ -54,21 +54,33 @@ mod {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col1
                                         colPos = 140
                                         colspan = 3
+                                        allowed { 
+                                            CType = bullets
+                                        }
                                     }
                                     2 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col2
                                         colPos = 150
                                         colspan = 3
+                                        allowed { 
+                                            CType = bullets
+                                        }
                                     }
                                     3 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col3
                                         colPos = 160
                                         colspan = 3
+                                        allowed { 
+                                            CType = bullets
+                                        }
                                     }
                                     4 {
                                         name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer_col4
                                         colPos = 170
                                         colspan = 3
+                                        allowed { 
+                                            CType = bullets
+                                        }
                                     }
                                 }
                             }

@@ -27,6 +27,11 @@
                     <f:if condition="{footer-col-4}">
                         <f:format.raw>{footer-col-4}</f:format.raw>
                     </f:if>
+                    <f:if condition="{theme.socialmedia.enable}">
+                        <div class="footer-sociallinks">
+                            <f:render partial="Structure/SocialLinks" arguments="{_all}" />
+                        </div>
+                    </f:if>
                 </div>
             </div>
         </div>
