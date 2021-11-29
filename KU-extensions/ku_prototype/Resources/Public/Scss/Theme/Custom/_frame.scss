@@ -1,0 +1,17 @@
+//
+// KU frame styling
+//
+
+.frame {
+    &-hide-desktop {
+        @include media-breakpoint-up('md') {
+            display: none;
+        }
+    }
+
+    &-hide-mobile {
+        @include media-breakpoint-down('md') {
+            display: none;
+        }
+    }
+}

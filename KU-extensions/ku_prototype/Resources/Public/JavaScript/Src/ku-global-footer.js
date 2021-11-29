@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   'use strict';
 
-  const footerHeading = document.querySelectorAll('.frame-header');
+  const footerHeading = document.querySelectorAll('.footer-section-content .frame-header');
 
   const isMobile = function () {
     return window.matchMedia('(max-width: 767px)').matches;
@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   };
 
-
-  const toggleFooter = () => {
+  function toggleFooter() {
     footerHeading.forEach(el => {
       el.addEventListener('click', (e) => {
         let that = e.currentTarget;

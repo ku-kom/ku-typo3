@@ -1,0 +1,223 @@
+#
+# BACKENDLAYOUT: KU Global elements - full width, multiple rows and columns.
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            ku-multi-column {
+                title = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.multicolumn
+                config {
+                    backend_layout {
+                        colCount = 12
+                        rowCount = 13
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 101
+                                        colspan = 12
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 102
+                                        colspan = 6
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 128
+                                        colspan = 6
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 103
+                                        colspan = 4
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 104
+                                        colspan = 4
+                                    }
+                                    3 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 105
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            4 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 106
+                                        colspan = 4
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 107
+                                        colspan = 8
+                                    }
+                                }
+                            }
+                            5 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 108
+                                        colspan = 8
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 109
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            6 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 110
+                                        colspan = 3
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 111
+                                        colspan = 3
+                                    }
+                                    3 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 112
+                                        colspan = 3
+                                    }
+                                    4 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 113
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            7 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 114
+                                        colspan = 12
+                                    }
+                                }
+                            }
+                            8 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 115
+                                        colspan = 6
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 116
+                                        colspan = 6
+                                    }
+                                }
+                            }
+                            9 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 117
+                                        colspan = 4
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 118
+                                        colspan = 4
+                                    }
+                                    3 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 119
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            10 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 120
+                                        colspan = 4
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 121
+                                        colspan = 8
+                                    }
+                                }
+                            }
+                            11 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 122
+                                        colspan = 8
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 123
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            12 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.left
+                                        colPos = 124
+                                        colspan = 3
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 125
+                                        colspan = 3
+                                    }
+                                    3 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.center
+                                        colPos = 126
+                                        colspan = 3
+                                    }
+                                    4 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.right
+                                        colPos = 127
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            13 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.local_footer_address
+                                        colPos = 21
+                                        colspan = 6
+                                    }
+                                    2 {
+                                        name = LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:backend_layout.column.local_footer_contact
+                                        colPos = 22
+                                        colspan = 6
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:ku_prototype/Resources/Public/Icons/BackendLayouts/Ku-multi-column.svg
+            }
+        }
+    }
+}
