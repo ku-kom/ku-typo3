@@ -1,5 +1,5 @@
 #
-# BACKENDLAYOUT: KU Global elements
+# BACKENDLAYOUT: KU Global elements - leftmenu, content and right column.
 #
 mod {
     web_layout {
@@ -42,7 +42,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:ku_prototype/Resources/Public/Icons/BackendLayouts/ku.svg
+                icon = EXT:ku_prototype/Resources/Public/Icons/BackendLayouts/ku-two-column.svg
             }
         }
     }

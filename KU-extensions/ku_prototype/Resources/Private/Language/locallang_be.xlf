@@ -18,6 +18,9 @@
             <trans-unit id="backend_layout.2colmenu">
                 <source>KU left menu, content and right column</source>
             </trans-unit>
+            <trans-unit id="backend_layout.2colrightcol">
+                <source>KU ontent and right column</source>
+            </trans-unit>
             <trans-unit id="backend_layout.2col">
                 <source>KU left menu and center column</source>
             </trans-unit>

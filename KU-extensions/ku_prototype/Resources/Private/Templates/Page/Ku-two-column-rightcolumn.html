@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="Border">
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3', slide: '{theme.pagelayout.{pagelayout}.colPos.3.slide}'}" />
+</f:section>
+<f:section name="Main">
+
+    <div class="section section-default">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-9 main-content">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '77'}" />
+                </main>
+                <aside class="col-md-3 right-side" aria-label="{f:translate(key: 'right-column-aria', extensionName: 'ku_prototype')}">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '78'}" />
+                </aside>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+
+<f:section name="Footer">
+    <f:render partial="Structure/LocalFooter" arguments="{_all}" />
+    <f:render partial="Structure/FooterContent" arguments="{_all}" />
+</f:section>
+
+</html>
