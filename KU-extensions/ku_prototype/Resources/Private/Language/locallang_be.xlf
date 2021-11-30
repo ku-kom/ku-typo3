@@ -33,9 +33,6 @@
             <trans-unit id="backend_layout.multicolumn">
                 <source>KU full width with multiple columns, no left menu</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.topbar">
-                <source>Global grey topbar</source>
-            </trans-unit>
             <trans-unit id="backend_layout.column.menu">
                 <source>Global menu</source>
             </trans-unit>

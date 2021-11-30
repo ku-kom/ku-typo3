@@ -8,18 +8,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const footerHeading = document.querySelectorAll('.footer-section-content .frame-header');
 
-  const isMobile = function () {
+  const isMobile = () => {
     return window.matchMedia('(max-width: 767px)').matches;
   };
 
-  const setAriaAttr = function () {
+  const setAriaAttr = () => {
     // Set accessible attributes
     footerHeading.forEach(el => {
       el.setAttribute('aria-expanded', isMobile() ? 'false' : 'true');
     });
   };
 
-  const resetFooter = function () {
+  const resetFooter = () => {
     // Reset styling
     footerHeading.forEach(el => {
       el.nextElementSibling.style.removeProperty('height');
@@ -63,9 +63,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   setAriaAttr();
-  if (isMobile()) {
-    toggleFooter();
-  }
+  toggleFooter();
 
   window.addEventListener('resize', debounce(() => {
     resetFooter();
