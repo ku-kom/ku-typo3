@@ -3,7 +3,7 @@
  * University of Copenhagen, FA Communications
  * ========================================================================*/
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   const footerHeading = document.querySelectorAll('.footer-section-content .frame-header');
