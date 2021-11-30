@@ -11,8 +11,6 @@ page {
     logo {
         file = EXT:ku_prototype/Resources/Public/Images/logo.svg
         fileInverted >
-        height = 148
-        width = 109
         alt = 
         linktitle = Københavns Universitet
     }
