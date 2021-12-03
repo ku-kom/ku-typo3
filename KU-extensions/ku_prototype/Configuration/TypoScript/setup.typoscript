@@ -12,6 +12,9 @@ page {
         theme = EXT:ku_prototype/Resources/Public/Scss/Theme/theme.scss
         
     }
+    includeCSSLibs {
+        # bootstrappackageicon >
+    }
 
     includeJSLibs {
         modernizr >

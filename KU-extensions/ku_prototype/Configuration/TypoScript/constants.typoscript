@@ -21,20 +21,42 @@ page {
                 googleplus >
                 xing >
                 vk >
+                facebook {
+                    # cat=bootstrap package: social media/165/02_facebook_url; type=string; label=Facebook aria-Label:
+                    aria_label =
+                }
+                twitter {
+                    # cat=bootstrap package: social media/165/03_twitter_url; type=string; label=Twitter aria-label:
+                    aria_label =
+                }
+                instagram {
+                    # cat=bootstrap package: social media/165/04_instagram_url; type=string; label=Instagram aria-label:
+                    aria_label =
+                }
+                linkedin {
+                    # cat=bootstrap package: social media/165/06_linkedin_url; type=string; label=LinkedIn aria-label:
+                    aria_label =
+                }
                 videoportal {
                     label = KU Video portal
-                    # cat=bootstrap package: social media/165/012_video_url; type=string; label=KU video portal: Insert the full account url
+                    # cat=bootstrap package: social media/165/012_video_url; type=string; label=KU video portal: Insert the full account url:
                     url =
+                    # cat=bootstrap package: social media/165/013_aria_label; type=string; label=KU video aria-Label:
+                    aria_label =
                 }
                 futurity {
                     label = Futurity
-                    # cat=bootstrap package: social media/165/013_futurity_url; type=string; label=Futurity: Insert the full account url
+                    # cat=bootstrap package: social media/165/013_futurity_url; type=string; label=Futurity: Insert the full account url:
                     url =
+                    # cat=bootstrap package: social media/165/014_aria_label; type=string; label=Futurity aria-Label:
+                    aria_label =
                 }
                 coursera {
                     label = Coursera
-                    # cat=bootstrap package: social media/165/014_coursera_url; type=string; label=Coursera: Insert the full account url
+                    # cat=bootstrap package: social media/165/014_coursera_url; type=string; label=Coursera: Insert the full account url:
                     url =
+                    # cat=bootstrap package: social media/165/015_aria_label; type=string; label=Coursera aria-Label:
+                    aria_label =
                 }
             }
         }
