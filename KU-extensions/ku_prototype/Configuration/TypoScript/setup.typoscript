@@ -18,8 +18,7 @@ page {
     }
 
     includeJS {
-        ku_custom = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-custom.js
-        ku_global_footer = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-global-footer.js
+        
     }
 
     includeJSFooterlibs {
@@ -28,7 +27,8 @@ page {
 
 
     includeJSFooter {
-        
+        ku_custom = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-custom.js
+        ku_global_footer = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-global-footer.js
     }
     10 {
         settings {

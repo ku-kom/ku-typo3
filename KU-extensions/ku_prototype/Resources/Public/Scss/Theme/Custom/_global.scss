@@ -1,9 +1,20 @@
 //
 // Scaffolding - global elements like sticky footer, etc.
 //
+
+// Include custom font:
+@include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-300, 300, normal, woff2 woff);
+@include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-400, 400, normal, woff2 woff);
+@include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-600, 600, normal, woff2 woff);
+@include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-700, 700, normal, woff2 woff);
+
 html,
 body {
     height: 100%;
+}
+
+body {
+    font-family: $ku-font, $font-family-base;
 }
 
 .body-bg {
