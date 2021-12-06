@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:if condition="{theme.socialmedia.channels}">
     <div class="sociallinks">
         <ul class="sociallinks-list">
@@ -6,7 +7,7 @@
                 <f:if condition="{channelOptions.url}">
                     <li class="sociallinks-item sociallinks-item-{channelKey}" title="{channelOptions.label}">
                         <a {f:if(condition: channelOptions.aria_label, then:' aria-label="{channelOptions.aria_label}"')} class="sociallinks-link sociallinks-link-{channelKey}" href="{channelOptions.url}" rel="noopener" target="_blank">
-                            <span class="sociallinks-link-icon bootstrappackageicon bootstrappackageicon-{channelKey}"></span>
+                            <span aria-hidden="true" class="sociallinks-link-icon bi-{channelKey}"></span>
                             <span class="sociallinks-link-label">{channelOptions.label}</span>
                         </a>
                     </li>
