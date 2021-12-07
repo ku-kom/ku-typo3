@@ -5,5 +5,30 @@ imports:
     - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
 
 editor:
+    externalPlugins:
+        ku_prototype_codemirror:
+            resource: "EXT:ku_prototype/Resources/Public/CKeditor/Plugins/Codemirror/"
+
     config:
         contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
+
+        scayt_autoStartup: true
+
+        disallowedContent:
+        - "i,s,*{font*}"
+
+        extraAllowedContent:
+        - "iframe(*){*}[*]"
+
+        removeFormatAttributes:
+        - "lang,width,height,align,hspace,valign"
+
+        removeButtons:
+        # - Italic
+
+        extraPlugins:
+        - ku_prototype_codemirror
+
+    processing:
+        allowTags:
+            - iframe
