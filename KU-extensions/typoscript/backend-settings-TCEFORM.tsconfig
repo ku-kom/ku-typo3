@@ -1,0 +1,207 @@
+####################################################
+# Pages ###########################################
+#################################################### 
+
+# "General"
+TCEFORM.pages.doktype.disabled = 0
+TCEFORM.pages.title.disabled = 0
+TCEFORM.pages.nav_title.disabled  = 0
+TCEFORM.pages.subtitle.disabled  = 1
+TCEFORM.pages.alias.disabled  = 1
+TCEFORM.pages.tx_realurl_pathsegment.disabled = 1
+TCEFORM.pages.tx_realurl_exclude.disabled = 1
+
+
+# "Access"
+TCEFORM.pages.hidden.disabled = 0
+TCEFORM.pages.nav_hide.disabled = 0
+TCEFORM.pages.extendToSubpages.disabled = 1
+TCEFORM.pages.fe_group.disabled = 0
+TCEFORM.pages.fe_login_mode.disabled = 1
+TCEFORM.pages.starttime.disabled  = 0
+TCEFORM.pages.endtime.disabled  = 0
+
+# "Metadata"
+TCEFORM.pages.abstract.disabled  = 0
+TCEFORM.pages.keywords.disabled = 1
+TCEFORM.pages.description.disabled = 0
+TCEFORM.pages.author.disabled = 1
+TCEFORM.pages.author_email.disabled = 1
+TCEFORM.pages.lastUpdated.disabled = 1
+
+
+# "Appearance"
+TCEFORM.pages.newUntil.disabled = 1
+TCEFORM.pages.backend_layout.disabled  = 0
+TCEFORM.pages.backend_layout_next_level.disabled  = 0
+TCEFORM.pages.module.disabled = 1
+
+# "Behaviour"
+TCEFORM.pages.alias.disabled  = 1
+TCEFORM.pages.target.disabled  = 1
+TCEFORM.pages.crdate.disabled = 1
+TCEFORM.pages.crdate.disabled = 1
+TCEFORM.pages.url_scheme.disabled = 1
+TCEFORM.pages.cache_timeout.disabled = 0
+TCEFORM.pages.no_cache.disabled = 0
+TCEFORM.pages.l18n_cfg.disabled  = 1
+TCEFORM.pages.is_siteroot.disabled = 1
+TCEFORM.pages.no_search.disabled = 1
+TCEFORM.pages.editlock.disabled = 1
+TCEFORM.pages.php_tree_stop.disabled = 1
+TCEFORM.pages.mount_pid_of.disabled  = 1
+
+# Categories
+TCEFORM.pages.categories.disabled  = 1
+
+# "Resources"
+TCEFORM.pages.media.disabled  = 0
+TCEFORM.pages.storage_pid.disabled  = 1
+TCEFORM.pages.TSconfig.disabled  = 1
+
+# Layout
+TCEFORM.pages.layout.disabled  = 1
+
+
+####################################################
+# tt_content  ######################################
+####################################################
+
+# turn off language dropdown in monolingual sites (only!)
+TCEFORM.tt_content.sys_language_uid.disabled  = 0
+
+#Frame 
+TCEFORM.tt_content.section_frame.disabled  = 1
+
+#Checkbox Index (Seiteninhalt wird in Menus ausgegeben) ?
+TCEFORM.tt_content.sectionIndex.disabled  = 1
+
+#Old school stuff
+TCEFORM.tt_content.spaceBefore.disabled  = 1
+TCEFORM.tt_content.spaceAfter.disabled  = 1
+
+#others
+TCEFORM.tt_content.altText.disabled  = 1
+TCEFORM.tt_content.select_key.disabled  = 1
+TCEFORM.tt_content.linkToTop.disabled  = 1
+TCEFORM.tt_content.rte_enabled.disabled  = 0
+TCEFORM.tt_content.colPos.disabled  = 0
+TCEFORM.tt_content.splash_layout.disabled  = 1
+TCEFORM.tt_content.titleText.disabled  = 1
+TCEFORM.tt_content.categories.disabled  = 1
+TCEFORM.tt_content.fe_users.lockToDomain.disabled  = 1
+
+####################################################
+# Section Header  ############################# 
+####################################################
+TCEFORM.tt_content.header.disabled  = 0
+TCEFORM.tt_content.header_position.disabled  = 1
+TCEFORM.tt_content.header_layout.disabled  = 0
+TCEFORM.tt_content.header_link.disabled  = 1
+
+####################################################
+# Section Text #####################################
+####################################################
+TCEFORM.tt_content.text_align.disabled  = 1
+TCEFORM.tt_content.text_face.disabled  = 1
+TCEFORM.tt_content.text_size.disabled  = 1
+TCEFORM.tt_content.text_color.disabled  = 1
+TCEFORM.tt_content.text_properties.disabled  = 1
+
+###################################################
+# Section Table #####################################
+####################################################
+TCEFORM.tt_content.table_bgColor.disabled  = 1
+TCEFORM.tt_content.table_bordersection_frame.disabled  = 1
+TCEFORM.tt_content.table_cellspacing.disabled  = 1
+TCEFORM.tt_content.table_cellpadding.disabled  = 1
+
+
+####################################################
+# Access ######################
+####################################################
+TCEFORM.tt_content.starttime.disabled  = 0
+TCEFORM.tt_content.endtime.disabled  = 0
+TCEFORM.tt_content.date.disabled  = 1
+TCEFORM.tt_content.fe_group.disabled  = 0
+
+
+#################################################################
+# textpic ######################################
+################################################################# 
+
+# Appearance
+TCEFORM.tt_content.longdescURL.disabled  = 1
+TCEFORM.tt_content.image_link.disabled  = 0
+TCEFORM.tt_content.image_zoom.disabled  = 1
+TCEFORM.tt_content.imageorient.disabled = 1
+TCEFORM.tt_content.imagecols.disabled = 1
+TCEFORM.tt_content.image_effects.disabled = 1
+TCEFORM.tt_content.spaceBefore.disabled = 1
+TCEFORM.tt_content.spaceAfter.disabled = 1
+TCEFORM.tt_content.section_frame.disabled = 1
+TCEFORM.tt_content.imagewidth.disabled = 1
+TCEFORM.tt_content.imageheight.disabled = 1
+TCEFORM.tt_content.imageborder.disabled = 1
+TCEFORM.tt_content.image_compression.disabled = 1
+TCEFORM.tt_content.imagecaption_position.disabled = 1
+TCEFORM.tt_content.image_noRows.disabled = 1
+TCEFORM.tt_content.image_frames.disabled  = 1
+TCEFORM.tt_content.layout.disabled  = 1
+
+# media
+TCEFORM.sys_file_reference.alternative.disabled  = 1
+# in FE, use caption as altText (I know)
+TCEFORM.sys_file_reference.description.disabled  = 0
+TCEFORM.sys_file_reference.title.disabled  = 1
+TCEFORM.sys_file_reference.link.disabled  = 0
+#*******Imageorient 
+#mod.wizards.newContentElement.wizardItems.common.elements.textpic.tt_content_defValues.imageorient = 2
+#mod.wizards.newContentElement.wizardItems.common.elements.image.tt_content_defValues.imageorient = 2
+
+## alle Werte von imageorient
+# 0, 1, 2, 8, 9, 10, 17, 18, 25, 26 
+#0 = Above, center
+#1 = Above, right
+#2 = Above, left
+#8 = Below, center
+#9 = Below, right
+#10 = Below, left
+#17 = In text, right
+#18 = In text, left
+#25 = In text, right (nowrap)
+#26 = In text, left (nowrap)
+# liesse sich sünst gut anpassen
+#TCEFORM.tt_content.imageorient.removeItems = 0, 1, 8, 9, 10, 17, 18, 25, 26 
+TCEFORM.tt_content.imageorient.disabled = 1
+
+##########################################
+# tx_news ################################
+##########################################
+
+TCEFORM.tx_news_domain_model_news.title.disabled = 0
+TCEFORM.tx_news_domain_model_news.teaser.disabled = 1
+TCEFORM.tx_news_domain_model_news.bodytext.disabled = 0
+TCEFORM.tx_news_domain_model_news.datetime.disabled = 0
+TCEFORM.tx_news_domain_model_news.archive.disabled = 0
+TCEFORM.tx_news_domain_model_news.author.disabled = 1
+TCEFORM.tx_news_domain_model_news.author_email.disabled = 1
+TCEFORM.tx_news_domain_model_news.categories.disabled = 0
+TCEFORM.tx_news_domain_model_news.related.disabled = 1
+TCEFORM.tx_news_domain_model_news.related_from.disabled = 1
+TCEFORM.tx_news_domain_model_news.related_files.disabled = 1
+TCEFORM.tx_news_domain_model_news.related_links.disabled = 1
+TCEFORM.tx_news_domain_model_news.type.disabled = 0
+TCEFORM.tx_news_domain_model_news.keywords.disabled = 1
+TCEFORM.tx_news_domain_model_news.tags.disabled = 1
+TCEFORM.tx_news_domain_model_news.media.disabled = 0
+TCEFORM.tx_news_domain_model_news.internalurl.disabled = 1
+TCEFORM.tx_news_domain_model_news.externalurl.disabled = 1
+TCEFORM.tx_news_domain_model_news.istopnews.disabled = 0
+TCEFORM.tx_news_domain_model_news.content_elements.disabled = 1
+TCEFORM.tx_news_domain_model_news.path_segment.disabled = 1
+TCEFORM.tx_news_domain_model_news.alternative_title.disabled = 1
+TCEFORM.tx_news_domain_model_news.rte_disabled.disabled = 1
+TCEFORM.tx_news_domain_model_news.import_id.disabled = 1
+TCEFORM.tx_news_domain_model_news.import_source.disabled = 1
+TCEFORM.tx_news_domain_model_news.is_dummy_record.disabled = 1
