@@ -12,6 +12,9 @@ editor:
     config:
         contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
 
+        stylesSet:
+            - { name: "Test", element: "div", attributes: { 'class': 'ku-test' } }
+
         scayt_autoStartup: true
 
         disallowedContent:
