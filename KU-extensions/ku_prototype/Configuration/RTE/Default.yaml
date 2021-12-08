@@ -15,7 +15,7 @@ editor:
         scayt_autoStartup: true
 
         disallowedContent:
-        - "i,s,*{font*}"
+        - "i,s,*{font*},table[cellspacing,cellpadding,border]"
 
         extraAllowedContent:
         - "iframe(*){*}[*]"
@@ -24,7 +24,7 @@ editor:
         - "lang,width,height,align,hspace,valign"
 
         removeButtons:
-        # - Italic
+        - Italic
 
         extraPlugins:
         - ku_prototype_codemirror
