@@ -7,7 +7,7 @@ imports:
 editor:
     externalPlugins:
         ku_prototype_codemirror:
-            resource: "EXT:ku_prototype/Resources/Public/CKeditor/Plugins/Codemirror/"
+            resource: "EXT:ku_prototype/Resources/Public/CKeditor/Plugins/Codemirror/plugin.min.js"
 
     config:
         contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
@@ -18,19 +18,21 @@ editor:
         scayt_autoStartup: true
 
         disallowedContent:
-        - "i,s,*{font*},table[cellspacing,cellpadding,border]"
+            - "i,s,*{font*},table[cellspacing,cellpadding,border]"
 
         extraAllowedContent:
-        - "iframe(*){*}[*]"
+            - "iframe(*){*}[*]"
 
         removeFormatAttributes:
-        - "lang,width,height,align,hspace,valign"
+            - "lang,width,height,align,hspace,valign"
 
         removeButtons:
-        - Italic
+            - Italic
 
         extraPlugins:
-        - ku_prototype_codemirror
+            - ku_prototype_codemirror
+
+        format_tags: "p;div;h2;h3;h4;h5;pre"
 
     processing:
         allowTags:

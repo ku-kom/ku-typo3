@@ -4,6 +4,11 @@
 TCEFORM {
     pages {
        // Page level rules:
+       # [usergroup = 4] 
+       # eller [backend.user.userId == 5]
+	    		# backend_layout_next_level.disabled  = 1
+	    	 #[GLOBAL]  
+       // 
       // hidden.disabled = 0
       // nav_hide.disabled = 0
       // extendToSubpages.disabled = 1
