@@ -1,5 +1,6 @@
 # Ftp settings
 sftp.json
+.eslintrc.json
 
 # TypeScript stuff
 .baseDir.ts
