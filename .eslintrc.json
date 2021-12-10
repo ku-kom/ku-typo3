@@ -9,7 +9,8 @@
     },
     "globals": {
         "debounce": "readonly",
-        "throttle": "readonly"
+        "throttle": "readonly",
+        "CKEDITOR": "readonly"
     },
     "rules": {
         "no-unused-vars": "off"
