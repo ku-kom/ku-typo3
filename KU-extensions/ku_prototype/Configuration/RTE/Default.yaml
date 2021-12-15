@@ -8,6 +8,10 @@ editor:
     externalPlugins:
         test: 
             resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/test/plugin.js"
+
+        bootstrapicons:
+            resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/bootstrapicons/plugin.js"
+
         # codemirror:
         #     resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/codemirror/plugin.js"
 
@@ -15,7 +19,8 @@ editor:
         contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
 
         stylesSet:
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Deloverskrift", element: "h2", attributes: { class: "deloverskrift"} }
+            - { name: "KU test", element: "div", attributes: { 'class': 'ku-test' } }
             - { name: "Small", element: "small" }
 
             - { name: "Table", element: "table", attributes: { 'class': 'table' } }
@@ -100,6 +105,11 @@ editor:
 
         format_tags: "p;h2;h3;h4;h5;pre"
 
+        disallowedContent:
+            - "i,s,*{font*},table[cellspacing,cellpadding,border],iframe[frameborder]"
+
+        extraAllowedContent:
+        - "iframe(*){*}[*],span(*)"
 
         extraPlugins:
             - wordcount
@@ -108,6 +118,7 @@ editor:
             - iframe
             - showblocks
             - test
+            - bootstrapicons
 
         removePlugins:
             - image
@@ -118,6 +129,10 @@ editor:
             - Underline
             - Strike
             - Italic
+
+        processing:
+            allowTags:
+                - iframe
 
 classesAnchor:
     page:
