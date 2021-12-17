@@ -12,7 +12,7 @@ editor:
         bootstrapicons:
             resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/bootstrapicons/plugin.js"
 
-        # codemirror:
+        # KU_codemirror:
         #     resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/codemirror/plugin.js"
 
     config:
@@ -106,7 +106,10 @@ editor:
         format_tags: "p;h2;h3;h4;h5;pre"
 
         disallowedContent:
-            - "i,s,*{font*},table[cellspacing,cellpadding,border],iframe[frameborder]"
+            - "i,s,*{font*},table[cellspacing,cellpadding,border],iframe[frameborder], align"
+
+        removeFormatAttributes: 
+            - "lang,width,height,align,hspace,valign"
 
         extraAllowedContent:
         - "iframe(*){*}[*],span(*)"
@@ -132,6 +135,8 @@ editor:
 
         processing:
             allowTags:
+                - iframe
+            allowTagsOutside:
                 - iframe
 
 classesAnchor:

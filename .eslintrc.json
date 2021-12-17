@@ -11,7 +11,8 @@
         "debounce": "readonly",
         "throttle": "readonly",
         "CKEDITOR": "readonly",
-        "require": "readonly"
+        "require": "readonly",
+        "$":"writable"
     },
     "rules": {
         "no-unused-vars": "off"
