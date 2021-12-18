@@ -1,0 +1,47 @@
+/* Plugin to display Bootstrap Icons: https://icons.getbootstrap.com/
+* Written by Nanna Ellegaard, 2021.
+*/
+
+.bootstrap-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    font-size: 3rem;
+}
+
+.iconlist {
+    cursor: pointer!important;
+    display: block;
+    padding: 10px 0!important;
+    margin: 10px!important;
+    flex: 0 0 25%;
+}
+
+.iconlist >* {
+    cursor: pointer;
+}
+
+.iconlist:hover, .iconlist:active {
+    background-color: #eee;
+    border: 1px solid #eee;
+}
+
+.iconlist.active {
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+[class^="bi-"] {
+    display: block;
+    text-align: center;
+}
+
+.iconlist .icon-label {
+    font-size: 1.3rem;
+    text-align: center;
+}
