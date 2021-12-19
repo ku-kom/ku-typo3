@@ -4,11 +4,13 @@
 
 //const src = '/typo3conf/ext/ku_prototype/Resources/Public/Icons/Bootstrap-icons/bootstrap-icons.json';
 
+// Bootstrap Icons version:
+const version = '1.7.1';
+
 function active() {
   // Set active element and remove active class from other elements:
   const bi = document.getElementById('icon-box');
   const iconlist = bi.querySelectorAll(".iconlist");
-
   const setActive = el => {
     [...el.parentElement.children].forEach(sib => sib.classList.remove('active'))
     el.classList.add('active')
@@ -17,10 +19,17 @@ function active() {
   spans.forEach(el => el.addEventListener('click', e => setActive(el)))
 }
 
+function select(el) {
+  // Set selected icon in selected input field:
+  let className = el.childNodes[0].getAttribute('class');
+  className = className.replace('bi-', '');
+  document.querySelector('.selected-icon').value = className;
+}
 
 function searchIcon(val) {
-  let bi = document.getElementById('icon-box');
-  let a = bi.querySelectorAll('.iconlist');
+  // Search in icon list:
+  const bi = document.getElementById('icon-box');
+  const a = bi.querySelectorAll('.iconlist');
   for (let i = 0, len = a.length, el, atr; i < len; i++) {
     el = a[i];
     atr = el.childNodes[0].getAttribute('class');
@@ -33,13 +42,13 @@ function searchIcon(val) {
 }
 
 function clear() {
-  let icons = document.getElementById('icon-box');
-  let activeIcon = icons.querySelectorAll('.active');
-  // let icon = icons.querySelectorAll('.iconlist');
-
-  for (let i = 0; i < activeIcon.length; ++i) {
-    activeIcon[i].className = activeIcon[i].className.replace('active', '');
+  const icons = document.getElementById('icon-box');
+  const icon = icons.querySelectorAll('.iconlist');
+  for (let i = 0; i < icon.length; ++i) {
+    icon[i].className = icon[i].className.replace('active', '');
+    icon[i].style.display = '';
   }
+  document.querySelector('.selected-icon').value = '';
 }
 
 CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
@@ -1583,58 +1592,67 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
   }
 
   function biIcons(bi) {
-    let icons = [];
+    let icons = '';
     for (const [key, value] of Object.entries(bi)) {
-      var icon = key;
-      icons.push('<a href="#" onclick="active(this);return false;" class="iconlist" aria-label="' + icon + '"><span class="bi-' + icon + '" aria-hidden="true"></span><div class="icon-label">' + icon + '</div></a>');
+      const icon = key;
+      icons += '<a href="#" onclick="active(this);select(this);return false;" class="iconlist" aria-label="' + icon + '"><span class="bi-' + icon + '" aria-hidden="true"></span><div class="icon-label">' + icon + '</div></a>'
     }
-    return icons.join('');
+    return icons;
   }
 
   return {
-    title: 'Bootstrap Icons',
+    title: lang.buttonTitle + ' ' + version,
     minWidth: 500,
     minHeight: 400,
     resizable: true,
     contents: [{
       id: 'bootstrap-icons',
-      label: 'Add icon',
+      label: lang.add,
       elements: [{
           type: 'text',
           id: 'bi-search',
           className: 'bi-icon-search',
-          label: lang.search,
+          label: lang.search + ':',
           onKeyUp: function (e) {
             searchIcon(e.sender.$.value);
           }
         },
-        // {
-        //   type: 'text',
-        //   id: 'faicon',
-        //   className: 'faSelect',
-        //   label: 'Selected',
-        //   validate: CKEDITOR.dialog.validate.notEmpty("Select fontAwesome icon"),
-        //   onLoad: function () {
-        //     this.getInputElement().setAttribute('readOnly', true);
-        //   },
-        //   setup: function (widget) {
-        //     this.setValue(widget.data.class != '' ? widget.data.class : '');
-        //   },
-        //   commit: function (widget) {
-        //     widget.setData('class', this.getValue());
-        //   }
-        // },
         {
           type: 'html',
           id: 'bootstrap-icons-list',
           html: '<div id="icon-box" class="bootstrap-icons">' + biIcons(bi_icons) + '</div>',
+          onLoad: function () {
+            active();
+          }
+        },
+        {
+          type: 'text',
+          id: 'bi-icon-select',
+          className: 'bi-icon-select',
+          label: lang.selected + ':',
+          validate: CKEDITOR.dialog.validate.notEmpty(lang.select),
+          onLoad: function () {
+            this.getInputElement().setAttribute('readOnly', true);
+            this.getInputElement().setAttribute('class', 'selected-icon');
+          },
+          setup: function (widget) {
+            this.setValue(widget.data.class != '' ? widget.data.class : '');
+          },
+          commit: function (widget) {
+            widget.setData('class', this.getValue());
+          }
         }
       ]
     }],
 
     onOk: function () {
-      //clear();
-      var dialog = this;
+      let dialog = this;
+      let icon = editor.document.createElement('span');
+      let type = dialog.getValueOf('bootstrap-icons', 'bi-icon-select');
+      icon.setAttribute('class', 'bi-' + type);
+      icon.setAttribute('aria-hidden', 'true');
+      editor.insertElement(icon);
+      clear();
     },
     onCancel: function () {
       clear();

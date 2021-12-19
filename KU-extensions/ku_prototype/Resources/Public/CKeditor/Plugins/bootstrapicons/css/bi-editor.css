@@ -8,35 +8,30 @@
     justify-content: space-around;
 }
 
-.bi::before,
-[class^="bi-"]::before,
-[class*=" bi-"]::before {
+.bootstrap-icons .bi::before,
+.bootstrap-icons [class^="bi-"]::before,
+.bootstrap-icons [class*=" bi-"]::before {
     font-size: 3rem;
 }
 
 .iconlist {
-    cursor: pointer!important;
+    cursor: pointer !important;
     display: block;
-    padding: 10px 0!important;
-    margin: 10px!important;
+    padding: 10px 0 !important;
+    margin: 10px !important;
     flex: 0 0 25%;
 }
 
-.iconlist >* {
+.iconlist>* {
     cursor: pointer;
 }
 
-.iconlist:hover, .iconlist:active {
+.iconlist:hover,
+.iconlist:active, .iconlist.active {
     background-color: #eee;
-    border: 1px solid #eee;
 }
 
-.iconlist.active {
-    background-color: #eee;
-    border: 1px solid #ddd;
-}
-
-[class^="bi-"] {
+.bootstrap-icons [class^="bi-"] {
     display: block;
     text-align: center;
 }
@@ -44,4 +39,12 @@
 .iconlist .icon-label {
     font-size: 1.3rem;
     text-align: center;
+}
+
+.selected-icon {
+    background-color: #e9ecef;
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    line-height: 1.5;
 }

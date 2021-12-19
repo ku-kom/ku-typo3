@@ -12,11 +12,13 @@ editor:
         bootstrapicons:
             resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/bootstrapicons/plugin.js"
 
-        # KU_codemirror:
+        # codemirror:
         #     resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/codemirror/plugin.js"
 
     config:
-        contentsCss: "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
+        contentsCss:
+        - "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
+        - "EXT:ku_prototype/Resources/Public/Icons/Bootstrap-icons/bootstrap-icons.css"
 
         stylesSet:
             - { name: "Deloverskrift", element: "h2", attributes: { class: "deloverskrift"} }
