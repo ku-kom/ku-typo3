@@ -1641,6 +1641,11 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
           }
         },
         {
+          type: 'html',
+          id: 'bootstrap-icons-msg',
+          html: '<div class="bootstrap-icons-msg">' + lang.select_msg + '</div>',
+        },
+        {
           type: 'text',
           id: 'bi-icon-select',
           className: 'bi-icon-select',

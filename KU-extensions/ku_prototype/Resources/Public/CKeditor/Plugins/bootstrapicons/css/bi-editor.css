@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -37,7 +37,12 @@
 }
 
 .iconlist:hover,
-.iconlist:active, .iconlist.active {
+.iconlist:focus {
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.iconlist.active {
     background-color: #eee;
 }
 
@@ -59,7 +64,7 @@
 .selected-icon {
     background-color: #e9ecef;
     display: block;
-    width: 100%;
+    width: 97%;
     padding: 0.4rem;
     line-height: 1.5;
     cursor: not-allowed!important;
