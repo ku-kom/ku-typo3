@@ -5,7 +5,7 @@
 //const src = '/typo3conf/ext/ku_prototype/Resources/Public/Icons/Bootstrap-icons/bootstrap-icons.json';
 
 // Bootstrap Icons version:
-const version = '1.7.1';
+const version = '1.7.2';
 
 function active() {
   // Set active element and remove active class from other elements:
@@ -26,19 +26,27 @@ function select(el) {
   document.querySelector('.selected-icon').value = className;
 }
 
+
 function searchIcon(val) {
   // Search in icon list:
+  let result = 0;
   const bi = document.getElementById('icon-box');
   const a = bi.querySelectorAll('.iconlist');
   for (let i = 0, len = a.length, el, atr; i < len; i++) {
     el = a[i];
     atr = el.childNodes[0].getAttribute('class');
     if (atr && atr.indexOf(val) >= 0) {
-      el.style.display = 'inline-block';
+      el.classList.remove('hidden');
     } else {
-      el.style.display = 'none';
+      el.classList.add('hidden');
     }
   }
+}
+
+function countItems() {
+  const bi = document.getElementById('icon-box');
+  const icon = bi.querySelectorAll('.iconlist:not(.hidden)');
+  document.getElementById('icon-count').innerHTML = icon.length;
 }
 
 function clear() {
@@ -1534,8 +1542,8 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
     "ticket-detailed-fill": 63174,
     "ticket-detailed": 63175,
     "ticket-fill": 63176,
-    "ticket-perferated-fill": 63177,
-    "ticket-perferated": 63178,
+    "ticket-perforated-fill": 63177,
+    "ticket-perforated": 63178,
     "ticket": 63179,
     "tiktok": 63180,
     "window-dash": 63181,
@@ -1591,17 +1599,20 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
     "terminal-x": 63231
   }
 
+  const count = Object.keys(bi_icons).length;
+
   function biIcons(bi) {
     let icons = '';
+
     for (const [key, value] of Object.entries(bi)) {
       const icon = key;
-      icons += '<a href="#" onclick="active(this);select(this);return false;" class="iconlist" aria-label="' + icon + '"><span class="bi-' + icon + '" aria-hidden="true"></span><div class="icon-label">' + icon + '</div></a>'
+      icons += '<a href="#" onclick="active(this);select(this);return false;" class="iconlist" aria-label="' + icon + '"><span class="bi-' + icon + '" aria-hidden="true"></span><div class="icon-label">' + icon + '</div></a>';
     }
     return icons;
   }
 
   return {
-    title: lang.buttonTitle + ' ' + version,
+    title: lang.buttonTitle + ' v.' + version,
     minWidth: 500,
     minHeight: 400,
     resizable: true,
@@ -1612,9 +1623,13 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
           type: 'text',
           id: 'bi-search',
           className: 'bi-icon-search',
-          label: lang.search + ':',
+          label: lang.search + ': (<span id="icon-count">' + count + '</span>)',
+          onLoad: function () {
+            this.getInputElement().setAttribute('placeholder', lang.placeholder);
+          },
           onKeyUp: function (e) {
             searchIcon(e.sender.$.value);
+            countItems();
           }
         },
         {

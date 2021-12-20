@@ -1,6 +1,9 @@
 /* Plugin to display Bootstrap Icons: https://icons.getbootstrap.com/
 * Written by Nanna Ellegaard, 2021.
 */
+* {
+    box-sizing: border-box;
+}
 
 .bootstrap-icons {
     display: flex;
@@ -14,12 +17,13 @@
     font-size: 3rem;
 }
 
-.iconlist {
+.bootstrap-icons .iconlist {
     cursor: pointer !important;
-    display: block;
-    padding: 10px 0 !important;
-    margin: 10px !important;
-    flex: 0 0 25%;
+    display: inline-block;
+    padding: 10px 5px !important;
+    margin: 10px 5px !important;
+    border: 1px solid #eee;
+    flex: 0 0 20%;
 }
 
 .iconlist>* {
@@ -31,6 +35,10 @@
     background-color: #eee;
 }
 
+.iconlist.active {
+    border: 1px solid #0d6efd;
+}
+
 .bootstrap-icons [class^="bi-"] {
     display: block;
     text-align: center;
@@ -39,6 +47,7 @@
 .iconlist .icon-label {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 10px;
 }
 
 .selected-icon {
@@ -47,4 +56,5 @@
     width: 100%;
     padding: 0.4rem;
     line-height: 1.5;
+    cursor: not-allowed!important;
 }
