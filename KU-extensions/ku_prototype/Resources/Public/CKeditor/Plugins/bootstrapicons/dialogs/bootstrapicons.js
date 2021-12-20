@@ -1613,8 +1613,8 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
 
   return {
     title: lang.buttonTitle + ' v.' + version,
-    minWidth: 500,
-    minHeight: 400,
+    minWidth: 600,
+    minHeight: 600,
     resizable: true,
     contents: [{
       id: 'bootstrap-icons',

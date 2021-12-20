@@ -6,9 +6,15 @@
 }
 
 .bootstrap-icons {
+    position: relative;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 500px;
 }
 
 .bootstrap-icons .bi::before,
