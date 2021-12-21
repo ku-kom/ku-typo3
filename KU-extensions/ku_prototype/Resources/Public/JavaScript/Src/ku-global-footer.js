@@ -12,15 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     return window.matchMedia('(max-width: 767px)').matches;
   };
 
+  /**
+   * Set accessible attributes
+   */
   const setAriaAttr = () => {
-    // Set accessible attributes
     footerHeading.forEach(el => {
       el.setAttribute('aria-expanded', isMobile() ? 'false' : 'true');
     });
   };
 
+  /**
+   * Reset styling
+   */
   const resetFooter = () => {
-    // Reset styling
     footerHeading.forEach(el => {
       el.nextElementSibling.style.removeProperty('height');
       el.nextElementSibling.classList.remove('active');
@@ -33,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let that = e.currentTarget;
         let list = that.nextElementSibling;
 
-        // Slide down
+        /**
+         * Slide down
+         */
         if (!list.classList.contains('active')) {
           list.classList.add('active');
           list.style.height = 'auto';
@@ -46,11 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
           that.setAttribute('aria-expanded', 'true');
 
         } else {
-          // Slide up
+          /**
+           * Slide up
+           */
           list.style.height = '0';
           that.setAttribute('aria-expanded', 'false');
 
-          // Remove the `active` class when the animation ends
+          /**
+           * Remove the `active` class when the animation ends
+           */
           list.addEventListener('transitionend', () => {
             list.classList.remove('active');
           }, {

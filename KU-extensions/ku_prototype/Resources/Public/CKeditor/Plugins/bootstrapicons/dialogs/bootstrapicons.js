@@ -7,8 +7,10 @@
 // Bootstrap Icons version:
 const version = '1.7.2';
 
+/**
+ * Set active element and remove active class from other elements.
+ */
 function active() {
-  // Set active element and remove active class from other elements:
   const bi = document.getElementById('icon-box');
   const iconlist = bi.querySelectorAll(".iconlist");
   const setActive = el => {
@@ -19,16 +21,21 @@ function active() {
   spans.forEach(el => el.addEventListener('click', e => setActive(el)))
 }
 
+/**
+ * Set selected icon in selected input field.
+ * @param {element} el 
+ */
 function select(el) {
-  // Set selected icon in selected input field:
   let className = el.childNodes[0].getAttribute('class');
   className = className.replace('bi-', '');
   document.querySelector('.selected-icon').value = className;
 }
 
-
+/**
+ * Search in icon list.
+ * @param {input field value} val 
+ */
 function searchIcon(val) {
-  // Search in icon list:
   let result = 0;
   const bi = document.getElementById('icon-box');
   const a = bi.querySelectorAll('.iconlist');
@@ -43,12 +50,18 @@ function searchIcon(val) {
   }
 }
 
+/**
+ * Count avaliable icons.
+ */
 function countItems() {
   const bi = document.getElementById('icon-box');
   const icon = bi.querySelectorAll('.iconlist:not(.hidden)');
   document.getElementById('icon-count').innerHTML = icon.length;
 }
 
+/**
+ * Clear dialogue and reset everything.
+ */
 function clear() {
   const icons = document.getElementById('icon-box');
   const icon = icons.querySelectorAll('.iconlist');
