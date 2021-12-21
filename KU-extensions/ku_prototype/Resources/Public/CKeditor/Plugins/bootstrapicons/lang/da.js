@@ -7,5 +7,5 @@ CKEDITOR.plugins.setLang('bootstrapicons', 'da', {
     placeholder: 'Indtast ikonnavn',
     select: 'Vælg et ikon',
     selected: 'Valgt ikon',
-    select_msg: 'Mark+er det ønskede ikon og klik OK for at bruge det..'
+    select_msg: 'Mark+er det ønskede ikon og klik OK for at indsætte det..'
 });

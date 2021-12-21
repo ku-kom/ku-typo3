@@ -1,8 +1,11 @@
 /* eslint-disable no-prototype-builtins */
-// Plugin to display Bootstrap Icons: https://icons.getbootstrap.com/
-// Written by Nanna Ellegaard, 2021.
 
-//const src = '/typo3conf/ext/ku_prototype/Resources/Public/Icons/Bootstrap-icons/bootstrap-icons.json';
+/**
+ * Plugin to display Bootstrap Icons: https://icons.getbootstrap.com/
+ * Written by Nanna Ellegaard, 2021.
+ */
+
+// const src = '/typo3conf/ext/ku_prototype/Resources/Public/Icons/Bootstrap-icons/bootstrap-icons.json';
 
 // Bootstrap Icons version:
 const version = '1.7.2';
@@ -10,9 +13,13 @@ const version = '1.7.2';
 /**
  * Set active element and remove active class from other elements.
  */
-function active() {
+const active = () => {
   const bi = document.getElementById('icon-box');
   const iconlist = bi.querySelectorAll(".iconlist");
+  /**
+   * 
+   * @param {element} el 
+   */
   const setActive = el => {
     [...el.parentElement.children].forEach(sib => sib.classList.remove('active'))
     el.classList.add('active')
@@ -25,7 +32,7 @@ function active() {
  * Set selected icon in selected input field.
  * @param {element} el 
  */
-function select(el) {
+const select = (el) => {
   let className = el.childNodes[0].getAttribute('class');
   className = className.replace('bi-', '');
   document.querySelector('.selected-icon').value = className;
@@ -35,7 +42,7 @@ function select(el) {
  * Search in icon list.
  * @param {input field value} val 
  */
-function searchIcon(val) {
+const searchIcon = (val) => {
   let result = 0;
   const bi = document.getElementById('icon-box');
   const a = bi.querySelectorAll('.iconlist');
@@ -53,7 +60,7 @@ function searchIcon(val) {
 /**
  * Count avaliable icons.
  */
-function countItems() {
+const countItems = () => {
   const bi = document.getElementById('icon-box');
   const icon = bi.querySelectorAll('.iconlist:not(.hidden)');
   document.getElementById('icon-count').innerHTML = icon.length;
@@ -62,7 +69,7 @@ function countItems() {
 /**
  * Clear dialogue and reset everything.
  */
-function clear() {
+const clear = () => {
   const icons = document.getElementById('icon-box');
   const icon = icons.querySelectorAll('.iconlist');
   for (let i = 0; i < icon.length; ++i) {
@@ -1614,7 +1621,12 @@ CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
 
   const count = Object.keys(bi_icons).length;
 
-  function biIcons(bi) {
+  /**
+   * Parse object and return html.
+   * @param {object} bi 
+   * @returns html
+   */
+  const biIcons = (bi) => {
     let icons = '';
 
     for (const [key, value] of Object.entries(bi)) {

@@ -6,9 +6,6 @@ imports:
 
 editor:
     externalPlugins:
-        test: 
-            resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/test/plugin.js"
-
         bootstrapicons:
             resource: "EXT:ku_prototype/Resources/Public/CKEditor/Plugins/bootstrapicons/plugin.js"
 
@@ -122,7 +119,6 @@ editor:
             - find
             - iframe
             - showblocks
-            - test
             - bootstrapicons
 
         removePlugins:

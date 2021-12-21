@@ -7,5 +7,5 @@ CKEDITOR.plugins.setLang('bootstrapicons', 'en', {
     placeholder: 'Enter icon name',
     select: 'Select an icon',
     selected: 'Selected icon',
-    select_msg: 'Select an icon and click OK to use it.'
+    select_msg: 'Select an icon and click OK to insert it.'
 });
