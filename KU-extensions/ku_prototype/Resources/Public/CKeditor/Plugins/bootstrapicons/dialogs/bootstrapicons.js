@@ -80,8 +80,8 @@ const clear = () => {
 }
 
 CKEDITOR.dialog.add('bootstrapiconsDialog', function (editor) {
-  let lang = editor.lang.bootstrapicons;
-  let bi_icons = {
+  const lang = editor.lang.bootstrapicons;
+  const bi_icons = {
     "123": 63103,
     "alarm-fill": 61697,
     "alarm": 61698,

@@ -1,6 +1,6 @@
 /* eslint-disable no-redeclare */
 /* ========================================================================
- * Copyright 2021
+ * Copyright 2022
  * University of Copenhagen, FA Communications, NEL.
  * ========================================================================*/
 

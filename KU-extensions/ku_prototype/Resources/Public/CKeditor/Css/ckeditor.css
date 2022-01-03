@@ -1,0 +1,12 @@
+/* 
+* CKEditor CSS
+*/
+* {
+    box-sizing: border-box;
+}
+
+
+/* Apply spacings to Bootstrap icons */
+[class^="bi-"] {
+    margin-right: 5px;
+}
