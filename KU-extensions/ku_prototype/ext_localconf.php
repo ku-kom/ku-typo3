@@ -5,6 +5,9 @@ defined('TYPO3_MODE') || die();
  */
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ku_prototype'] = 'EXT:ku_prototype/Configuration/RTE/Default.yaml';
 
+// KU sinmple editor
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['KU_simple'] = 'EXT:ku_prototype/Configuration/RTE/KU_simple.yaml';
+
 /***************
  * PageTS
  */

@@ -112,7 +112,7 @@ editor:
             - "lang,width,height,align,hspace,valign"
 
         extraAllowedContent:
-        - "iframe(*){*}[*],span(*)"
+            - "iframe(*){*}[*],span(*)"
 
         extraPlugins:
             - wordcount

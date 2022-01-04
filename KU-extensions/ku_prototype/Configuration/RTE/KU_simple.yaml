@@ -1,0 +1,57 @@
+# KU simple editor preset:
+
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+#   - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
+
+editor:
+
+    config:
+        contentsCss:
+        - "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
+
+        stylesSet:
+            - { name: "Deloverskrift", element: "h2", attributes: { class: "deloverskrift"} }
+            
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ find, spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: specialcharacters,   groups: [ insertcharacters ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h2;h3;h4;h5;pre"
+
+        disallowedContent:
+            - "i,s,*{font*},table[cellspacing,cellpadding,border],iframe[frameborder], align"
+
+        removeFormatAttributes: 
+            - "lang,width,height,align,hspace,valign"
+
+        extraAllowedContent:
+        - "iframe(*){*}[*],span(*)"
+
+        extraPlugins:
+            - wordcount
+            - editorplaceholder
+            - find
+            - showblocks
+
+        removePlugins:
+            - image
+            - bootstrappackage_address
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike
+            - Italic
+
