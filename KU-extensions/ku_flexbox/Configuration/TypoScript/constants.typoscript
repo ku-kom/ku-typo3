@@ -1,0 +1,28 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:ku_flexbox/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:ku_flexbox/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:ku_flexbox/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:ku_flexbox/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:ku_flexbox/Resources/Private/Partials/Page/
+        templateRootPath = EXT:ku_flexbox/Resources/Private/Templates/Page/
+    }
+}

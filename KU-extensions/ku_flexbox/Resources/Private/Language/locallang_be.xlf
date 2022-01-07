@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-01-07UTC10:38:380">
+        <header>
+            <authorName>Nanna Ellegaard</authorName>
+            <authorEmail>nel@adm.u.dk</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.flexbox_title">
+                <source>Flexible box</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.flexbox_description">
+                <source>Flexible box with various image, text and link.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

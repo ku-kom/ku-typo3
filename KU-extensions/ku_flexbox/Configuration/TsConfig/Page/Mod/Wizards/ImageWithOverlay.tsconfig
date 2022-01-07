@@ -1,0 +1,16 @@
+mod.wizards.ImageWithOverlay.wizardItems {
+   // add the content element to the tab "common"
+   common {
+      elements {
+         ImageWithOverlay {
+            iconIdentifier = content-text
+            title = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_title
+            description = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_description
+            tt_content_defValues {
+               CType = image_with_overlay
+            }
+         }
+      }
+      show := addToList(image_with_overlay)
+   }
+}

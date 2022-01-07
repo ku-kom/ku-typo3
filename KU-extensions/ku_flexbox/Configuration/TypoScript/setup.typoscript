@@ -1,0 +1,27 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_flexbox/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+######################
+#### FLEXIBLR BOX ####
+######################
+tt_content.image_with_overlay =< lib.contentElement
+tt_content.image_with_overlay {
+	templateName = ImageWithOverlay
+	templateRootPaths.10 = EXT:ku_flexbox/Resources/Private/Templates/ContentElements/
+	partialRootPaths.10 = EXT:ku_flexbox/Resources/Private/Partials/ContentElements/
+
+	dataProcessing {
+		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+		10 {
+			references.fieldName = image
+		}
+	}
+}

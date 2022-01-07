@@ -1,0 +1,93 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+	<f:if condition="{data.header_link}">
+		<f:then>
+			<f:link.typolink parameter="{data.header_link}" class="hero">
+				<f:render section="HeroContent" arguments="{_all}" />
+			</f:link.typolink>
+		</f:then>
+		<f:else>
+			<div class="hero">
+				<f:render section="HeroContent" arguments="{_all}" />
+			</div>
+		</f:else>
+	</f:if>
+
+</f:section>
+
+<f:section name="HeroContent">
+	<figure>
+		<f:if condition="{files.0}">
+			<f:then>
+				<f:image image="{files.0}" width="400c" height="250c" />
+			</f:then>
+			<f:else>
+				<p style="font-style: italic">Ikke noget billede valgt</p>
+			</f:else>
+		</f:if>
+	</figure>
+	<h2>{data.header}</h2>
+	<f:format.html>{data.bodytext}</f:format.html>
+</f:section>
+
+<f:section name="Header"></f:section>
+
+<f:section name="HeaderAssets">
+	<style type="text/css">
+		.hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 250px;
+			background-color: transparent;
+			flex-direction: column;
+			width: 100%;
+			position: relative;
+		}
+
+		a.hero {
+			text-decoration: none;
+		}
+
+		a.hero:hover {
+			text-decoration: underline;
+			text-decoration-color: white;
+		}
+
+		.hero figure {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -10;
+			overflow: hidden;
+			box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+			border-radius: 0.3rem;
+		}
+
+		.hero:hover figure img {
+			transform: scale(1.1);
+		}
+
+		.hero figure img {
+			width: 100%;
+			transition: transform 0.6s ease-in;
+		}
+
+		.hero h2 {
+			font-size: 4rem;
+			color: #888;
+			line-height: 125%;
+			padding: 2rem;
+		}
+
+		.hero p {
+			color: #888;
+			font-size: 2rem;
+		}
+	</style>
+</f:section>
