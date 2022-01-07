@@ -1,8 +1,8 @@
-mod.wizards.ImageWithOverlay.wizardItems {
+mod.wizards.newContentElement.wizardItems {
    // add the content element to the tab "common"
    common {
       elements {
-         ImageWithOverlay {
+         image_with_overlay {
             iconIdentifier = content-text
             title = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_title
             description = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_description
