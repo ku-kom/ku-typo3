@@ -12,6 +12,9 @@
             <trans-unit id="backend_layout.flexbox_description">
                 <source>Flexible box with image, text and link.</source>
             </trans-unit>
+            <trans-unit id="backend_layout.flexbox_color">
+                <source>Colour</source>
+            </trans-unit>
             <trans-unit id="backend_layout.flexbox_textbar_down">
                 <source>Text bottom</source>
             </trans-unit>

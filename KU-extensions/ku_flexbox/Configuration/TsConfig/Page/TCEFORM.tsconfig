@@ -24,8 +24,8 @@ TCEFORM {
             types.image_with_overlay.disabled = 1
         }
 
-        background_color_class {
-            types.image_with_overlay.disabled = 1
-        }
+        // background_color_class {
+        //     types.image_with_overlay.disabled = 1
+        // }
     }
 }

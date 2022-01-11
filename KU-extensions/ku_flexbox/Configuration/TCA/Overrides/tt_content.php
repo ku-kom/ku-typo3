@@ -2,7 +2,18 @@
 
 defined('TYPO3_MODE') or die();
 
-// use the same configuration for visible backend fields as "Textmedia"
+// KU flexible box custom input field
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
+    'ku_flexbox_color' => [
+        'exclude' => 0,
+        'label' => 'LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_color',
+        'config' => [
+            'type' => 'text',
+        ],
+    ],
+]);
+
+// KU flexible box
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
 	'tt_content',
 	'CType',
@@ -19,7 +30,7 @@ $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/local
 
 $kuflexbox=[
     'showitem' => '
-    --palette--; LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general; general,header,header_link,bodytext,image,
+    --palette--; LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general; general,header,header_link,ku_flexbox_color,bodytext,image,
     --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
     --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
     --palette--;;appearanceLinks,
