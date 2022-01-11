@@ -10,9 +10,11 @@ TCEFORM {
         header_position.types.image_with_overlay.disabled = 1
         date.types.image_with_overlay.disabled = 1
         
-        // frame_layout {
-        //     types.image_with_overlay.disabled = 1
-        // }
+        frame_layout.addItems {
+            text-down = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_textbar_down
+            outline = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_outline
+            full = LLL:EXT:ku_flexbox/Resources/Private/Language/locallang_be.xlf:backend_layout.flexbox_full
+        }
 
         background_image {
             types.image_with_overlay.disabled = 1

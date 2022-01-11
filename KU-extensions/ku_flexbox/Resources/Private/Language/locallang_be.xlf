@@ -10,7 +10,16 @@
                 <source>Flexible box</source>
             </trans-unit>
             <trans-unit id="backend_layout.flexbox_description">
-                <source>Flexible box with various image, text and link.</source>
+                <source>Flexible box with image, text and link.</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.flexbox_textbar_down">
+                <source>Text bottom</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.flexbox_outline">
+                <source>Outline</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.flexbox_full">
+                <source>Full background colour</source>
             </trans-unit>
         </body>
     </file>

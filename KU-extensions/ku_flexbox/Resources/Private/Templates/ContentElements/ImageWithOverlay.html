@@ -1,4 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
 <f:layout name="Default" />
 <f:section name="Header" />
 
@@ -17,28 +19,17 @@
 </f:section>
 
 <f:section name="flexboxContent">
-    <div class="frame-group-container">
-        <div class="frame-group-inner">
-            <div class="frame-container frame-container-default">
-                <div class="frame-inner">
-                    <div class="flexbox">
-                        <f:if condition="{files.0}">
-                            <f:then>
-                                <f:image image="{files.0}" width="400c" height="250c" />
-                            </f:then>
-                            <!-- <f:else>
-                                <div class="text-center">Ikke noget billede valgt</p>
-                            </f:else> -->
-                        </f:if>
-                        <div class="flexbox-content">
-                            <h3>{data.header}</h3>
-                            <f:format.html>{data.bodytext}</f:format.html>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <div class="flexbox">
+        <f:if condition="{files.0}">
+            <f:then>
+                <f:image image="{files.0}" width="400c" height="250c" />
+            </f:then>
+        </f:if>
+        <div class="flexbox-content">
+            <h3>{data.header}</h3>
+            <f:format.html>{data.bodytext}</f:format.html>
         </div>
+
     </div>
 </f:section>
 
@@ -55,6 +46,7 @@
             background-color: transparent;
             width: 100%;
             position: relative;
+            overflow: hidden;
         }
 
         .flexbox img {
@@ -68,13 +60,27 @@
         }
 
         .flexbox-content {
-			background-color: rgba(219, 59, 10, 0.8);
-			color: #fff;
-			padding: 1rem;
+            background-color: rgba(219, 59, 10, 0.8);
+            color: #fff;
+            padding: 1rem;
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
+        }
+
+
+        .frame-layout-outline .flexbox {
+            border: 1px solid black;
+        }
+
+		.frame-layout-full .flexbox .flexbox-content {
+            position: relative;
+			height: 100%;
+        }
+
+        .frame-layout-full .flexbox img {
+            display: none;
         }
 
     </style>
