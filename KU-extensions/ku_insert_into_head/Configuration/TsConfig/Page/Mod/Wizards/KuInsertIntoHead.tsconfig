@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+   // add the content element to the tab "common"
+   common {
+      elements {
+         ku_insert_into_head {
+            iconIdentifier = content-text
+            title = LLL:EXT:ku_insert_into_head/Resources/Private/Language/locallang_be.xlf:backend_layout.insert_title
+            description = LLL:EXT:ku_insert_into_head/Resources/Private/Language/locallang_be.xlf:backend_layout.insert_description
+            tt_content_defValues {
+               CType = ku_insert_into_head
+            }
+         }
+      }
+      show := addToList(ku_insert_into_head)
+   }
+}

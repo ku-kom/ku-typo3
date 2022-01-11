@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = ku_prototype
+        preset = ku_flexbox
     }
 }

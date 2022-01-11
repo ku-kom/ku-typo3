@@ -1,0 +1,14 @@
+plugin.tx_ku_ext_scripts {
+    view {
+        # cat=plugin.tx_ku_ext_scripts/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:dan_tester/Resources/Private/Templates/
+        # cat=plugin.tx_ku_ext_scripts/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:dan_tester/Resources/Private/Partials/
+        # cat=plugin.tx_ku_ext_scripts/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:dan_tester/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_ku_ext_scripts//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

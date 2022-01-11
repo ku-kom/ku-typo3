@@ -6,6 +6,24 @@ TCEFORM {
 
     }
     tt_content {
+        header_layout.types.image_with_overlay.disabled = 1
+        header_position.types.image_with_overlay.disabled = 1
+        date.types.image_with_overlay.disabled = 1
+        
+        // frame_layout {
+        //     types.image_with_overlay.disabled = 1
+        // }
 
+        background_image {
+            types.image_with_overlay.disabled = 1
+        }
+
+        background_image_options {
+            types.image_with_overlay.disabled = 1
+        }
+
+        background_color_class {
+            types.image_with_overlay.disabled = 1
+        }
     }
 }

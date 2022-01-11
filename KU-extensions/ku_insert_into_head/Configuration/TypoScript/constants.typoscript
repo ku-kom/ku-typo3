@@ -1,0 +1,23 @@
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:ku_insert_into_head/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:ku_insert_into_head/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:ku_insert_into_head/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:ku_insert_into_head/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:ku_insert_into_head/Resources/Private/Partials/Page/
+        templateRootPath = EXT:ku_insert_into_head/Resources/Private/Templates/Page/
+    }
+}

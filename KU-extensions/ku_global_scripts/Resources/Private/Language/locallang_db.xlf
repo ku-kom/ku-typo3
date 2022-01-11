@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:dan_tester/Resources/Private/Language/locallang_db.xlf" date="2022-01-06T13:25:31Z" product-name="dan_tester">
+		<header/>
+		<body>
+			<trans-unit id="tx_dantester_domain_model_dantester" resname="tx_dantester_domain_model_dantester">
+				<source>Dan Tester</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
