@@ -140,3 +140,30 @@ plugin.bootstrap_package.settings.scss {
     # footer-sections = (content:(background: $body-bg, color: $body-color, link-color: $primary), meta:(background: #f6f6f6, color: #313131, link-color: $primary))
 }
 
+#############################
+### NEWS SYSTEM EXTENSION ###
+#############################
+
+# plugin.tx_news {
+#     view {
+#         #cat=plugin.tx_news/file; type=string; label=Path to template root (FE)
+#         templateRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Templates/
+#         #cat=plugin.tx_news/file; type=string; label=Path to template partials (FE)
+#         partialRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Partials/
+#         #cat=plugin.tx_news/file; type=string; label=Path to template layouts (FE)
+#         layoutRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Layouts/
+#     }
+# }
+
+plugin.tx_news {
+	view.twb5 {
+		# cat=plugin.tx_news/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Styles/Twb5/Templates/
+		# cat=plugin.tx_news/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Styles/Twb5/Partials/
+		# cat=plugin.tx_news/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ku_prototype/Resources/Private/Extensions/News/Styles/Twb5/Layouts/
+	}
+}
+
+

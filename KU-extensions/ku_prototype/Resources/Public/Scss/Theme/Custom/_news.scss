@@ -1,0 +1,16 @@
+//
+// News system extension
+//
+
+// Custom styling
+
+.news {
+    .list-group-item {
+        .news-title {
+            a {
+                color: #000;
+                font-weight: 500;
+            }
+        }
+    }
+}

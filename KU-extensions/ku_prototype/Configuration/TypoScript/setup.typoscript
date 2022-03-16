@@ -61,5 +61,13 @@ page {
         partialRootPaths.3 = EXT:ku_prototype/Resources/Private/Partials/Page/
         layoutRootPaths.3 = EXT:ku_prototype/Resources/Private/Layouts/Page/
     }
-
 }
+
+plugin.tx_news {
+    _LOCAL_LANG {
+		default {
+			more-link = Læs mere
+		}
+    }
+}
+	
