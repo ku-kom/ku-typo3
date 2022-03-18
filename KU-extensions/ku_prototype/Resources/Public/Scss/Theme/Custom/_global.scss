@@ -7,6 +7,9 @@
 @include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-400, 400, normal, woff2 woff);
 @include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-600, 600, normal, woff2 woff);
 @include font-face("Open Sans", typo3conf/ext/ku_prototype/Resources/Public/Fonts/open-sans-v27-latin-ext_latin-700, 700, normal, woff2 woff);
+.extbase-debugger-floating {
+    top: 100px;
+}
 
 html,
 body {

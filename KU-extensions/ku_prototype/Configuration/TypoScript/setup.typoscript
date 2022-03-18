@@ -67,6 +67,7 @@ plugin.tx_news {
     _LOCAL_LANG {
 		default {
 			more-link = Læs mere
+            author = Af %s
 		}
     }
 }

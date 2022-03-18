@@ -68,3 +68,8 @@ TCEFORM.tt_content.frame_layout {
         factbox = Faktabox
    }
 }
+
+# Added template to News System extension:
+TCEFORM.tx_news.templateLayouts {
+    1 = KU tiles layout
+}

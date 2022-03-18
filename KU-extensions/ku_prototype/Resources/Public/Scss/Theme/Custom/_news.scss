@@ -13,4 +13,32 @@
             }
         }
     }
+
+    .news-tile-view {
+        .list-group {
+            list-style: none;
+            width: 100%;
+            /*kills the irritating intial padding on uls in webkit*/
+            -webkit-padding-start: 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch;
+        }
+        .list-group-item {
+            width: calc(50% - 30px);
+            display: list-item;
+            border-top-width: 1px;
+            padding-top: 20px;
+            margin-bottom: 30px;
+
+            &:nth-child(even) {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .news-single-tile-view {
+        border: 1px solid #ccc;
+        padding: 30px;
+    }
 }

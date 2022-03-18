@@ -1,0 +1,46 @@
+/* Close button */
+.t3js-editform-close {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.t3js-editform-close:hover, .t3js-editform-close:focus, .t3js-editform-close:active:hover {
+    background-color: #0358d6;
+    color: #fff;
+}
+
+/* View button */
+.t3js-editform-view {
+    color: #fff;
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+.t3js-editform-view:hover, .t3js-editform-view:focus, .t3js-editform-view:active:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+button[name="_savedok"] {
+    color: #fff;
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_savedok"]:active:hover {
+    background-color: #065e35;
+    color: #fff;
+}
+
+/* Delete button */
+.t3js-editform-delete-record {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.t3js-editform-delete-record:hover, .t3js-editform-delete-record:focus, .t3js-editform-delete-record:active:hover {
+    background-color: #b61423;
+    color: #fff;
+}
