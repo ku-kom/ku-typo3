@@ -10,6 +10,7 @@
 
 <f:section name="content">
     <f:if condition="{newsItem}">
+        <f:debug title="All" >{_all}</f:debug>
         <n:format.nothing>
             <n:excludeDisplayedNews newsItem="{newsItem}" />
             <f:if condition="{settings.detail.showMetaTags}">

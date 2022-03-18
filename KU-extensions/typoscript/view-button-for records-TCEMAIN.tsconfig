@@ -1,0 +1,17 @@
+TCEMAIN {
+    preview {
+    // Add View button to news record
+        tx_news_domain_model_news {
+            // previewPageId is a custom view page
+            previewPageId = 468
+            useDefaultLanguageRecord = 0
+            fieldToParameterMap {
+                uid = tx_news_pi1[news_preview]
+            }
+            additionalGetParameters {
+                tx_news_pi1.controller = News
+                tx_news_pi1.action = detail
+            }
+        }
+    }
+}
