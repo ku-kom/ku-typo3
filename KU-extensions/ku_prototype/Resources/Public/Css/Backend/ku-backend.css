@@ -1,7 +1,7 @@
 /* Close button */
 .t3js-editform-close {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #0d6efd!important;
     border-color: #0d6efd;
     padding-right: 10px;
 }
@@ -14,7 +14,7 @@
 /* View button */
 .t3js-editform-view {
     color: #fff;
-    background-color: #5c636a;
+    background-color: #5c636a!important;
     border-color: #565e64;
     padding-left: 10px;
     padding-right: 10px;
@@ -28,7 +28,7 @@
 /* Save button */
 button[name="_savedok"] {
     color: #fff;
-    background-color: #157347;
+    background-color: #157347!important;
     border-color: #146c43;
     padding-left: 10px;
     padding-right: 10px;
@@ -42,7 +42,7 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 /* Delete button */
 .t3js-editform-delete-record {
     color: #fff;
-    background-color: #dc3545;
+    background-color: #dc3545!important;
     border-color: #dc3545;
     padding-left: 10px;
     padding-right: 10px;
@@ -56,7 +56,7 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 /* Button New */
 .t3js-editform-new {
     color: #000;
-    background-color: #ffc107;
+    background-color: #ffc107!important;
     border-color: #ffc107;
     padding-left: 10px;
     padding-right: 10px;

@@ -3,12 +3,6 @@
 #
 TCEFORM {
     pages {
-       // Page level rules:
-       # [usergroup = 4] 
-       # eller [backend.user.userId == 5]
-	    		# backend_layout_next_level.disabled  = 1
-	    	 #[GLOBAL]  
-       // 
       // hidden.disabled = 0
       // nav_hide.disabled = 0
       // extendToSubpages.disabled = 1
@@ -73,3 +67,7 @@ TCEFORM.tt_content.frame_layout {
 TCEFORM.tx_news.templateLayouts {
     1 = KU tiles layout
 }
+
+# Add characters counter below any input field
+TCEFORM.tx_news_domain_model_news.teaser.config.max = 220
+TCEFORM.tx_news_domain_model_news.title.config.max = 150

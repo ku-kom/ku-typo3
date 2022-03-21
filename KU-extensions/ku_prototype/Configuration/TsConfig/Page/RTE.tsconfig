@@ -6,3 +6,5 @@ RTE {
         preset = ku_prototype
     }
 }
+
+RTE.config.tx_news_domain_model_news.bodytext.preset = ku_news

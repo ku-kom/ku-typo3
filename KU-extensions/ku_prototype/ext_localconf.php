@@ -8,6 +8,9 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ku_prototype'] = 'EXT:ku_prototyp
 // KU sinmple editor
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['KU_simple'] = 'EXT:ku_prototype/Configuration/RTE/KU_simple.yaml';
 
+// KU news editor
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ku_news'] = 'EXT:ku_prototype/Configuration/RTE/KU_news.yaml';
+
 /***************
  * PageTS
  */
