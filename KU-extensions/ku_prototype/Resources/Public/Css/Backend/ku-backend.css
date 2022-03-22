@@ -1,3 +1,34 @@
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../../Fonts/open-sans-v27-latin-ext_latin-300.woff2") format("woff2"), url("../../Fonts/open-sans-v27-latin-ext_latin-300.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../../Fonts/open-sans-v27-latin-ext_latin-400.woff2") format("woff2"), url("../../Fonts/open-sans-v27-latin-ext_latin-400.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../../Fonts/open-sans-v27-latin-ext_latin-600.woff2") format("woff2"), url("../../Fonts/open-sans-v27-latin-ext_latin-600.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../Fonts/open-sans-v27-latin-ext_latin-700.woff2") format("woff2"), url("../../Fonts/open-sans-v27-latin-ext_latin-700.woff") format("woff")
+}
 /* Close button */
 .t3js-editform-close {
     color: #fff;
@@ -65,4 +96,33 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 .t3js-editform-new:hover, .t3js-editform-new:active:hover {
     color: #000;
     background-color: #e8af06;
+}
+
+/* CMS login button */
+.btn-login {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #901a1e!important;
+    border-color: #901a1e;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+.btn-login:hover, .btn-login:focus, .btn-login:active:hover {
+    background-color: #7a1014;
+    color: #fff;
+    font-size: 14px;
+}
+
+.typo3-login {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #757575;
+}
+
+.input-login {
+    border-color: #757575;
 }
