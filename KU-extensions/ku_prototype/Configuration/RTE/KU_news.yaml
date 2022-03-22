@@ -13,7 +13,7 @@ editor:
         - "EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css"
 
         stylesSet:
-            - { name: "Deloverskrift", element: "h2", attributes: { class: "deloverskrift"} }
+            - { name: "Well", element: "div", attributes: { 'class': 'well' } }
             
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
@@ -25,10 +25,10 @@ editor:
             - { name: editing, groups: [ find, spellchecker ] }
             - { name: insert, groups: [ insert ] }
             - { name: specialcharacters,   groups: [ insertcharacters ] }
-            - { name: tools, groups: [ table, specialchar ] }
+            - { name: tools, groups: [ specialchar ] }
             - { name: document, groups: [ mode ] }
 
-        format_tags: "p;h2;h3;h4;h5;pre"
+        format_tags: "p;h2;h3;h4;h5"
 
         disallowedContent:
             - "i,s,*{font*},table[cellspacing,cellpadding,border],iframe[frameborder], align"
@@ -47,13 +47,17 @@ editor:
 
         removePlugins:
             - bootstrappackage_address
+            - sourcearea
+            - tabletools
+            - horizontalrule
 
         removeButtons:
-            - table
             - Anchor
             - Underline
             - Superscript
             - Subscript
             - Strike
             - Italic
+            - Source
+            - Table
 

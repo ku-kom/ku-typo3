@@ -69,5 +69,5 @@ TCEFORM.tx_news.templateLayouts {
 }
 
 # Add characters counter below any input field
-TCEFORM.tx_news_domain_model_news.teaser.config.max = 220
-TCEFORM.tx_news_domain_model_news.title.config.max = 150
+TCEFORM.tx_news_domain_model_news.teaser.config.max = 200
+TCEFORM.tx_news_domain_model_news.title.config.max = 60
