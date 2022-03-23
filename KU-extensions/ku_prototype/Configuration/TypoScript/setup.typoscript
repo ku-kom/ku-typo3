@@ -68,7 +68,13 @@ plugin.tx_news {
 		default {
 			more-link = Læs mere
             author = Af %s
+            paginate_previous = Forrige
+            paginate_next = Næste
 		}
+    }
+    settings {
+        displayDummyIfNoMedia = 1
+        list.media.dummyImage = EXT:ku_prototype/Resources/Public/Images/News/fallback_image.png
     }
 }
 	

@@ -30,7 +30,7 @@
             flex: 1 0 100%;
 
             @include media-breakpoint-up(md) {
-                flex: 1 0 calc(33% - 30px);
+                flex: 0 0 calc(33% - 30px);
             }
 
             border: 0;
