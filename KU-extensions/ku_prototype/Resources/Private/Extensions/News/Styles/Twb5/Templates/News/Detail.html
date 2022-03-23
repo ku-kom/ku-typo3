@@ -11,7 +11,6 @@
 <f:section name="content">
     <f:if condition="{newsItem}">
         <f:comment><f:debug title="All" >{_all}</f:debug></f:comment>
-        
         <n:format.nothing>
             <n:excludeDisplayedNews newsItem="{newsItem}" />
             <f:if condition="{settings.detail.showMetaTags}">
@@ -98,6 +97,21 @@
                 <f:format.html>{newsItem.teaser}</f:format.html>
             </div>
         </f:if>
+
+        <!-- Tags (KU) -->
+        <f:if condition="{newsItem.tags}">
+            <h3>KU tags</h3>
+            <ul class="list-inline">
+            <f:for each="{newsItem.tags}" as="tag">
+                <li>
+                <f:link.page title="{tag.title}" pageUid="{tag.uid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+                    {tag.title}
+                </f:link.page>
+                </li>
+            </f:for>
+            </ul>
+        </f:if>
+        <!-- Tags (KU) -->
 
         <f:if condition="{newsItem.contentElements}">
             <!-- content elements -->

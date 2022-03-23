@@ -29,15 +29,18 @@
     font-display: swap;
     src: url("../../Fonts/open-sans-v27-latin-ext_latin-700.woff2") format("woff2"), url("../../Fonts/open-sans-v27-latin-ext_latin-700.woff") format("woff")
 }
+
 /* Close button */
 .t3js-editform-close {
     color: #fff;
-    background-color: #0d6efd!important;
+    background-color: #0d6efd !important;
     border-color: #0d6efd;
     padding-right: 10px;
 }
 
-.t3js-editform-close:hover, .t3js-editform-close:focus, .t3js-editform-close:active:hover {
+.t3js-editform-close:hover,
+.t3js-editform-close:focus,
+.t3js-editform-close:active:hover {
     background-color: #0358d6;
     color: #fff;
 }
@@ -45,13 +48,15 @@
 /* View button */
 .t3js-editform-view {
     color: #fff;
-    background-color: #5c636a!important;
+    background-color: #5c636a !important;
     border-color: #565e64;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.t3js-editform-view:hover, .t3js-editform-view:focus, .t3js-editform-view:active:hover {
+.t3js-editform-view:hover,
+.t3js-editform-view:focus,
+.t3js-editform-view:active:hover {
     background-color: #444;
     color: #fff;
 }
@@ -59,13 +64,15 @@
 /* Save button */
 button[name="_savedok"] {
     color: #fff;
-    background-color: #157347!important;
+    background-color: #157347 !important;
     border-color: #146c43;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_savedok"]:active:hover {
+button[name="_savedok"]:hover,
+button[name="_savedok"]:focus,
+button[name="_savedok"]:active:hover {
     background-color: #065e35;
     color: #fff;
 }
@@ -73,13 +80,15 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 /* Delete button */
 .t3js-editform-delete-record {
     color: #fff;
-    background-color: #dc3545!important;
+    background-color: #dc3545 !important;
     border-color: #dc3545;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.t3js-editform-delete-record:hover, .t3js-editform-delete-record:focus, .t3js-editform-delete-record:active:hover {
+.t3js-editform-delete-record:hover,
+.t3js-editform-delete-record:focus,
+.t3js-editform-delete-record:active:hover {
     background-color: #b61423;
     color: #fff;
 }
@@ -87,21 +96,22 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 /* Button New */
 .t3js-editform-new {
     color: #000;
-    background-color: #ffc107!important;
+    background-color: #ffc107 !important;
     border-color: #ffc107;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.t3js-editform-new:hover, .t3js-editform-new:active:hover {
+.t3js-editform-new:hover,
+.t3js-editform-new:active:hover {
     color: #000;
     background-color: #e8af06;
 }
 
 /* CMS login button */
 .btn-login {
-    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #901a1e!important;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+    background-color: #901a1e !important;
     border-color: #901a1e;
     color: #fff;
     font-size: 14px;
@@ -109,14 +119,16 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
     letter-spacing: .7px;
 }
 
-.btn-login:hover, .btn-login:focus, .btn-login:active:hover {
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active:hover {
     background-color: #7a1014;
     color: #fff;
     font-size: 14px;
 }
 
 .typo3-login {
-    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -125,4 +137,8 @@ button[name="_savedok"]:hover, button[name="_savedok"]:focus, button[name="_save
 
 .input-login {
     border-color: #757575;
+}
+
+.panel-login {
+    box-shadow: 0 8px 10px 0 rgb(60 60 60 / 10%), 0 2px 6px 0 rgb(64 64 64 / 19%);
 }
