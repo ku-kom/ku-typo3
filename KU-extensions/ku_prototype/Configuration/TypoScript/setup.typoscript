@@ -28,7 +28,6 @@ page {
         
     }
 
-
     includeJSFooter {
         ku_custom = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-custom.js
         ku_global_footer = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-global-footer.js
@@ -63,6 +62,7 @@ page {
     }
 }
 
+/* News extension */
 plugin.tx_news {
     _LOCAL_LANG {
 		default {
@@ -77,4 +77,9 @@ plugin.tx_news {
         list.media.dummyImage = EXT:ku_prototype/Resources/Public/Images/News/fallback_image.png
     }
 }
-	
+
+/* Infinite scrolling */
+plugin.tx_infinitescrolling {
+    includeJQueryLibrary = 0
+}
+

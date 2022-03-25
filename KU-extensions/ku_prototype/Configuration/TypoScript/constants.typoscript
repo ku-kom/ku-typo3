@@ -166,4 +166,6 @@ plugin.tx_news {
 	}
 }
 
-
+plugin.tx_infinitescrolling {
+    includeJQueryLibrary = 0
+}
