@@ -63,7 +63,9 @@ page {
 }
 
 
-/* News extension */
+###############################
+#### NEWS SYSTEM EXTENSION ####
+###############################
 plugin.tx_news {
     _LOCAL_LANG {
 		default {
@@ -79,7 +81,9 @@ plugin.tx_news {
     }
 }
 
-/* Infinite scrolling */
+######################################
+#### INFINITE SCROLLING EXTENSION ####
+######################################
 plugin.tx_infinitescrolling {
     includeJQueryLibrary = 0
 }
@@ -87,12 +91,8 @@ plugin.tx_infinitescrolling {
 ####################
 #### NAVIGATION ####
 ####################
-
-##########################
-### DATA PREPROCESSING ###
-##########################
-# Top menu
+# Top menu (overriding bootstrap_package settings)
 page.10.dataProcessing.10.levels = 5
 
-# Left menu
+# Left menu (overriding bootstrap_package settings)
 page.10.dataProcessing.20.levels = 5
