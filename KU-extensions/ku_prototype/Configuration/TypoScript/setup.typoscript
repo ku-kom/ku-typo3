@@ -62,6 +62,7 @@ page {
     }
 }
 
+
 /* News extension */
 plugin.tx_news {
     _LOCAL_LANG {
@@ -83,3 +84,15 @@ plugin.tx_infinitescrolling {
     includeJQueryLibrary = 0
 }
 
+####################
+#### NAVIGATION ####
+####################
+
+##########################
+### DATA PREPROCESSING ###
+##########################
+# Top menu
+page.10.dataProcessing.10.levels = 5
+
+# Left menu
+page.10.dataProcessing.20.levels = 5
