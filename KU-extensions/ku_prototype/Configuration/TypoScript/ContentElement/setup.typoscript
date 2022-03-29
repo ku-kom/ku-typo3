@@ -1,0 +1,5 @@
+#############################################################
+#### CONTENT ELEMENT RENDERING                           ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Element/TextPic.typoscript">

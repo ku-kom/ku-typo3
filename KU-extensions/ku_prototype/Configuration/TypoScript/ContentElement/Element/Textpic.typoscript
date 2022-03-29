@@ -1,0 +1,8 @@
+# Reactivate options to float images left/right
+tt_content.textpic.templateName.stdWrap.cObject {
+  17 = TEXT
+  17.value = TextpicIntextRight
+
+  18 = TEXT
+  18.value = TextpicIntextLeft
+}
