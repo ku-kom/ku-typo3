@@ -7,10 +7,8 @@
         <div class="textpic-item textpic-gallery">
             <f:render partial="Media/Gallery" arguments="{_all}" />
         </div>
-        <div class="textpic-item textpic-text">
-            <f:render partial="Header/All" arguments="{_all}" />
-            <f:format.html>{data.bodytext}</f:format.html>
-        </div>
+        <f:render partial="Header/All" arguments="{_all}" />
+        <f:format.html>{data.bodytext}</f:format.html>
     </div>
 
 </f:section>

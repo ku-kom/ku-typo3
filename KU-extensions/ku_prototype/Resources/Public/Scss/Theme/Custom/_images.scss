@@ -1,0 +1,29 @@
+//
+// Image styling
+//
+
+// Reactivating image floating
+.textpic-intext-right,
+.textpic-intext-left {
+    .textpic-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@include media-breakpoint-up('md') {
+    .textpic-intext-right {
+        .textpic-item {
+            width: 50%;
+            float: right;
+            margin: 0 0 1.3rem 1.5rem;
+        }
+    }
+
+    .textpic-intext-left {
+        .textpic-item {
+            width: 50%;
+            float: left;
+            margin: 0 1.5rem 1.3rem 0;
+        }
+    }
+}
