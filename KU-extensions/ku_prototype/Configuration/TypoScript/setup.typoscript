@@ -2,7 +2,7 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_prototype/Configuration/TypoScript/ContentElement/setup.typoscript">
 
 
 ##############
@@ -82,13 +82,6 @@ plugin.tx_news {
     }
 }
 
-######################################
-#### INFINITE SCROLLING EXTENSION ####
-######################################
-plugin.tx_infinitescrolling {
-    includeJQueryLibrary = 0
-}
-
 ####################
 #### NAVIGATION ####
 ####################
@@ -97,12 +90,3 @@ page.10.dataProcessing.10.levels = 5
 
 # Left menu (overriding bootstrap_package settings)
 page.10.dataProcessing.20.levels = 5
-
-# Reactivate options to float images left/right
-tt_content.textpic.templateName.stdWrap.cObject {
-  17 = TEXT
-  17.value = TextpicIntextRight
-
-  18 = TEXT
-  18.value = TextpicIntextLeft
-}
