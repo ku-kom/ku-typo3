@@ -1,0 +1,10 @@
+//
+// Breadcrumbs
+//
+
+// Reactivating image floating
+.breadcrumb-section {
+     &> .container {
+         padding: 0;
+     }
+}

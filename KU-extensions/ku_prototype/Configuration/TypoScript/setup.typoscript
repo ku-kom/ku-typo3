@@ -63,6 +63,21 @@ page {
     }
 }
 
+####################
+#### NAVIGATION ####
+####################
+# Disable default global Bootstrap menu - if needed:
+# page.10.dataProcessing.10 >
+
+# Top menu (overriding bootstrap_package settings)
+page.10.dataProcessing.10.levels = 5
+
+# Left menu (overriding bootstrap_package settings)
+page.10.dataProcessing.20.entryLevel = 0
+page.10.dataProcessing.20.levels = 5
+
+# Bread crumb start level and depth:
+page.10.dataProcessing.30.special.range = 0|-1
 
 ###############################
 #### NEWS SYSTEM EXTENSION ####
@@ -81,12 +96,3 @@ plugin.tx_news {
         list.media.dummyImage = EXT:ku_prototype/Resources/Public/Images/News/fallback_image.png
     }
 }
-
-####################
-#### NAVIGATION ####
-####################
-# Top menu (overriding bootstrap_package settings)
-page.10.dataProcessing.10.levels = 5
-
-# Left menu (overriding bootstrap_package settings)
-page.10.dataProcessing.20.levels = 5

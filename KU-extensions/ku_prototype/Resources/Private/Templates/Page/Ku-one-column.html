@@ -8,6 +8,7 @@
 
     <div class="section section-default">
         <main class="main-content">
+            <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
             <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '70'}" />
         </main>
     </div>

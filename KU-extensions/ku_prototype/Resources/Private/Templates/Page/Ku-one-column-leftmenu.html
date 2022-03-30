@@ -13,6 +13,7 @@
                     <f:render partial="Navigation/Subnavigation" arguments="{_all}" />
                 </div>
                 <main class="col-md-9 main-content">
+                    <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
                     <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '77'}" />
                 </main>
             </div>
