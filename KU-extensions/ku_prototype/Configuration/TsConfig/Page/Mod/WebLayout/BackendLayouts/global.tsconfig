@@ -55,7 +55,7 @@ mod {
                                         colPos = 140
                                         colspan = 3
                                         allowed { 
-                                            CType = bullets
+                                            CType = menu_pages
                                         }
                                     }
                                     2 {
@@ -63,7 +63,7 @@ mod {
                                         colPos = 150
                                         colspan = 3
                                         allowed { 
-                                            CType = bullets
+                                            CType = menu_pages
                                         }
                                     }
                                     3 {
@@ -71,7 +71,7 @@ mod {
                                         colPos = 160
                                         colspan = 3
                                         allowed { 
-                                            CType = bullets
+                                            CType = menu_pages
                                         }
                                     }
                                     4 {
@@ -79,7 +79,7 @@ mod {
                                         colPos = 170
                                         colspan = 3
                                         allowed { 
-                                            CType = bullets
+                                            CType = menu_pages
                                         }
                                     }
                                 }

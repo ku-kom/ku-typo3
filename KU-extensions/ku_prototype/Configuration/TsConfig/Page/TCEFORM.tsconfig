@@ -26,6 +26,7 @@ TCEFORM {
    }
 }
 
+
 TCEFORM.tt_content.background_color_class {
    addItems {
         box-red1 = Rød mørk

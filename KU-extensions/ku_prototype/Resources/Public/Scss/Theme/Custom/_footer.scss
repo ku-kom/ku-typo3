@@ -28,13 +28,15 @@
         color: $white;
     }
 
-    .list {
+    ul {
+
         @include list-unstyled();
-        color: var(--frame-color);
 
         li {
-            p {
-                margin: 0;
+            color: var(--frame-color);
+
+            a {
+                color: inherit;
             }
         }
     }
@@ -63,7 +65,7 @@
             padding: ($spacer * 1) ($spacer * 1.25);
         }
 
-        .list {
+        ul {
             margin: 0;
             transition: height .4s cubic-bezier(.02, .01, .47, 1);
             overflow: hidden;
