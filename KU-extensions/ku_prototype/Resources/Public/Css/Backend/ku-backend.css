@@ -145,5 +145,6 @@ button[name="_savedok"]:active:hover {
 
 /* Selected backend page layout */
 .icon-list .item.active {
+    border: 1px solid #dc3545;
     box-shadow: inset 1px 1px 4px #555;
 }

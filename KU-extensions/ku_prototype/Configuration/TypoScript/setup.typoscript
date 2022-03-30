@@ -76,6 +76,24 @@ page.10.dataProcessing.10.levels = 5
 page.10.dataProcessing.20.entryLevel = 0
 page.10.dataProcessing.20.levels = 5
 
+# Separate menu for 3. level
+# page {
+#     10 = FLUIDTEMPLATE
+#     10 {
+#         dataProcessing {
+
+#             50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+#             50 {
+#                 levels = 2
+#                 entryLevel = 3
+#                 expandAll = 1
+#                 includeSpacer = 1
+#                 as = thirdlevel
+#             }
+#         }
+#     }
+# }
+
 # Bread crumb start level and depth:
 page.10.dataProcessing.30.special.range = 0|-1
 

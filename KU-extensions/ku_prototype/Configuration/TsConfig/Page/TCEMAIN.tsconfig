@@ -21,23 +21,25 @@ TCEMAIN {
 
 
 // Hide default Bootstrap page layouts:
-// mod.web_layout.BackendLayouts.2_columns_25_75 >
-// mod.web_layout.BackendLayouts.2_columns >
-// mod.web_layout.BackendLayouts.2_columns_50_50 >
-// mod.web_layout.BackendLayouts.2_columns_offset_right >
-// mod.web_layout.BackendLayouts.3_columns >
-// mod.web_layout.BackendLayouts.default >
-// mod.web_layout.BackendLayouts.simple >
-// mod.web_layout.BackendLayouts.special_feature >
-// mod.web_layout.BackendLayouts.special_start >
-// mod.web_layout.BackendLayouts.2_columns_offset_right >
-// mod.web_layout.BackendLayouts.subnavigation_left >
-// mod.web_layout.BackendLayouts.subnavigation_left_2_columns >
-// mod.web_layout.BackendLayouts.subnavigation_right >
-// mod.web_layout.BackendLayouts.subnavigation_right_2_columns >
-// mod.web_layout.BackendLayouts.leftsidebarrightcontent >
-
+mod.web_layout.BackendLayouts.2_columns_25_75 >
+mod.web_layout.BackendLayouts.2_columns >
+mod.web_layout.BackendLayouts.2_columns_50_50 >
+mod.web_layout.BackendLayouts.2_columns_offset_right >
+mod.web_layout.BackendLayouts.3_columns >
+mod.web_layout.BackendLayouts.default >
+mod.web_layout.BackendLayouts.simple >
+mod.web_layout.BackendLayouts.special_feature >
+mod.web_layout.BackendLayouts.special_start >
+mod.web_layout.BackendLayouts.2_columns_offset_right >
+mod.web_layout.BackendLayouts.subnavigation_left >
+mod.web_layout.BackendLayouts.subnavigation_left_2_columns >
+mod.web_layout.BackendLayouts.subnavigation_right >
+mod.web_layout.BackendLayouts.subnavigation_right_2_columns >
 mod.web_layout.BackendLayouts.example >
+
+// KU custom
+mod.web_layout.BackendLayouts.ku-multi-column >
+// page.options.backendLayout.exclude = pagets__ku-multi-column
 
 // Hide old KU layout:
 mod.web_layout.BackendLayouts.ku1col >
