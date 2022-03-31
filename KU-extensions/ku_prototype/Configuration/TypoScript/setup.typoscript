@@ -76,6 +76,9 @@ page.10.dataProcessing.10.levels = 5
 page.10.dataProcessing.20.entryLevel = 0
 page.10.dataProcessing.20.levels = 5
 
+# Bread crumb start level and depth:
+page.10.dataProcessing.30.special.range = 0|-1
+
 # Separate menu for 3. level
 # page {
 #     10 = FLUIDTEMPLATE
@@ -93,9 +96,6 @@ page.10.dataProcessing.20.levels = 5
 #         }
 #     }
 # }
-
-# Bread crumb start level and depth:
-page.10.dataProcessing.30.special.range = 0|-1
 
 ###############################
 #### NEWS SYSTEM EXTENSION ####

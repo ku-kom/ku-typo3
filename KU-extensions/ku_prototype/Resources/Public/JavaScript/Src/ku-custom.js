@@ -13,7 +13,7 @@
  * @returns a function
  */
 const debounce = (func, wait, immediate) => {
-  var timeout;
+  let timeout;
   return function () {
     let context = this,
       args = arguments;
