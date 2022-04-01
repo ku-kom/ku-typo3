@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{thirdlevelmenu}">
+    <!--TYPO3SEARCH_end-->
+    <f:render section="ThirdMenuItem" arguments="{_all}" />
+    <!--TYPO3SEARCH_begin-->
+</f:if>
+<f:section name="ThirdMenuItem">
+    <f:if condition="{thirdlevelmenu}">
+        <f:debug title="Third level">{_all}</f:debug>
+        <ul class="navbar-nav thirdmenu">
+            <f:for each="{thirdlevelmenu}" as="item">
+                <li
+                    class="nav-item{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' has-children')}">
+                    <a href="{item.link}" id="nav-item-{item.data.uid}"
+                        class="nav-link{f:if(condition: item.children, then:' has-child')}" {f:if(condition:
+                        item.target, then: ' target="{item.target}"' )} title="{item.title}" {f:if(condition: item.current, then: ' aria-current="page"' )}>
+                        <span class="nav-link-text">{item.title}<f:if condition="{item.current}"> <span
+                                    class="visually-hidden">(current)</span></f:if></span>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+
+</html>

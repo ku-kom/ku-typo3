@@ -80,22 +80,22 @@ page.10.dataProcessing.20.levels = 5
 page.10.dataProcessing.30.special.range = 0|-1
 
 # Separate menu for 3. level
-# page {
-#     10 = FLUIDTEMPLATE
-#     10 {
-#         dataProcessing {
-
-#             50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-#             50 {
-#                 levels = 2
-#                 entryLevel = 3
-#                 expandAll = 1
-#                 includeSpacer = 1
-#                 as = thirdlevel
-#             }
-#         }
-#     }
-# }
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        dataProcessing {
+            60 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            60 {
+                levels = 2
+                entryLevel = 3
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = thirdlevelmenu
+            }
+        }
+    }
+}
 
 ###############################
 #### NEWS SYSTEM EXTENSION ####
