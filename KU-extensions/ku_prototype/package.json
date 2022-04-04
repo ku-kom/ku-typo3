@@ -1,0 +1,22 @@
+{
+	"name": "ku_prototype",
+	"version": "1.0.0",
+	"description": "Sitepackage for the project \"KU prototype\" ",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Nanna Ellegaard",
+	"license": "ISC",
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0"
+	},
+	"devDependencies": {
+		"del": "^6.0.0",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-sass": "^5.1.0",
+		"sass": "~1.32.12"
+	}
+}

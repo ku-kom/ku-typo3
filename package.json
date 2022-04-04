@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
   "devDependencies": {
-    "eslint": "^8.3.0"
+    "eslint": "^8.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

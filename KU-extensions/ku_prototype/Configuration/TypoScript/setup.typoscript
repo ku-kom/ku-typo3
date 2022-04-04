@@ -8,11 +8,19 @@
 ##############
 #### PAGE ####
 ##############
+config {
+  concatenateJs = 0
+  concatenateCss = 0
+  compressJs = 0
+  compressCss = 0
+}
 page {
     includeCSS {
-        theme = EXT:ku_prototype/Resources/Public/Scss/Theme/theme.scss
-        
+        //theme = EXT:ku_prototype/Resources/Public/Scss/Theme/theme.scss
+        // We compile sass ourselves:
+        theme = EXT:ku_prototype/Resources/Public/Css/Dist/theme.css
     }
+    
     includeCSSLibs {
         # bootstrappackageicon >
     }
