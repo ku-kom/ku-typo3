@@ -66,6 +66,24 @@ page {
 ####################
 #### NAVIGATION ####
 ####################
+# Global menu based on pages in a folder
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        dataProcessing {
+            70 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            70 {
+                special = directory
+                special.value = 492
+                levels = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = globalnavigation
+            }
+        }
+    }
+}
+
 # Disable default global Bootstrap menu - if needed:
 # page.10.dataProcessing.10 >
 
@@ -77,6 +95,8 @@ page.10.dataProcessing.20.entryLevel = 0
 page.10.dataProcessing.20.levels = 5
 
 # Bread crumb start level and depth:
+# Start level: 1 = The page one level below the root page.
+# End level: -1 = The current page.
 page.10.dataProcessing.30.special.range = 0|-1
 
 # Separate menu for 3. level

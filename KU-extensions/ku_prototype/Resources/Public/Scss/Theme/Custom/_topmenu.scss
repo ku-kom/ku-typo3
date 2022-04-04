@@ -2,6 +2,13 @@
 // Global menu
 //
 
+#mainnavigation {
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
 .navbar-mainnavigation {
     .navbar-brand-image {
         img {
