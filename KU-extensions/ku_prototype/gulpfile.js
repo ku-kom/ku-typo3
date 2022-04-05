@@ -2,7 +2,8 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
@@ -24,9 +25,7 @@ gulp.task('sass', () => {
   return gulp.src('./Resources/Public/Scss/Theme/theme.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
