@@ -18,7 +18,7 @@ page {
     includeCSS {
         //theme = EXT:ku_prototype/Resources/Public/Scss/Theme/theme.scss
         // We compile sass ourselves:
-        theme = EXT:ku_prototype/Resources/Public/Css/Dist/theme.css
+        theme = EXT:ku_prototype/Resources/Public/Css/Dist/theme.min.css
     }
     
     includeCSSLibs {
@@ -38,8 +38,7 @@ page {
     }
 
     includeJSFooter {
-        ku_custom = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-custom.js
-        ku_global_footer = EXT:ku_prototype/Resources/Public/JavaScript/Src/ku-global-footer.js
+        ku_custom = EXT:ku_prototype/Resources/Public/JavaScript/Dist/ku-scripts.min.js
     }
     10 {
         settings {
