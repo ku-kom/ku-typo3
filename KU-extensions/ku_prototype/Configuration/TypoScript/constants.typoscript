@@ -78,12 +78,16 @@ page {
     settings {
         ku {
             # customcategory=ku-page-settings=LLL:EXT:ku_prototype/Resources/Private/Language/locallang_be.xlf:ku-page-settings
+            #cat=ku-page-settings; type=string; label=Page id for global elements (footer, etc.).
+            global_elements {
+                id =
+            }
             #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
             utilityMenu {
                 enable = 1
             }
-            #cat=ku-page-settings; type=string; label=Folder id for global menu.
-            globalMenu {
+            #cat=ku-page-settings; type=string; label=Folder id for utility menu.
+            utilityMenu {
                 id =
             }
             #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
