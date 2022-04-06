@@ -5,7 +5,7 @@
         <ul class="sociallinks-list">
             <f:for each="{theme.socialmedia.channels}" key="channelKey" as="channelOptions">
                 <f:if condition="{channelOptions.url}">
-                    <li class="sociallinks-item sociallinks-item-{channelKey}">
+                    <li class="sociallinks-item">
                         <a {f:if(condition: channelOptions.aria_label, then:' aria-label="{channelOptions.aria_label}"')} class="sociallinks-link sociallinks-link-{channelKey}" href="{channelOptions.url}" rel="noopener" target="_blank">
                             <span aria-hidden="true" class="sociallinks-link-icon bi-{channelKey}"></span>
                             <span class="sociallinks-link-label">{channelOptions.label}</span>

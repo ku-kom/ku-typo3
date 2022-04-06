@@ -45,7 +45,7 @@ page {
             ku {
                 # Used for global elements
                 global_elements {
-                    id = = {$page.settings.ku.global_elements.id}
+                    id = {$page.settings.ku.global_elements.id}
                 }
                 # Enable/disable utility menu
                 utilityMenu {

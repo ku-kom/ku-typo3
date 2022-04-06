@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:variable name="global_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContentSlide"  data="{pageUid: '{settings.ku.special_id}', colPos: '21'}" /></f:variable>
+<f:variable name="global_local_footer_address"><f:cObject typoscriptObjectPath="lib.dynamicContent"  data="{pageUid: '{settings.ku.global_elements.id}', colPos: '21', slide: '-1'}" /></f:variable>
 
-<f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContentSlide"  data="{pageUid: '{settings.ku.special_id}', colPos: '22'}" /></f:variable>
+<f:variable name="local_footer_contact"><f:cObject typoscriptObjectPath="lib.dynamicContent"  data="{pageUid: '{settings.ku.global_elements.id}', colPos: '22', slide: '-1'}" /></f:variable>
 
 <f:if condition="{settings.ku.localFooter.enable} > 0">
     <section class="section section-default local-footer">
