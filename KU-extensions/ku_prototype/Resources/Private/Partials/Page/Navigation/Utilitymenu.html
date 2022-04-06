@@ -1,13 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:if condition="{thirdlevelmenu}">
+<f:if condition="{utilitymenu}">
     <!--TYPO3SEARCH_end-->
-    <f:render section="ThirdMenuItem" arguments="{_all}" />
+    <f:render section="UtilityMenuItem" arguments="{_all}" />
     <!--TYPO3SEARCH_begin-->
 </f:if>
-<f:section name="ThirdMenuItem">
-    <f:if condition="{thirdlevelmenu}">
-        <ul class="menubar thirdmenu" id="thirdmenu">
-            <f:for each="{thirdlevelmenu}" as="item">
+<f:section name="UtilityMenuItem">
+    <f:if condition="{utilitymenu}">
+        <ul class="menubar utilitymenu" id="utilitymenu">
+            <f:for each="{utilitymenu}" as="item">
                 <li
                     class="nav-item{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' has-children')}">
                     <a href="{item.link}" id="nav-item-{item.data.uid}"

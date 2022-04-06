@@ -1,8 +1,9 @@
 //
 // Variables
 //
-
 $ku_prototype_public_path:          "/typo3conf/ext/ku_prototype/Resources/Public/";
+
+$body-color:                        #252525 !default;
 
 $ku-font:                           "Open Sans";
 $gray-ccc:                         #ccc !default;
@@ -30,4 +31,6 @@ $white1:                           #fff !default;
 $white2:                           #fefaf2 !default;
 $white3:                           #ffbd38 !default;
 
+$link-color:                       #2c6694;
+$link-decoration:                    underline !default;
 $breadcrumb-bg:                    #fff !default;

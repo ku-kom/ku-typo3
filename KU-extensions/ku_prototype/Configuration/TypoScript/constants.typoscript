@@ -82,9 +82,17 @@ page {
             utilityMenu {
                 enable = 1
             }
+            #cat=ku-page-settings; type=string; label=Folder id for global menu.
+            globalMenu {
+                id =
+            }
             #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
             globalMenu {
                 enable = 1
+            }
+            #cat=ku-page-settings; type=string; label=Folder id for global menu.
+            globalMenu {
+                id =
             }
             #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
             localFooter {

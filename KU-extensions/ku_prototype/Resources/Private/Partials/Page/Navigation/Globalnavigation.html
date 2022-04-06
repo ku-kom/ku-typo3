@@ -7,7 +7,7 @@
 <f:comment>This menu iterates over a folder with pages for the global menu, id 492.</f:comment>
 <f:section name="GlobalMenu">
     <f:if condition="{globalnavigation}">
-        <ul class="navbar-nav globalmenu">
+        <ul class="menubar globalmenu">
             <f:for each="{globalnavigation}" as="item">
                 <li
                     class="nav-item{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' has-children')}">

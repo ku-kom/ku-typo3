@@ -2,18 +2,184 @@
 // Global menu
 //
 
-#mainnavigation {
-    flex-direction: column;
-    align-items: flex-start;
+.menubar {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    a {
+        padding: .5rem 1.3rem .5rem 1rem;
+        display: block;
+        position: relative;
+        color: $body-color;
+
+        &+a {
+            margin-left: 1rem;
+        }
+    }
 
 }
 
-
 .navbar-mainnavigation {
     .navbar-brand-image {
+        display: block;
+        height: auto;
+        margin-right: 0;
+
         img {
+            top: auto;
+            transform: none;
             max-height: 100%;
-            height: 100%;
+            height: 100px;
         }
     }
+}
+
+.row-branding {
+    width: 100%;
+}
+
+.branding-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
+.sitenavigation {
+    li {
+        &.has-children {
+            &>a {
+                @extend .bi;
+
+                &:before {
+                    content: map-get($bootstrap-icons-map, "chevron-right");
+                }
+            }
+
+            &.active {
+                &>a {
+                    @extend .bi;
+
+                    &:before {
+                        content: map-get($bootstrap-icons-map, "chevron-down");
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up('md') {
+    #page-header {
+        flex-direction: column;
+    }
+
+    #mainnavigation {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .navbar-mainnavigation {
+        .navbar-nav {
+            &>li {
+                &>.nav-link {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #utilitymenu {
+        align-self: self-end;
+    }
+
+    .row-branding {
+        align-items: center;
+    }
+
+    //========================================
+    .sitenavigation {
+        position: relative;
+
+        li {
+            position: relative;
+            transition-duration: 0.5s;
+
+            &:hover,
+            &:focus-within {
+                background: #eee;
+                cursor: pointer;
+            }
+
+            &.has-children {
+                &>a {
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &.active {
+                    background: #eee;
+
+                    &>a {
+                        padding-right: 2rem;
+
+                        &:before {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                visibility: hidden;
+                opacity: 0;
+                min-width: 15rem;
+                list-style-type: none;
+                padding-left: 0;
+                position: absolute;
+                transition: all 0.5s ease;
+                left: 0;
+                display: none;
+
+                li {
+                    ul {
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+            }
+
+            &.has-children:hover>ul,
+            .has-children>ul:hover>ul.has-children,
+            &:hover>ul.has-children,
+            &:focus-within>ul.has-children {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                z-index: 10;
+                background-color: $white;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+
+    //========================================
 }

@@ -48,10 +48,12 @@ page {
                 # Enable/disable utility menu
                 utilityMenu {
                     enable = {$page.settings.ku.utilityMenu.enable}
+                    id = {$page.settings.ku.utilityMenu.id}
                 }
                 # Enable/disable global menu
                 globalMenu {
                     enable = {$page.settings.ku.globalMenu.enable}
+                    id = {$page.settings.ku.globalMenu.id}
                 }
                 # Enable/disable local footer
                 localFooter {    
@@ -73,6 +75,25 @@ page {
 ####################
 #### NAVIGATION ####
 ####################
+
+# Utility menu based on pages in a folder
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        dataProcessing {
+            80 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            80 {
+                special = directory
+                special.value = {$page.settings.ku.utilityMenu.id}
+                levels = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = utilitymenu
+            }
+        }
+    }
+}
+
 # Global menu based on pages in a folder
 page {
     10 = FLUIDTEMPLATE
@@ -81,7 +102,7 @@ page {
             70 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             70 {
                 special = directory
-                special.value = 492
+                special.value = {$page.settings.ku.globalMenu.id}
                 levels = 1
                 includeSpacer = 0
                 titleField = nav_title // title
