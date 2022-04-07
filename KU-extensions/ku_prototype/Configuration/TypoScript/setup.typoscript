@@ -47,6 +47,10 @@ page {
                 global_elements {
                     id = {$page.settings.ku.global_elements.id}
                 }
+                # Enable/disable company logo
+                companyName {
+                    enable = {$page.settings.ku.companyName.enable}
+                }
                 # Enable/disable utility menu
                 utilityMenu {
                     enable = {$page.settings.ku.utilityMenu.enable}
@@ -71,6 +75,23 @@ page {
         templateRootPaths.3 = EXT:ku_prototype/Resources/Private/Templates/Page/
         partialRootPaths.3 = EXT:ku_prototype/Resources/Private/Partials/Page/
         layoutRootPaths.3 = EXT:ku_prototype/Resources/Private/Layouts/Page/
+    }
+}
+
+####################
+#### VARIABLES #####
+####################
+
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            siteTitle = TEXT
+            siteTitle.data = TSFE:tmpl|setup|sitetitle
+            # Get current language uid:
+            pageLanguage = TEXT
+            pageLanguage.data = sitelanguage:languageId
+        }
     }
 }
 

@@ -15,6 +15,13 @@ page {
         linktitle = Københavns Universitet
     }
     theme {
+        navigation {
+            # Global menu style settings
+            style = default-transition
+            type = top
+            meta.enable = 0
+        }
+
         socialmedia {
             channels {
                 github >
@@ -82,7 +89,11 @@ page {
             global_elements {
                 id =
             }
-            #cat=ku-page-settings; type=boolean; label=Display global menu. Set to '0' to disable.
+            #cat=ku-page-settings; type=boolean; label=Display company logo. Set to '0' to remove.
+            companyName {
+                enable = 1
+            }
+            #cat=ku-page-settings; type=boolean; label=Display utility menu. Set to '0' to disable.
             utilityMenu {
                 enable = 1
             }

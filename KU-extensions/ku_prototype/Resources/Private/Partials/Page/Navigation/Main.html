@@ -6,8 +6,39 @@
 <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:'
     navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
 <header id="page-header" class="{headerClass}">
+    <f:if condition="{settings.ku.companyName.enable} > 0">
+        <div class="companylogo">
+            <f:link.page pageUid="{rootPage}" class="companylink" tabindex="-1" title="Start">
+                <f:if condition="{pageLanguage} = 0">
+                    <f:then>
+                        <img src="/typo3conf/ext/ku_prototype/Resources/Public/Images/Frontend/ku_top_dk.svg"
+                            alt="">
+
+                    </f:then>
+                    <f:else>
+                        <img src="/typo3conf/ext/ku_prototype/Resources/Public/Images/Frontend/ku_top_uk.svg"
+                            alt="">
+                    </f:else>
+                </f:if>
+            </f:link.page>
+        </div>
+    </f:if>
     <div class="container">
         <f:if condition="{mainnavigation}">
+            <f:link.page pageUid="{rootPage}"
+                class="navbar-brand navbar-brand-{f:if(condition: logo.normal, then: 'image', else: 'text')}"
+                title="{settings.logo.linktitle}">
+                <f:if condition="{logo.normal}">
+                    <f:then>
+                        <img class="navbar-brand-logo-normal" src="{f:uri.image(image: logo.normal)}" alt="{logoAlt}"
+                            height="{settings.logo.height}" width="{settings.logo.width}">
+                        <f:if condition="{logo.inverted}">
+                            <img class="navbar-brand-logo-inverted" src="{f:uri.image(image: logo.inverted)}"
+                                alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
+                        </f:if>
+                    </f:then>
+                </f:if>
+            </f:link.page>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse"
                 data-target="#mainnavigation" data-bs-target="#mainnavigation" aria-controls="mainnavigation"
                 aria-expanded="false"
@@ -26,35 +57,16 @@
             </nav>
         </f:if>
     </div>
-    <div class="container">
-        <div class="row row-branding">
-            <div class="col-md-auto">
-                <f:link.page pageUid="{rootPage}"
-                    class="navbar-brand navbar-brand-{f:if(condition: logo.normal, then: 'image', else: 'text')}"
-                    title="{settings.logo.linktitle}">
-                    <f:if condition="{logo.normal}">
-                        <f:then>
-                            <img class="navbar-brand-logo-normal" src="{f:uri.image(image: logo.normal)}"
-                                alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
-                            <f:if condition="{logo.inverted}">
-                                <img class="navbar-brand-logo-inverted" src="{f:uri.image(image: logo.inverted)}"
-                                    alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
-                            </f:if>
-                        </f:then>
-                        <f:else>
-                            <span>{siteTitle}</span>
-                        </f:else>
-                    </f:if>
-                </f:link.page>
-            </div>
-            <div class="col">
-                <div class="sitename">
-                    <f:link.page pageUid="{rootPage}" class="branding-name" tabindex="-1">{siteTitle}</f:link.page>
-                </div>
+</header>
+<div class="container">
+    <div class="row row-sitename">
+        <div class="col offset-md-3">
+            <div class="sitename">
+                <f:link.page pageUid="{rootPage}" class="branding-name" tabindex="-1">{siteTitle}</f:link.page>
             </div>
         </div>
     </div>
-</header>
+</div>
 
 <f:section name="MainNavigation">
     <f:if condition="{menu}">
@@ -68,35 +80,49 @@
             <f:else>
                 <li
                     class="{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' has-children')}">
-                    <a href="{item.link}" id="item-{item.data.uid}"
-                        class="menu-link{f:if(condition: item.children, then:' has-child')}" {f:if(condition:
-                        item.target, then: ' target="{item.target}"' )} {f:if(condition:
-                        item.children, then: ' aria-haspopup="true"' )} title="{item.title}">
+                    <a href="{item.link}" class="menu-link{f:if(condition: item.children, then:' has-child')}"
+                        {f:if(condition: item.target, then: ' target="{item.target}"' )} title="{item.title}">
                         <span class="menu-link-text">{item.title}<f:if condition="{item.current}"> <span
                                     class="visually-hidden">(current)</span></f:if></span>
                     </a>
+                    <button type="button" class="menu_arrow" aria-expanded="false" aria-controls="item-{item.data.uid}"
+                        {f:if(condition: item.children, then: ' aria-haspopup="true"' )}>
+                        <span class="visually-hidden">{f:translate(key: 'togglenavigation', extensionName:
+                            'bootstrap_package')}</span>
+                    </button>
 
                     <f:if condition="{item.children}">
-                        <ul class="level-2{f:if(condition: item.children, then:' has-children')}">
+                        <ul class="level-2{f:if(condition: item.children, then:' has-children')}"
+                            id="item-{item.data.uid}">
                             <f:for each="{item.children}" as="child">
                                 <f:if condition="{child.spacer}">
                                     <f:then>
                                         <li class="dropdown-divider"></li>
                                     </f:then>
                                     <f:else>
-                                        <li class="{f:if(condition: child.active, then:' active')}{f:if(condition: child.children, then:' has-children')}">
+                                        <li
+                                            class="{f:if(condition: child.active, then:' active')}{f:if(condition: child.children, then:' has-children')}">
                                             <a href="{child.link}"
-                                                class="menu-link{f:if(condition: child.children, then:' has-child')}{f:if(condition: child.active, then:' active')}" {f:if(condition:
-                                                child.target, then: ' target="{child.target}"' )} title="{child.title}">
+                                                class="menu-link{f:if(condition: child.children, then:' has-child')}{f:if(condition: child.active, then:' active')}"
+                                                {f:if(condition: child.target, then: ' target="{child.target}"' )}
+                                                {f:if(condition: child.current, then: ' aria-current="page"' )}
+                                                title="{child.title}">
                                                 <span class="item-text">{child.title}<f:if condition="{child.current}">
                                                         <span class="visually-hidden">(current)</span></f:if></span>
                                             </a>
+                                            <button type="button" class="menu_arrow" aria-expanded="false"
+                                                aria-controls="item-{child.data.uid}" {f:if(condition: item.children,
+                                                then: ' aria-haspopup="true"' )}>
+                                                <span class="visually-hidden">{f:translate(key: 'togglenavigation',
+                                                    extensionName: 'bootstrap_package')}</span>
+                                            </button>
 
                                             <f:comment>
                                                 <!-- Level 2 -->
                                             </f:comment>
                                             <f:if condition="{child.children}">
-                                                <ul class="level-3{f:if(condition: child.children, then:' has-children')}">
+                                                <ul class="level-3{f:if(condition: child.children, then:' has-children')}"
+                                                    id="item-{child.data.uid}">
                                                     <f:for each="{child.children}" as="child2">
                                                         <f:if condition="{child2.spacer}">
                                                             <f:then>
@@ -117,12 +143,22 @@
                                                                                     class="visually-hidden">(current)</span>
                                                                             </f:if></span>
                                                                     </a>
+                                                                    <button type="button" class="menu_arrow"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="item-{child2.data.uid}"
+                                                                        {f:if(condition: item.children,
+                                                                        then: ' aria-haspopup="true"' )}>
+                                                                        <span class="visually-hidden">{f:translate(key:
+                                                                            'togglenavigation', extensionName:
+                                                                            'bootstrap_package')}</span>
+                                                                    </button>
 
                                                                     <f:comment>
                                                                         <!-- Level 3 -->
                                                                     </f:comment>
                                                                     <f:if condition="{child2.children}">
-                                                                        <ul class="level-4{f:if(condition: child2.children, then:' has-children')}">
+                                                                        <ul class="level-4{f:if(condition: child2.children, then:' has-children')}"
+                                                                            id="item-{child2.data.uid}">
                                                                             <f:for each="{child2.children}" as="child3">
                                                                                 <f:if condition="{child3.spacer}">
                                                                                     <f:then>
@@ -151,13 +187,28 @@
                                                                                                     </f:if>
                                                                                                 </span>
                                                                                             </a>
+                                                                                            <button type="button"
+                                                                                                class="menu_arrow"
+                                                                                                aria-expanded="false"
+                                                                                                aria-controls="item-{child3.data.uid}"
+                                                                                                {f:if(condition:
+                                                                                                item.children,
+                                                                                                then: ' aria-haspopup="true"'
+                                                                                                )}>
+                                                                                                <span
+                                                                                                    class="visually-hidden">{f:translate(key:
+                                                                                                    'togglenavigation',
+                                                                                                    extensionName:
+                                                                                                    'bootstrap_package')}</span>
+                                                                                            </button>
 
                                                                                             <f:comment>
                                                                                                 <!-- Level 4 -->
                                                                                             </f:comment>
                                                                                             <f:if
                                                                                                 condition="{child3.children}">
-                                                                                                <ul class="level-5">
+                                                                                                <ul class="level-5"
+                                                                                                    id="item-{child3.data.uid}">
                                                                                                     <f:for
                                                                                                         each="{child3.children}"
                                                                                                         as="child4">
@@ -169,7 +220,8 @@
                                                                                                                 </li>
                                                                                                             </f:then>
                                                                                                             <f:else>
-                                                                                                                <li class="{f:if(condition: child4.active, then:' active')}{f:if(condition: child4.children, then:' has-children')}">
+                                                                                                                <li
+                                                                                                                    class="{f:if(condition: child4.active, then:' active')}{f:if(condition: child4.children, then:' has-children')}">
                                                                                                                     <a href="{child4.link}"
                                                                                                                         class="menu-link{f:if(condition: child4.children, then:' has-child')}{f:if(condition: child4.active, then:' active')}"
                                                                                                                         {f:if(condition:
