@@ -43,7 +43,8 @@
 
     .element-header {
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        letter-spacing: .06rem;
     }
 }
 
@@ -115,7 +116,9 @@
     }
 
     .footer-section-content-column {
-
+        .element-header {
+            font-size: 1.4rem;
+        }
         .frame-header {
             pointer-events: none;
             margin-bottom: .5rem;

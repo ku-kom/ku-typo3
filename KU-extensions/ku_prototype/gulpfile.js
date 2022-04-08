@@ -15,9 +15,16 @@ const sassOptions = {
   outputStyle: 'compressed'
 };
 
-gulp.task('clean', () => {
+gulp.task('cleanCss', () => {
   return del([
-    './Resources/Public/Css/Dist'
+    './Resources/Public/Css/Dist/**/*',
+  ]);
+});
+
+gulp.task('cleanJs', () => {
+  return del([
+    './Resources/Public/JavaScript/Dist/**/*',
+    '!./Resources/Public/JavaScript/Dist/jquery.min.js'
   ]);
 });
 
@@ -25,7 +32,7 @@ gulp.task('sass', () => {
   return gulp.src('./Resources/Public/Scss/Theme/theme.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
@@ -45,6 +52,6 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./Resources/Public/Scss/Theme/**/*.scss', gulp.series(['clean', 'sass']));
-  gulp.watch('./Resources/Public/JavaScript/Src/**/*.js', gulp.series(['scripts']));
+  gulp.watch('./Resources/Public/Scss/Theme/**/*.scss', gulp.series(['cleanCss', 'sass']));
+  gulp.watch('./Resources/Public/JavaScript/Src/**/*.js', gulp.series(['cleanJs', 'scripts']));
 });

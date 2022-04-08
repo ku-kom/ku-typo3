@@ -2,9 +2,14 @@
 // Global menu
 //
 
-@include media-breakpoint-down('md') {
+@include media-breakpoint-down('lg') {
 
     // Mobile navigation:
+
+    #mainnavigation {
+        display: flex;
+        flex-direction: column;
+    }
 
     .navbar-toggler {
         &[aria-expanded="false"] {
@@ -197,7 +202,7 @@
     }
 }
 
-@include media-breakpoint-up('md') {
+@include media-breakpoint-up('lg') {
     .companylink {
         max-width: 25%;
         padding: 0;

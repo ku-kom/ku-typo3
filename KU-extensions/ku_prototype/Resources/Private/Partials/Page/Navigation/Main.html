@@ -26,13 +26,11 @@
                     </f:then>
                 </f:if>
             </f:link.page>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse"
-                data-target="#mainnavigation" data-bs-target="#mainnavigation" aria-controls="mainnavigation"
-                aria-expanded="false"
+            <button class="navbar-toggler collapsed" type="button" id="navbarSideCollapse" aria-expanded="false"
                 aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <nav id="mainnavigation" class="collapse navbar-collapse">
+            <nav id="mainnavigation" class="navbar-collapse offcanvas-collapse">
                 <f:render partial="Navigation/Utilitymenu" arguments="{_all}" />
                 <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
                 <f:render partial="Navigation/Globalnavigation" arguments="{_all}" />
