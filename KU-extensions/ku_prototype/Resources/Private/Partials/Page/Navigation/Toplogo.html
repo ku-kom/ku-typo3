@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.ku.companyName.enable} > 0">
+    <div class="companylogo">
+        <f:link.page pageUid="{rootPage}" class="companylink" tabindex="-1" title="Start">
+            <f:if condition="{pageLanguage} = 0">
+                <f:then>
+                    <img src="/typo3conf/ext/ku_prototype/Resources/Public/Images/Frontend/ku_top_dk.svg" alt="">
+                </f:then>
+                <f:else>
+                    <img src="/typo3conf/ext/ku_prototype/Resources/Public/Images/Frontend/ku_top_uk.svg" alt="">
+                </f:else>
+            </f:if>
+        </f:link.page>
+    </div>
+</f:if>
+
+</html>

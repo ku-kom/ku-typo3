@@ -40,6 +40,11 @@
             }
         }
     }
+
+    .element-header {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
 }
 
 @include media-breakpoint-down('md') {
@@ -82,6 +87,7 @@
                     border-top: 1px solid $gray-500;
                     padding-top: 10px;
                 }
+
                 a {
                     color: $black;
                 }

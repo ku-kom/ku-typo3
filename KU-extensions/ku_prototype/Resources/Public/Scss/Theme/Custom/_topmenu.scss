@@ -47,7 +47,9 @@
 
 .companylink {
     display: block;
-    max-width: 25%;
+    max-width: 100%;
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
 }
 
 .menubar {
@@ -196,13 +198,14 @@
 }
 
 @include media-breakpoint-up('md') {
+    .companylink {
+        max-width: 25%;
+        padding: 0;
+    }
+
     .navbar-transition {
         // After scroll
         box-shadow: 0 3px 10px 0 rgba($black, .14);
-
-        .companylink {
-            max-width: 20%;
-        }
 
         .utilitymenu,
         .globalmenu {
@@ -212,19 +215,12 @@
             overflow: hidden;
             transition: all 0.3s ease-in;
         }
-
-        .navbar-brand-image {
-            img {
-                max-height: 60px;
-            }
-        }
     }
 
     .navbar-default-transition {
         &:not(.navbar-transition) {
             .navbar-brand {
                 &>img {
-                    display: block !important;
                     max-height: 100%;
 
                 }
