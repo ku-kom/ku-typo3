@@ -18,9 +18,8 @@
                     </a>
                     <f:if condition="{item.children}">
                         <f:then>
-                            <button type="button" class="menu_arrow" aria-expanded="false"
-                                aria-controls="item-{item.data.uid}" {f:if(condition: item.children,
-                                then: ' aria-haspopup="true"' )}>
+                            <button type="button" class="menu_arrow" aria-controls="item-{item.data.uid}" {f:if(condition: item.children, then:' aria-haspopup="true"')} 	
+                            {f:if(condition: item.active, then:' aria-expanded="true"', else:' aria-expanded="false"')}>
                                 <span class="visually-hidden">{f:translate(key: 'togglenavigation', extensionName:
                                     'bootstrap_package')}</span>
                             </button>
@@ -49,9 +48,8 @@
                                             </a>
                                             <f:if condition="{child.children}">
                                                 <f:then>
-                                                    <button type="button" class="menu_arrow" aria-expanded="false"
-                                                        aria-controls="item-{child.data.uid}" {f:if(condition:
-                                                        item.children, then: ' aria-haspopup="true"' )}>
+                                                    <button type="button" class="menu_arrow" aria-controls="item-{child.data.uid}" {f:if(condition:
+                                                        child.children, then: ' aria-haspopup="true"' )}{f:if(condition: child.active, then:' aria-expanded="true"', else:' aria-expanded="false"')}>
                                                         <span class="visually-hidden">{f:translate(key:
                                                             'togglenavigation',
                                                             extensionName: 'bootstrap_package')}</span>
@@ -90,10 +88,8 @@
                                                                     <f:if condition="{child2.children}">
                                                                         <f:then>
                                                                             <button type="button" class="menu_arrow"
-                                                                                aria-expanded="false"
                                                                                 aria-controls="item-{child2.data.uid}"
-                                                                                {f:if(condition: item.children,
-                                                                                then: ' aria-haspopup="true"' )}>
+                                                                                {f:if(condition: child2.children, then:' aria-haspopup="true"')} {f:if(condition: child2.active, then:' aria-expanded="true"', else:' aria-expanded="false"')}>
                                                                                 <span
                                                                                     class="visually-hidden">{f:translate(key:
                                                                                     'togglenavigation', extensionName:
@@ -143,12 +139,8 @@
                                                                                                     <button
                                                                                                         type="button"
                                                                                                         class="menu_arrow"
-                                                                                                        aria-expanded="false"
                                                                                                         aria-controls="item-{child3.data.uid}"
-                                                                                                        {f:if(condition:
-                                                                                                        child3.children,
-                                                                                                        then: ' aria-haspopup="true"'
-                                                                                                        )}>
+                                                                                                        {f:if(condition: child3.children, then:' aria-haspopup="true"')} {f:if(condition: child3.active, then:' aria-expanded="true"', else:' aria-expanded="false"')}>
                                                                                                         <span
                                                                                                             class="visually-hidden">{f:translate(key:
                                                                                                             'togglenavigation',
@@ -205,12 +197,8 @@
                                                                                                                             <button
                                                                                                                                 type="button"
                                                                                                                                 class="menu_arrow"
-                                                                                                                                aria-expanded="false"
                                                                                                                                 aria-controls="item-{child4.data.uid}"
-                                                                                                                                {f:if(condition:
-                                                                                                                                child4.children,
-                                                                                                                                then: ' aria-haspopup="true"'
-                                                                                                                                )}>
+                                                                                                                                {f:if(condition: child4.children, then:' aria-haspopup="true" aria-expanded="false"')} {f:if(condition: child4.active, then:' aria-expanded="true"', else:' aria-expanded="false"')}>
                                                                                                                                 <span
                                                                                                                                     class="visually-hidden">{f:translate(key:
                                                                                                                                     'togglenavigation',
