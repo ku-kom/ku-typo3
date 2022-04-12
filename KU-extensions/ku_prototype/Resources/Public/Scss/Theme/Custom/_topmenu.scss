@@ -2,6 +2,30 @@
 // Global menu
 //
 
+@mixin icon-before($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $body-color;
+    content: '';
+    display: block;
+    top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $body-color;
+    content: '';
+    display: block;
+    top: $top;
+}
+
+
+
 @include media-breakpoint-down('lg') {
 
     // Mobile navigation:
@@ -12,6 +36,9 @@
     }
 
     .navbar-toggler {
+        position: relative;
+        transition-duration: 0.5s;
+
         &[aria-expanded="false"] {
             #mainnavigation {
                 display: flex;
@@ -19,10 +46,75 @@
                 align-items: flex-start;
             }
         }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &>span {
+            transition-duration: 0.5s;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            top: auto;
+            left: 0;
+            background-color: $body-color;
+
+            &:before,
+            &:after {
+                transition-duration: 0.5s;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                ;
+                background-color: $body-color;
+                content: '';
+                display: block;
+            }
+
+            &:before {
+                top: -10px;
+            }
+
+            &:after {
+                top: 10px;
+            }
+        }
+
+        &.open {
+            &>span {
+                transition-duration: 0.5s;
+                background: transparent;
+
+                &:before {
+                    transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+                }
+
+                &:after {
+                    transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+                }
+            }
+        }
     }
 
     .menubar {
         width: 100%;
+
+        li {
+            &.active {
+                li {
+                    &.active {
+                        flex-direction: column;
+                    }
+
+                    ul {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
+                }
+            }
+        }
     }
 
     .sitenavigation {
@@ -172,11 +264,13 @@
             left: 0;
             display: none;
 
-            li {
-                ul {
-                    // Sub menu position
-                    left: 100%;
-                    top: 0;
+            @include media-breakpoint-up('lg') {
+                li {
+                    ul {
+                        // Sub menu position
+                        left: 100%;
+                        top: 0;
+                    }
                 }
             }
         }
@@ -195,9 +289,11 @@
             border: 1px solid $gray-ccc;
         }
 
-        .level-2 {
-            // Second level
-            top: 100% !important;
+        @include media-breakpoint-up('lg') {
+            .level-2 {
+                // Second level
+                top: 100% !important;
+            }
         }
     }
 }
