@@ -1,17 +1,19 @@
 @include media-breakpoint-down('lg') {
+
+    // Mobile menu off canvas:
+
     html,
     body {
         overflow-x: hidden;
-        // Prevent scroll on narrow devices
     }
 
     .offcanvas-collapse {
         position: fixed;
-        top:  map-get($navbar-heights, 'md') + 24px; // 24px is the height of the toplogo...
+        top: map-get($navbar-heights, 'md') + 24px; // 24px is the height of the toplogo...
         bottom: 0;
         left: 100%;
         width: 100%;
-        margin: 0!important;
+        margin: 0 !important;
         overflow-y: auto;
         visibility: hidden;
         background-color: $gray-eee;
@@ -21,5 +23,96 @@
     .offcanvas-collapse.open {
         visibility: visible;
         transform: translateX(-100%);
+    }
+
+    #mainnavigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        transition-duration: 0.5s;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &>span {
+            transition-duration: 0.5s;
+            position: absolute;
+            display: block;
+            height: 4px;
+            width: 100%;
+            top: auto;
+            left: 0;
+            background-color: $body-color;
+
+            &:before,
+            &:after {
+                transition-duration: inherit;
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                background-color: $body-color;
+                content: '';
+                display: block;
+            }
+
+            &:before {
+                top: -10px;
+            }
+
+            &:after {
+                top: 10px;
+            }
+        }
+
+        &.open {
+            &>span {
+                transition-duration: 0.5s;
+                background: transparent;
+
+                &:before {
+                    transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+                }
+
+                &:after {
+                    transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+                }
+            }
+        }
+    }
+
+    .menubar {
+        width: 100%;
+
+        li {
+            &.active {
+                li {
+                    &.active {
+                        flex-direction: column;
+                    }
+                }
+                ul {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .sitenavigation {
+        order: 1;
+    }
+
+    .utilitymenu {
+        order: 2;
+    }
+
+    .globalmenu {
+        order: 3;
     }
 }

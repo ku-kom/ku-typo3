@@ -12,6 +12,7 @@
      * Solution to set appropiate aria-axpanded states in menus.
      * 
      */
+
     function navbarPointerOver(element) {
       let toggle = document.querySelector('.navbar-toggler');
       if (window.getComputedStyle(toggle).display === 'none' && element.classList.contains('open') === false) {
@@ -65,6 +66,13 @@
         }
       });
     });
+
+    // Toggle aria states for hamburger icon
+    document.getElementById('navbarSideCollapse').addEventListener('click', (e) => {
+      const btn = e.currentTarget;
+      btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+    });
+
   });
 
 })()
