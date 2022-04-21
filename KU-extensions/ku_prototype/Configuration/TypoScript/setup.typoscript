@@ -60,8 +60,12 @@ page {
                 globalMenu {
                     enable = {$page.settings.ku.globalMenu.enable}
                     id = {$page.settings.ku.globalMenu.id}
+                    relation = {$page.settings.ku.globalMenu.relation}
                 }
-                # Enable/disable local footer
+                # Enable/disable local menu
+                localMenu {    
+                    enable = {$page.settings.ku.localMenu.enable}
+                }
                 localFooter {    
                     enable = {$page.settings.ku.localFooter.enable}
                 }

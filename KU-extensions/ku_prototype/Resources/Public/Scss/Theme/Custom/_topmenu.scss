@@ -35,6 +35,12 @@
         list-style: none;
     }
 
+    li {
+        &.active {
+            background: $gray-eee;
+        }
+    }
+
     a {
         padding: .5rem .7rem .5rem .7rem;
         display: inline-block;
@@ -100,7 +106,7 @@
 
         &:hover,
         &:focus-within {
-            background: #eee;
+            background: $gray-eee;
             cursor: pointer;
         }
 
@@ -121,7 +127,7 @@
 
         &.has-children {
             &.active {
-                background: #eee;
+                background: $gray-eee;
             }
         }
 

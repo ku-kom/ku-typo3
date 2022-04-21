@@ -27,45 +27,45 @@
       }
     }
 
-    Array.from(document.querySelectorAll('li.has-children')).forEach(function (element) {
-      element.addEventListener('pointerover', (e) => {
-        if (e.pointerType === "mouse") {
-          navbarPointerOver(element);
-        }
-      });
-      element.addEventListener('mouseenter', () => {
-        if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-          navbarPointerOver(element);
-        }
-      });
-      element.addEventListener('pointerleave', (e) => {
-        if (e.pointerType === "mouse") {
-          navbarPointerLeave(element);
-        }
-      });
-      element.addEventListener('mouseleave', () => {
-        if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-          navbarPointerLeave(element);
-        }
-      });
-    });
+    // Array.from(document.querySelectorAll('li.has-children')).forEach(function (element) {
+    //   element.addEventListener('pointerover', (e) => {
+    //     if (e.pointerType === "mouse") {
+    //       navbarPointerOver(element);
+    //     }
+    //   });
+    //   element.addEventListener('mouseenter', () => {
+    //     if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    //       navbarPointerOver(element);
+    //     }
+    //   });
+    //   element.addEventListener('pointerleave', (e) => {
+    //     if (e.pointerType === "mouse") {
+    //       navbarPointerLeave(element);
+    //     }
+    //   });
+    //   element.addEventListener('mouseleave', () => {
+    //     if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    //       navbarPointerLeave(element);
+    //     }
+    //   });
+    // });
 
-    Array.from(document.querySelectorAll('.menubar li')).forEach(function (element) {
-      element.addEventListener('click', (e) => {
-        let listElement = element.parentElement;
-        if (listElement.classList.contains('has-children')) {
-          let listElementSiblings = listElement.parentElement.querySelectorAll('.menu_arrow');
-          Array.from(listElementSiblings).forEach(function (listElementsSibling) {
-            listElementsSibling.setAttribute('aria-expanded', 'false')
-          });
-          listElement.setAttribute('aria-expanded', 'true')
-          listElement.querySelector('.menu_arrow').setAttribute('aria-expanded', 'true');
-          e.stopImmediatePropagation();
-          e.preventDefault();
-          return false;
-        }
-      });
-    });
+    // Array.from(document.querySelectorAll('.menubar li')).forEach(function (element) {
+    //   element.addEventListener('click', (e) => {
+    //     let listElement = element.parentElement;
+    //     if (listElement.classList.contains('has-children')) {
+    //       let listElementSiblings = listElement.parentElement.querySelectorAll('.menu_arrow');
+    //       Array.from(listElementSiblings).forEach(function (listElementsSibling) {
+    //         listElementsSibling.setAttribute('aria-expanded', 'false')
+    //       });
+    //       listElement.setAttribute('aria-expanded', 'true')
+    //       listElement.querySelector('.menu_arrow').setAttribute('aria-expanded', 'true');
+    //       e.stopImmediatePropagation();
+    //       e.preventDefault();
+    //       return false;
+    //     }
+    //   });
+    // });
 
     // Toggle aria states for hamburger icon
     document.getElementById('navbarSideCollapse').addEventListener('click', (e) => {

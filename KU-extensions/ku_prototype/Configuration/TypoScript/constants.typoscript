@@ -109,6 +109,18 @@ page {
             globalMenu {
                 id =
             }
+            #cat=ku-page-settings; type=string; label=Page id in global menu to which a subsite or page is relative to.
+            globalMenu {
+                relation =
+            }
+            #cat=ku-page-settings; type=boolean; label=Display local menu. Set to '0' to disable.
+            localMenu {
+                enable = 1
+            }
+            #cat=ku-page-settings; type=string; label=Folder id for local menu.
+            localMenu {
+                id =
+            }
             #cat=ku-page-settings; type=boolean; label=Display local footer. Set to '0' to disable.
             localFooter {
                 enable = 1

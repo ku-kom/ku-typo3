@@ -4,6 +4,7 @@
         <ul id="language_menu" class="language-menu">
     </f:comment>
     <f:for each="{languagenavigation}" as="item">
+
         <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
             <f:if condition="{item.active} == 0">
                 <f:if condition="{item.available}">
@@ -19,6 +20,7 @@
             </f:if>
         </li>
     </f:for>
+    
     <f:comment>
         </ul>
     </f:comment>
