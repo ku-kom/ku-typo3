@@ -86,8 +86,6 @@ page {
     10 = FLUIDTEMPLATE
     10 {
         variables {
-            siteTitle = TEXT
-            siteTitle.data = TSFE:tmpl|setup|sitetitle
             # Get current language uid:
             pageLanguage = TEXT
             pageLanguage.data = sitelanguage:languageId
