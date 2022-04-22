@@ -1,29 +1,20 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:if condition="{languagenavigation}">
-    <f:comment>
-        <ul id="language_menu" class="language-menu">
-    </f:comment>
-    <f:for each="{languagenavigation}" as="item">
 
-        <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
-            <f:if condition="{item.active} == 0">
-                <f:if condition="{item.available}">
-                    <f:then>
-                        <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
-                            <span>{item.navigationTitle}</span>
-                        </a>
-                    </f:then>
-                    <f:else>
+<f:if condition="{languagenavigation}">
+    <f:for each="{languagenavigation}" as="item">
+        <f:if condition="{item.active} == 0">
+            <f:then>
+                <li>
+                    <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}" class="nav-link">
+                        <core:icon identifier="{item.flag}" size="small" /></span>
                         <span>{item.navigationTitle}</span>
-                    </f:else>
-                </f:if>
-            </f:if>
-        </li>
+                    </a>
+                </li>
+            </f:then>
+            <f:else>
+            </f:else>
+        </f:if>
     </f:for>
-    
-    <f:comment>
-        </ul>
-    </f:comment>
 </f:if>
 
 </html>
