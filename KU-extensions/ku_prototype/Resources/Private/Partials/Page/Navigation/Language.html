@@ -4,9 +4,9 @@
     <f:for each="{languagenavigation}" as="item">
         <f:if condition="{item.active} == 0">
             <f:then>
-                <li>
+                <li class="lang">
                     <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}" class="nav-link">
-                        <core:icon identifier="{item.flag}" size="small" /></span>
+                        <span aria-hidden="true"><core:icon identifier="{item.flag}" size="small" /></span>
                         <span>{item.navigationTitle}</span>
                     </a>
                 </li>

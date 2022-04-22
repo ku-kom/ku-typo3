@@ -2,6 +2,10 @@
 // Global menu
 //
 
+.lang .icon-markup {
+    margin-right: .4rem;
+}
+
 .companylogo {
     margin: auto;
     width: 100%;
@@ -186,8 +190,7 @@
         // After scroll
         box-shadow: 0 3px 10px 0 rgba($black, .14);
 
-        .utilitymenu,
-        .globalmenu {
+        .utilitymenu {
             // Hide menus on scroll
             opacity: 0;
             height: 0;
