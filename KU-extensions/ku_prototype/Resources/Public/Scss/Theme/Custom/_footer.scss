@@ -48,6 +48,12 @@
     }
 }
 
+.footer-sociallinks {
+    .sociallinks-link {
+        border-radius: 50%;
+    }
+}
+
 @include media-breakpoint-down('md') {
     .footer-section-content-column {
         padding-left: 0;
