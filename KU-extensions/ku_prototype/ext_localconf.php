@@ -1,5 +1,12 @@
 <?php
 defined('TYPO3_MODE') || die();
+
+/***************
+ * PageTS
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_prototype/Configuration/TsConfig/Page/All.tsconfig">');
+
+
 /***************
  * Add default RTE configuration
  */
@@ -11,12 +18,13 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ku_simple'] = 'EXT:ku_prototype/C
 // KU news editor
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ku_news'] = 'EXT:ku_prototype/Configuration/RTE/KU_news.yaml';
 
-/***************
- * PageTS
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_prototype/Configuration/TsConfig/Page/All.tsconfig">');
+// KU Viewhelper namespace
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['ku'] = ['UniversityOfCopenhagen\KuPrototype\ViewHelpers'];
 
-// Backend logo and login logo
+
+/***************
+// KU backend logo and login logo
+*/
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = [
     'backendFavicon' => 'EXT:ku_prototype/Resources/Public/Icons/favicon.ico',
     'backendLogo' => 'EXT:ku_prototype/Resources/Public/Images/Backend/ku.svg',

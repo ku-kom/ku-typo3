@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "UniversityOfCopenhagen\\KuPrototype\\": "Classes/"
+            "UniversityOfCopenhagen\\KuPrototype\\": "public/typo3conf/ext/ku_prototype/Classes/"
         }
     },
     "extra": {
