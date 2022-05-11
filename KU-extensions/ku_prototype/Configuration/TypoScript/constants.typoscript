@@ -8,10 +8,13 @@
 ### PAGE ###
 ############
 page {
+    preloader.enable = 0
     logo {
-        file = EXT:ku_prototype/Resources/Public/Images/logo.svg
-        fileInverted >
-        alt = 
+        file = EXT:ku_prototype/Resources/Public/Images/Frontend/ku-logo-inverted.svg
+        fileInverted = EXT:ku_prototype/Resources/Public/Images/Frontend/ku-logo.svg
+        height = 148
+        width = 109
+        alt = Københavns Universitet
         linktitle = Københavns Universitet
     }
     theme {
@@ -22,6 +25,18 @@ page {
             meta.enable = 0
         }
 
+        cookieconsent {
+            position = bottom-right
+        }
+
+        googleFont {
+            enable = 0
+        }
+        
+        breadcrumb {
+            enableLevel = 1
+        }
+
         socialmedia {
             channels {
                 github >
@@ -29,19 +44,33 @@ page {
                 xing >
                 vk >
                 facebook {
-                    # cat=bootstrap package: social media/165/02_facebook_url; type=string; label=Facebook aria-Label:
+                    # cat=bootstrap package: social media/165/02_facebook_url; type=string; label=Facebook url:
+                    url = https://www.facebook.com/universitet
+                    # cat=bootstrap package: social media/165/02a_facebook_url; type=string; label=Facebook aria-Label:
                     aria_label =
                 }
                 twitter {
-                    # cat=bootstrap package: social media/165/03_twitter_url; type=string; label=Twitter aria-label:
+                    # cat=bootstrap package: social media/165/03_twitter_url; type=string; label=Twitter url:
+                    url = https://twitter.com/koebenhavns_uni
+                    # cat=bootstrap package: social media/165/03a_twitter_url; type=string; label=Twitter aria-label:
                     aria_label =
                 }
                 instagram {
-                    # cat=bootstrap package: social media/165/04_instagram_url; type=string; label=Instagram aria-label:
+                    # cat=bootstrap package: social media/165/04_instagram_url; type=string; label=Instagram url:
+                    url = https://www.instagram.com/university_of_copenhagen/
+                    # cat=bootstrap package: social media/165/04a_instagram_url; type=string; label=Instagram aria-label:
                     aria_label =
                 }
                 linkedin {
-                    # cat=bootstrap package: social media/165/06_linkedin_url; type=string; label=LinkedIn aria-label:
+                    # cat=bootstrap package: social media/165/06_linkedin_url; type=string; label=LinkedIn url:
+                    url = https://www.linkedin.com/school/university-of-copenhagen/
+                    # cat=bootstrap package: social media/165/06a_linkedin_url; type=string; label=LinkedIn aria-label:
+                    aria_label =
+                }
+                youtube {
+                    # cat=bootstrap package: social media/165/07_youtube_url; type=string; label=Youtube url:
+                    url = https://www.youtube.com/user/CopenhagenUniversity/
+                    # cat=bootstrap package: social media/165/07a_youtube_url; type=string; label=Youtube aria-label:
                     aria_label =
                 }
                 videoportal {

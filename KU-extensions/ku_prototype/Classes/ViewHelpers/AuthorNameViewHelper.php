@@ -1,11 +1,11 @@
-<?php declare(strict_types=1);
+<?php 
+
+declare(strict_types=1);
 
 /*
  * This file is part of the package ku_protopype.
- * Use like this: <ku:AuthorName authorUid="{data.cruser_id}" />
+ * Usage: <ku:AuthorName authorUid="{data.cruser_id}" />
  *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
  */
 namespace UniversityOfCopenhagen\KuPrototype\ViewHelpers;
 
@@ -38,7 +38,7 @@ class AuthorNameViewHelper extends AbstractViewHelper
     }
 
     /**
-     * Returns the realName of selected author by uid if set
+     * Returns the realName of selected author by uid if set,
      * otherwise returns the username
      *
      * @param int $authorUid

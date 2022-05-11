@@ -92,7 +92,7 @@ page {
         variables {
             # Get current language uid:
             pageLanguage = TEXT
-            pageLanguage.data = sitelanguage:languageId
+            pageLanguage.data = siteLanguage:languageId
         }
     }
 }

@@ -2,4 +2,4 @@
 #### CONTENT ELEMENT RENDERING                           ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_prototype/Configuration/TypoScript/ContentElement/Element/TextPic.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ku_prototype/Configuration/TypoScript/ContentElement/Element/Textpic.typoscript">
