@@ -1,4 +1,10 @@
-﻿.. include:: /Includes.rst.txt
+﻿.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. include:: ../../Includes.txt
+
 
 .. _migration_6.2.11:
 
@@ -9,13 +15,6 @@ Upgrade from 6.2.10 to 6.2.11
 This document will only cover **breaking changes**, that could happen while
 overriding the Bootstrap Package.
 
-**Table of Contents:**
-
-.. contents::
-   :backlinks: top
-   :class: compact-list
-   :depth: 1
-   :local:
 
 
 

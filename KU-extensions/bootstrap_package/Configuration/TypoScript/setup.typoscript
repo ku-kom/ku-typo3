@@ -2,7 +2,6 @@
 #### DEPENDENCIES ####
 ######################
 @import 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement/setup.typoscript'
-@import 'EXT:bootstrap_package/Configuration/TypoScript/Extension/setup.typoscript'
 
 
 ################
@@ -10,6 +9,17 @@
 ################
 @import 'EXT:bootstrap_package/Configuration/TypoScript/Helper/Block.typoscript'
 @import 'EXT:bootstrap_package/Configuration/TypoScript/Helper/PageClass.typoscript'
+
+
+#############################################################
+#### EXTENSIONS                                          ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Felogin/setup.typoscript" condition="extension.isLoaded('felogin') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/IndexedSearch/setup.typoscript" condition="extension.isLoaded('indexed_search') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Seo/setup.typoscript" condition="extension.isLoaded('seo') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Container/setup.typoscript" condition="extension.isLoaded('container') == 1">
 
 
 ###################
@@ -208,26 +218,6 @@ page {
                 as = metanavigation
                 if {
                     isTrue = {$page.theme.meta.navigationValue}
-                }
-            }
-            1629126321 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            1629126321 {
-                special = {$page.theme.footernavigation.navigationType}
-                special.value = {$page.theme.footernavigation.navigationValue}
-                includeNotInMenu = {$page.theme.footernavigation.includeNotInMenu}
-                levels = {$page.theme.footernavigation.levels}
-                as = footernavigation
-                if {
-                    isTrue = {$page.theme.footernavigation.navigationValue}
-                }
-                dataProcessing {
-                    1629202464 = BK2K\BootstrapPackage\DataProcessing\IconsDataProcessor
-                    1629202464 {
-                        iconSet.field = nav_icon_set
-                        iconIdentifier.field = nav_icon_identifier
-                        iconFileFieldName = nav_icon
-                        as = icon
-                    }
                 }
             }
             1553883874 = BK2K\BootstrapPackage\DataProcessing\StaticFilesProcessor

@@ -61,9 +61,6 @@ TCEFORM {
                 }
             }
         }
-        frame_class {
-            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right
-        }
         accessibility_title {
             disabled = 1
         }

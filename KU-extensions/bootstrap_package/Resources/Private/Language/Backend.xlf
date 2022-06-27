@@ -804,21 +804,6 @@
             <trans-unit id="field.frame_layout">
                 <source>Frame Layout</source>
             </trans-unit>
-            <trans-unit id="field.frame_options">
-                <source>Frame Options</source>
-            </trans-unit>
-            <trans-unit id="field.frame_options.ruler_before">
-                <source>Ruler before</source>
-            </trans-unit>
-            <trans-unit id="field.frame_options.ruler_after">
-                <source>Ruler after</source>
-            </trans-unit>
-            <trans-unit id="field.frame_options.indent_left">
-                <source>Indent left</source>
-            </trans-unit>
-            <trans-unit id="field.frame_options.indent_right">
-                <source>Indent right</source>
-            </trans-unit>
 
             <trans-unit id="field.background_color_class">
                 <source>Background Color</source>
@@ -844,15 +829,6 @@
                 <source>Beside Text, Centered Left</source>
             </trans-unit>
 
-            <trans-unit id="option.background_image.behaviour">
-                <source>Behaviour</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.behaviour.cover">
-                <source>Cover</source>
-            </trans-unit>
-            <trans-unit id="option.background_image.behaviour.pattern">
-                <source>Pattern</source>
-            </trans-unit>
             <trans-unit id="option.background_image.parallax">
                 <source>Parallax</source>
             </trans-unit>

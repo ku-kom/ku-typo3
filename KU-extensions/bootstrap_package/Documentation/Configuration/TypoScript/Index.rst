@@ -1,33 +1,22 @@
-﻿.. include:: /Includes.rst.txt
+﻿.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
 
-.. index:: ! TypoScript
-.. _typoscript:
+.. include:: ../../Includes.txt
+
 
 ==========
 TypoScript
 ==========
-
-Bootstrap Package was built to be as adjustable as possible, so nothing is fixed
-and everything can be overridden with TypoScript constants. The constants are
-grouped in basic and advanced settings. Use the :ref:`Constant Editor <t3tsref:constant-editor>`
-in the backend to modify the values.
-
-**Table of Contents:**
-
-.. contents::
-   :backlinks: top
-   :class: compact-list
-   :depth: 2
-   :local:
+Bootstrap Package was built to be as adjustable as possible, so nothing is fixed and everything can be overridden with TypoScript constants.
+The constants are grouped in basic and advanced settings. Use the **TYPO3 Constant Editor** in the backend to modify the values.
 
 
 Bootstrap Package: Basic Constants
 ==================================
-
 The basic settings will provide easy to use and understandable options for that are used mainly for styling and appearance.
 
-
-.. index:: TypoScript; page.logo
 
 page.logo
 ---------
@@ -58,9 +47,6 @@ page.logo
     }
 
 
-.. TODO: This property seems to be outdated. There is a second "page.meta"
-   further down.
-
 page.meta
 ---------
 
@@ -74,8 +60,6 @@ page.meta
 | keywords                          | string        |                                                                       |
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
-
-.. index:: TypoScript; page.theme
 
 page.theme
 ----------
@@ -93,8 +77,6 @@ page.theme
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
 
-.. index:: TypoScript; page.theme.copyright
-
 page.theme.copyright
 --------------------
 
@@ -107,8 +89,6 @@ page.theme.copyright
 |                                   |               | Made with <3 by Benjamin Kott                                         |
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
-
-.. index:: TypoScript; page.theme.news
 
 page.theme.news
 ---------------
@@ -132,8 +112,6 @@ page.theme.news
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
 
-.. index:: TypoScript; page.theme.language
-
 page.theme.language
 -------------------
 
@@ -151,8 +129,6 @@ Bootstrap Package: Advanced Constants
 The advanced settings should be used only if you really know what you are doing.
 
 
-.. index:: TypoScript; page.fluidtemplate
-
 page.fluidtemplate
 ------------------
 
@@ -167,8 +143,6 @@ page.fluidtemplate
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
 
-.. index:: TypoScript; page.includePath
-
 page.includePath
 ----------------
 
@@ -182,8 +156,6 @@ page.includePath
 | javascript                        | string        | EXT:bootstrap_package/Resources/Public/JavaScript/                    |
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
-
-.. index:: TypoScript; page.meta
 
 page.meta
 ---------
@@ -203,8 +175,6 @@ page.meta
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
 
-.. index:: TypoScript; page.tracking.google
-
 page.tracking.google
 --------------------
 
@@ -216,8 +186,6 @@ page.tracking.google
 | anonymizeIp                       | boolean       | **1** | 0                                                             |
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
-
-.. index:: TypoScript; config
 
 config
 ------
@@ -246,8 +214,6 @@ config
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
 
-.. index:: TypoScript; plugin.bootstrap_package.settings
-
 plugin.bootstrap_package.settings
 ---------------------------------
 
@@ -259,8 +225,6 @@ plugin.bootstrap_package.settings
 | cssSourceMapping                  | boolean       | 1 | **0**                                                             |
 +-----------------------------------+---------------+-----------------------------------------------------------------------+
 
-
-.. index:: TypoScript; plugin.bootstrap_package_contentelements.view
 
 plugin.bootstrap_package_contentelements.view
 ---------------------------------------------

@@ -1,20 +1,23 @@
-﻿.. include:: /Includes.rst.txt
+﻿.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
 
-.. _introduction:
+.. include:: ../Includes.txt
 
-============
+
+==============================
 Introduction
-============
+==============================
 
-Bootstrap Package is a theme for TYPO3 CMS based on the
-`Bootstrap CSS Framework <https://getbootstrap.com/>`_ Version 5.1.
+Bootstrap Package is a theme for TYPO3 CMS based on the `Bootstrap CSS Framework <http://getbootstrap.com/>`_ Version 3.3.7
 
 Features
-========
+==============================
 
 * Full configured TypoScript Setup provided as Static Template
 * Completely adjustable via TypoScript Constants
-* TYPO3 CMS rendering is adjusted to the needs of Bootstrap CSS Framework:
+* TYPO3 CMS rendering is adjusted to the needs of `Bootstrap CSS Framework <http://getbootstrap.com/>`_
 
   * Layouts for all Content Elements
   * Section Frames
@@ -38,23 +41,18 @@ Features
 
 
 Screenshots
-===========
+==============================
 
 .. figure:: ../Images/Screens/Desktop.jpg
-   :width: 820px
-   :alt: Desktop
-
-   Desktop View
+	:width: 500px
+	:alt: Desktop
 
 .. figure:: ../Images/Screens/Tablet.jpg
-   :width: 820px
-   :alt: Tablet
-
-   Tablet View
+	:width: 400px
+	:alt: Tablet
 
 .. figure:: ../Images/Screens/Mobile.jpg
-   :alt: Mobile
-
-   Mobile View
+	:width: 180px
+	:alt: Mobile
 
 

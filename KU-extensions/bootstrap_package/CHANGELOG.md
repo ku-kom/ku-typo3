@@ -1,3 +1,95 @@
+# 12.0.5
+
+## BREAKING
+
+- [!!!][TASK] Adapt useragent to fetch woff2 - fixes #840 2532ccc9
+
+## FEATURE
+
+- [FEATURE] Use translatable labels for container names and columns (#1110) 390d91a4
+
+## TASK
+
+- [TASK] Update frontend dependencies b03a87eb
+- [TASK] Remove obsolete labeler config 76ced494
+- [TASK] Update bootstrap versions to 4.6.1 and 5.1.3 a8e72b97
+- [TASK] Allow composer plugins 6ff185a7
+- [TASK] Drop commit message check and labeler to avoid unnessesary long ci runs 32625b2f
+- [!!!][TASK] Adapt useragent to fetch woff2 - fixes #840 2532ccc9
+- [TASK] Update scssphp to v1.8.1 (#1114) eb8826f5
+
+## BUGFIX
+
+- [BUGFIX] Respect target and add rel in all page template menus 70ce1396
+- [BUGFIX] PHPStan issues (#1133) 57c4987d
+- [BUGFIX] Add missing xlarge crop variant - fixes #1088 5fbef46e
+
+# 12.0.4
+
+## TASK
+
+- [TASK] Use @import syntax for TS includes (#1090) fa4aa4a1
+- [TASK] Require at least v11.5 LTS on the 11 cycle 33135fc1
+
+## BUGFIX
+
+- [BUGFIX] Do not call "libxml_disable_entity_loader" in PHP 8 (#1105) 940986b4
+- [BUGFIX] Respect and adjust responsive image configuration for carousel background_image 84dff11e
+- [BUGFIX] Get frontend controller from request if available d2a44582
+- [BUGFIX] Use bootstrap 5 styles in RTE (#1091) 0d8e0f1b
+- [BUGFIX] Do not pass absolute path to resource factory 28dda974
+
+# 12.0.3
+
+## TASK
+
+- [TASK] Migrate form definition (#1095) 13707e54
+
+## BUGFIX
+
+- [BUGFIX] BrandingService conditions (#1094) 41718f62
+- [BUGFIX] Remove pollution of global scss variables add3aeac
+- [BUGFIX] Ensure accordion elements collapse as intended with bootstrap 5 c2ea116b
+- [BUGFIX] Avoid overrides of global scss variables within card-panel comonent 05ef945f
+- [BUGFIX] Fix breadcrumb when "breadcrumbExtendedValue" is used 576014e7
+
+# 12.0.2
+
+## TASK
+
+- [TASK] Update frontend dependencies 151f4877
+- [TASK] Update scssphp to v1.7.0 168b6c90
+- [TASK] Update Bug Report template (#1069) 95ba43c4
+- [TASK] Provide frontend build custom commands (#1068) 6c56d7ba
+- [TASK] Exclude submenues from indexing (#1061) 1c4b80a2
+- [TASK] correct Photoswipe opening animation (#941) 3a6f50cd
+
+## BUGFIX
+
+- [BUGFIX] Add automatic contrast calculations again for backgrounds - fixes #1057 e56f5ec4
+- [BUGFIX] Hide header for container elements - fixes #1079 98faa9ad
+- [BUGFIX] Ensure spacing for frames is applied when set to none 48ec125d
+- [BUGFIX] Missing theme colors (#1067) 85867a1b
+- [BUGFIX] Array access warnings in PHP 8 (#1063) 1511a449
+- [BUGFIX] CGL in CI workflow (#1064) 7dafab16
+- [BUGFIX] Docs rendering (#1062) 2122e791
+- [BUGFIX] Mark menu items correctly as closed - fixes #1052 9bc37078
+- [BUGFIX] Include correct popper.js version for bootstrap 5 f9fccd09
+- [BUGFIX] Wrong table classes and add missing ones (#927) faaa75c7
+- [BUGFIX] Preserve custom layout values (#1055) 63667857
+- [BUGFIX] Add Bootstrap v5 options to Fullscreen and Small carousel (#1053) 10b2eced
+- [BUGFIX] Remove deprecated softref `images` (#1046) 07bdd774
+- [BUGFIX] Make embedded layouts more strict and reset backgrounds properly 42395176
+
+# 12.0.1
+
+## BUGFIX
+
+- [BUGFIX] Let image service resolve svgicon - fixes #1042 e763705f
+- [REVERT][BUGFIX] Update doctrine usages (#1037) (#1044) 1e8864b4
+- [BUGFIX] Add missing embed css to bootstrap 5 (#1043) c6addb4b
+- [BUGFIX] Remove external softref to ext:rtehtmlarea (#1039) 7345b209
+
 # 12.0.0
 
 ## BREAKING

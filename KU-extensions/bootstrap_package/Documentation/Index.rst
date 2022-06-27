@@ -1,60 +1,61 @@
-﻿.. include:: /Includes.rst.txt
+﻿.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
 
-=================
+.. include:: Includes.txt
+
+
+.. _start:
+
+=============================================================
 Bootstrap Package
-=================
+=============================================================
 
-:Extension key:
-   bootstrap_package
+.. only:: html
 
-:Package name:
-   bk2k/bootstrap-package
+    :Classification:
+        bootstrap_package
 
-:Version:
-   |release|
+    :Version:
+        |release|
 
-:Language:
-   en
+    :Language:
+        en
 
-:Author:
-   Benjamin Kott & Contributors
+    :Description:
+        Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.
 
-:License:
-   This document is published under the
-   `Open Publication License <https://www.opencontent.org/openpub/>`__.
+    :Keywords:
+        Theme, Bootstrap
 
-:Rendered:
-   |today|
+    :Copyright:
+        2014
 
-----
+    :Author:
+        Benjamin Kott
 
-Bootstrap Package delivers a fully configured frontend theme for TYPO3, based on
-the Bootstrap CSS Framework.
+    :Email:
+        info@bk2k.info
 
-The goal of this package is also to give an advanced example of how modern
-templating in TYPO3 CMS can be handled nicely without depending on third party
-extensions. Bootstrap Package comes with a fully configurable Frontend via
-TypoScript. This includes the TypoScript Constant Editor.
+    :License:
+        This document is published under the Open Content License
+        available from http://www.opencontent.org/opl.shtml
 
-----
+    :Rendered:
+        |today|
 
-**Table of Contents:**
+    The content of this document is related to TYPO3,
+    a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
 
-.. toctree::
-   :maxdepth: 2
-   :titlesonly:
 
-   Introduction/Index
-   Installation/Index
-   QuickStart/Index
-   Configuration/Index
-   AdministratorManual/Index
-   Contribution/Index
-
-.. Meta Menu
+    **Table of Contents**
 
 .. toctree::
-   :hidden:
+    :maxdepth: 5
+    :titlesonly:
+    :glob:
 
-   Sitemap
-   genindex
+    Introduction/Index
+    Configuration/Index
+    AdministratorManual/Index

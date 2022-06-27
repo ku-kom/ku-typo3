@@ -1,16 +1,19 @@
-﻿.. include:: /Includes.rst.txt
+﻿.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
 
-.. _configuration:
+.. include:: ../Includes.txt
 
-=============
+
+==============================
 Configuration
-=============
-
-**Table of Contents:**
+==============================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :titlesonly:
+   :glob:
 
    Extension/Index
    ImageRendering/Index
